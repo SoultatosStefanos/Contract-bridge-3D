@@ -4,10 +4,11 @@ using UnityEngine.Serialization;
 
 public class CardBehaviour : MonoBehaviour
 {
-    [FormerlySerializedAs("Rank")] [SerializeField]
+    [FormerlySerializedAs("Rank")]
+    [SerializeField]
     private Rank rank;
 
-    [FormerlySerializedAs("Suit")] 
+    [FormerlySerializedAs("Suit")]
     [SerializeField]
     private Suit suit;
 

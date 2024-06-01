@@ -3,7 +3,8 @@ using UnityEngine.Serialization;
 
 public class QuitManager : MonoBehaviour
 {
-    [FormerlySerializedAs("Quit Key")] [SerializeField]
+    [FormerlySerializedAs("Quit Key")]
+    [SerializeField]
     private KeyCode quitKey = KeyCode.Escape;
 
     private void Update()

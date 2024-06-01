@@ -1,12 +1,14 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class QuitManager : MonoBehaviour
 {
-    private const KeyCode QuitKey = KeyCode.Escape;
+    [FormerlySerializedAs("Quit Key")] [SerializeField]
+    private KeyCode quitKey = KeyCode.Escape;
 
     private void Update()
     {
-        if (Input.GetKeyDown(QuitKey))
+        if (Input.GetKeyDown(quitKey))
         {
             Application.Quit();
         }

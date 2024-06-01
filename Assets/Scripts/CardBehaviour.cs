@@ -10,7 +10,7 @@ public class CardBehaviour : MonoBehaviour
     [FormerlySerializedAs("Suit")] [SerializeField]
     private Suit suit;
 
-    private Card Card { get; set; }
+    public Card Card { get; private set; }
 
     private void Start()
     {

@@ -418,6 +418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card Deck
       objectReference: {fileID: 0}
+    - target: {fileID: 1634378309120157460, guid: aeba8cf2961befd429d19b9f6a2e2a48, type: 3}
+      propertyPath: m_Name
+      value: Eight of Hearts
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeba8cf2961befd429d19b9f6a2e2a48, type: 3}
 --- !u!1 &131381936 stripped

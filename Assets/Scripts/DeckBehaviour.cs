@@ -8,7 +8,5 @@ public class DeckBehaviour : MonoBehaviour
     private void Start()
     {
         Deck = new Deck();
-
-        Debug.Log("Hello, I'm " + Deck);
     }
 }

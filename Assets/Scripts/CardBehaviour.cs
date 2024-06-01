@@ -15,7 +15,5 @@ public class CardBehaviour : MonoBehaviour
     private void Start()
     {
         Card = Card.Get(rank, suit);
-
-        Debug.Log("Hello, I'm " + Card);
     }
 }

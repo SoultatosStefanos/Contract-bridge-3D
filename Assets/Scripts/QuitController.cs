@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class QuitManager : MonoBehaviour
+public class QuitController : MonoBehaviour
 {
     [FormerlySerializedAs("Quit Key")]
     [SerializeField]

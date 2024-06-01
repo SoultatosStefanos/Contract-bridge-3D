@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class ContextSwitchManager : MonoBehaviour
+public class ContextSwitchController : MonoBehaviour
 {
     [FormerlySerializedAs("Main")]
     [SerializeField]

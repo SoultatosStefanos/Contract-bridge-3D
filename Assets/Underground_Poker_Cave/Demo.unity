@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &1766688 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5430481285014861683, guid: 6440615f4d3ace04e9756efd733ef084, type: 3}
+  m_PrefabInstance: {fileID: 1019578481376276340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7263232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2793,6 +2798,7 @@ GameObject:
   - component: {fileID: 668127974}
   - component: {fileID: 668127975}
   - component: {fileID: 668127976}
+  - component: {fileID: 668127977}
   m_Layer: 0
   m_Name: East
   m_TagString: Untagged
@@ -2870,6 +2876,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
+--- !u!114 &668127977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668127973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4845917ce72907ebb9ef3fffbe776223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 1
 --- !u!1001 &740465291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3559,6 +3578,7 @@ GameObject:
   - component: {fileID: 1169715019}
   - component: {fileID: 1169715020}
   - component: {fileID: 1169715021}
+  - component: {fileID: 1169715022}
   m_Layer: 0
   m_Name: South
   m_TagString: Untagged
@@ -3636,6 +3656,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
+--- !u!114 &1169715022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169715018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4845917ce72907ebb9ef3fffbe776223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 2
 --- !u!4 &1226420219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2398602574471142245, guid: f15d4304b343dce4d9b76dc0ff7d540f, type: 3}
@@ -3709,6 +3742,7 @@ GameObject:
   - component: {fileID: 1284269346}
   - component: {fileID: 1284269347}
   - component: {fileID: 1284269348}
+  - component: {fileID: 1284269349}
   m_Layer: 0
   m_Name: North
   m_TagString: Untagged
@@ -3786,6 +3820,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
+--- !u!114 &1284269349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284269345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4845917ce72907ebb9ef3fffbe776223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 0
 --- !u!1001 &1338900588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4541,6 +4588,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quitKey: 27
+--- !u!1 &1493351658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1493351659}
+  - component: {fileID: 1493351660}
+  m_Layer: 0
+  m_Name: Board
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1493351659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493351658}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1766688}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1493351660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493351658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ca2764169f516b2bb69c24bc818668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1514744799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4623,6 +4713,7 @@ GameObject:
   - component: {fileID: 1615160559}
   - component: {fileID: 1615160560}
   - component: {fileID: 1615160561}
+  - component: {fileID: 1615160562}
   m_Layer: 0
   m_Name: West
   m_TagString: Untagged
@@ -4700,6 +4791,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
+--- !u!114 &1615160562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615160558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4845917ce72907ebb9ef3fffbe776223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 3
 --- !u!1001 &1722623712
 PrefabInstance:
   m_ObjectHideFlags: 0

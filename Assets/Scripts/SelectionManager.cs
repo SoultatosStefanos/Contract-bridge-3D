@@ -21,20 +21,30 @@ public class SelectionManager : MonoBehaviour
 
     private void Start()
     {
-        _renderer = GetComponent<Renderer>();
         _highlightMaterials = new[] { highlightMaterial };
+        _renderer = GetComponent<Renderer>();
+        if (_renderer)
+        {
+            _originalMaterials = _renderer.materials;
+        }
+        else
+        {
+            Debug.LogWarning($"No Renderer attached to {name}");
+        }
     }
 
     private void Update()
     {
-        if (!camera.enabled) return;
+        if (!camera.enabled || !_renderer) return;
 
-        if (!_renderer) return;
+        HandleSelection();
+    }
 
+    private void HandleSelection()
+    {
         if (_isHighlighted)
         {
-            _renderer.materials = _originalMaterials;
-            _isHighlighted = false;
+            UnhighlightObject();
         }
 
         var ray = camera.ScreenPointToRay(Input.mousePosition);
@@ -43,8 +53,21 @@ public class SelectionManager : MonoBehaviour
         var selection = hit.transform;
         if (selection != transform) return;
 
-        _originalMaterials = _renderer.materials;
+        if (!_isHighlighted)
+        {
+            HighlightObject();
+        }
+    }
+
+    private void HighlightObject()
+    {
         _renderer.materials = _highlightMaterials;
         _isHighlighted = true;
+    }
+
+    private void UnhighlightObject()
+    {
+        _renderer.materials = _originalMaterials;
+        _isHighlighted = false;
     }
 }

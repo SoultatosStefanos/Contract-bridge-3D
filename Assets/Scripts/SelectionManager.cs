@@ -3,10 +3,6 @@ using UnityEngine.Serialization;
 
 public class SelectionManager : MonoBehaviour
 {
-    [FormerlySerializedAs("Selectable Tag")]
-    [SerializeField]
-    private string selectableTag = "Selectable";
-
     [FormerlySerializedAs("Highlight Material")]
     [SerializeField]
     private Material highlightMaterial;
@@ -15,38 +11,40 @@ public class SelectionManager : MonoBehaviour
     [SerializeField]
     private new Camera camera;
 
+    private Material[] _highlightMaterials;
+
+    private bool _isHighlighted;
+
     private Material[] _originalMaterials;
 
-    private Transform _selection;
+    private Renderer _renderer;
+
+    private void Start()
+    {
+        _renderer = GetComponent<Renderer>();
+        _highlightMaterials = new[] { highlightMaterial };
+    }
 
     private void Update()
     {
-        if (_selection)
-        {
-            var selectionRenderer = _selection.GetComponent<Renderer>();
-            if (selectionRenderer)
-            {
-                selectionRenderer.materials = _originalMaterials;
-            }
+        if (!camera.enabled) return;
 
-            _selection = null;
+        if (!_renderer) return;
+
+        if (_isHighlighted)
+        {
+            _renderer.materials = _originalMaterials;
+            _isHighlighted = false;
         }
 
         var ray = camera.ScreenPointToRay(Input.mousePosition);
         if (!Physics.Raycast(ray, out var hit)) return;
 
         var selection = hit.transform;
+        if (selection != transform) return;
 
-        if (selection.CompareTag(selectableTag))
-        {
-            var selectionRenderer = selection.GetComponent<Renderer>();
-            if (selectionRenderer)
-            {
-                _originalMaterials = selectionRenderer.materials;
-                selectionRenderer.materials = new[] { highlightMaterial };
-            }
-
-            _selection = selection;
-        }
+        _originalMaterials = _renderer.materials;
+        _renderer.materials = _highlightMaterials;
+        _isHighlighted = true;
     }
 }

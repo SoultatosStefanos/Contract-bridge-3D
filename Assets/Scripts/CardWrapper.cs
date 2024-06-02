@@ -2,10 +2,7 @@ using Makaretu.Bridge;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-// TODO Think this through - will this script be used only to serve a model? Or do we add behaviour?
-// TODO(?) Rename
-
-public class CardBehaviour : MonoBehaviour
+public class CardWrapper : MonoBehaviour
 {
     [FormerlySerializedAs("Rank")]
     [SerializeField]

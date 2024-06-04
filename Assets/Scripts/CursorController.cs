@@ -15,6 +15,11 @@ public class CursorController : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        ShowCursor();
+    }
+
     private static void ToggleShowHideCursor()
     {
         if (Cursor.lockState == CursorLockMode.Locked)

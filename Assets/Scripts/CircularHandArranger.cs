@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class CircularHand : MonoBehaviour
+public class CircularHandArranger : MonoBehaviour
 {
     [FormerlySerializedAs("Cards")]
     [SerializeField]
@@ -10,6 +10,11 @@ public class CircularHand : MonoBehaviour
     [FormerlySerializedAs("Path")]
     [SerializeField]
     private Transform[] path;
+
+    [FormerlySerializedAs("Z Offset Step")]
+    [SerializeField]
+    [Tooltip("Use this offset variable to avoid z-fighting (clipping).")]
+    private float zOffsetStep = 0.01f;
 
     private void Start()
     {
@@ -23,6 +28,10 @@ public class CircularHand : MonoBehaviour
             var t = (float)i / (cards.Length - 1);
 
             iTween.PutOnPath(cards[i].gameObject, path, t);
+
+            var cardPosition = cards[i].position;
+            cardPosition.z += i * zOffsetStep;
+            cards[i].position = cardPosition;
 
             iTween.LookTo(
                 cards[i].gameObject,

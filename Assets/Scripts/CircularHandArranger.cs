@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
+// TODO Read from Hand, (by seat), use ICardManager
 public class CircularHandArranger : MonoBehaviour
 {
     [FormerlySerializedAs("Cards")]

@@ -1,12 +1,13 @@
+using Makaretu.Bridge;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Zenject;
 
-// TODO Read from Hand, (by seat), use ICardManager
 public class CircularHandArranger : MonoBehaviour
 {
-    [FormerlySerializedAs("Cards")]
+    [FormerlySerializedAs("Seat")]
     [SerializeField]
-    private Transform[] cards;
+    private Seat seat;
 
     [FormerlySerializedAs("Path")]
     [SerializeField]
@@ -17,30 +18,67 @@ public class CircularHandArranger : MonoBehaviour
     [Tooltip("Use this offset variable to avoid z-fighting (clipping).")]
     private float zOffsetStep = 0.01f;
 
-    private void Start()
+    [FormerlySerializedAs("Initial Rotation (Pre-Animation)")]
+    [SerializeField]
+    [Tooltip("Set this to `identity` (default) if the card deck is facing down initially.")]
+    private Quaternion initialRotation = Quaternion.identity;
+
+    [Inject]
+    private IBoardResolver _boardResolver;
+
+    [Inject]
+    private ICardManager _cardManager;
+
+    private void OnEnable()
+    {
+        EventBus.On<DealEvent>(HandleDealEvent);
+    }
+
+    private void OnDisable()
+    {
+        EventBus.Off<DealEvent>(HandleDealEvent);
+    }
+
+    private void HandleDealEvent(DealEvent evt)
     {
         ArrangeCardsOnSpline();
     }
 
     private void ArrangeCardsOnSpline()
     {
-        for (var i = 0; i < cards.Length; i++)
+        var board = _boardResolver.GetBoard();
+        var hand = board.Hands[seat];
+        var cards = hand.Cards;
+
+        for (var i = 0; i < cards.Count; i++)
         {
-            var t = (float)i / (cards.Length - 1);
+            var card = _cardManager.GetGameObject(cards[i]);
 
-            iTween.PutOnPath(cards[i].gameObject, path, t);
+            card.transform.rotation = initialRotation; // Handle face down.
 
-            var cardPosition = cards[i].position;
-            cardPosition.z += i * zOffsetStep;
-            cards[i].position = cardPosition;
+            var t = (float)i / (cards.Count - 1);
+            iTween.PutOnPath(card, path, t);
+
+            OffsetZPosition(card, i); // To avoid z-fighting (clipping).
 
             iTween.LookTo(
-                cards[i].gameObject,
+                card,
                 iTween.Hash(
                     "looktarget", transform.position,
-                    "axis", "y"
+                    "axis", "y",
+                    "time", 0.5f,
+                    "easetype", iTween.EaseType.easeInOutQuad
                 )
             );
+        }
+
+        return;
+
+        void OffsetZPosition(GameObject card, int i)
+        {
+            var cardPosition = card.transform.position;
+            cardPosition.z += i * zOffsetStep;
+            card.transform.position = cardPosition;
         }
     }
 }

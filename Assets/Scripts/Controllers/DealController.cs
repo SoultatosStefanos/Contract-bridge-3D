@@ -14,6 +14,9 @@ namespace Controllers
         [Inject]
         private IDeckResolver _deckResolver;
 
+        [Inject]
+        private IEventBus _eventBus;
+
         private void Update()
         {
             if (!Input.GetKeyDown(KeyCode.Space)) return;
@@ -24,7 +27,7 @@ namespace Controllers
             deck.Shuffle()
                 .Deal(board);
 
-            EventBus.Post(new DealEvent());
+            _eventBus.Post(new DealEvent());
         }
     }
 }

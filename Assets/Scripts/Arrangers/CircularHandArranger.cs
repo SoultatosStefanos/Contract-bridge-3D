@@ -34,14 +34,17 @@ namespace Arrangers
         [Inject]
         private ICardMapper _cardMapper;
 
+        [Inject]
+        private IEventBus _eventBus;
+
         private void OnEnable()
         {
-            EventBus.On<DealEvent>(HandleDealEvent);
+            _eventBus.On<DealEvent>(HandleDealEvent);
         }
 
         private void OnDisable()
         {
-            EventBus.Off<DealEvent>(HandleDealEvent);
+            _eventBus.Off<DealEvent>(HandleDealEvent);
         }
 
         private void HandleDealEvent(DealEvent evt)
@@ -59,7 +62,7 @@ namespace Arrangers
             {
                 var card = _cardMapper.GetGameObject(cards[i]);
 
-                card.layer = gameObject.layer; // Mine!
+                card.layer = gameObject.layer; // Mine! (Culling mask from other players perspective).
 
                 card.transform.rotation = initialRotation; // Handle face down.
 

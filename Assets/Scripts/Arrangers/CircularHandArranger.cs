@@ -23,6 +23,11 @@ namespace Arrangers
         [Tooltip("Set this to `identity` (default) if the card deck is facing down initially.")]
         private Quaternion initialRotation = Quaternion.identity;
 
+        [FormerlySerializedAs("Duration")]
+        [SerializeField]
+        [Tooltip("Animation duration in seconds.")]
+        private float duration = 0.5f;
+
         [Inject]
         private IBoardResolver _boardResolver;
 
@@ -59,7 +64,7 @@ namespace Arrangers
 
                 card.layer = gameObject.layer; // Mine! (Culling mask from other players perspective).
 
-                card.transform.rotation = initialRotation; // Handle face down.
+                card.transform.rotation = initialRotation; // Handle face down (if must).
 
                 var t = (float)i / (cards.Count - 1);
                 iTween.PutOnPath(card, path, t);
@@ -69,7 +74,7 @@ namespace Arrangers
                     iTween.Hash(
                         "looktarget", transform.position,
                         "axis", "y",
-                        "time", 0.5f,
+                        "time", duration,
                         "easetype", iTween.EaseType.easeInOutQuad
                     )
                 );

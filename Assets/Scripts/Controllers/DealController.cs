@@ -1,6 +1,7 @@
 using Events;
 using Resolvers;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
 
 // TODO This will be part of the UI
@@ -8,6 +9,10 @@ namespace Controllers
 {
     public class DealController : MonoBehaviour
     {
+        [FormerlySerializedAs("Deal Key")]
+        [SerializeField]
+        private KeyCode dealKey = KeyCode.M;
+
         [Inject]
         private IBoardResolver _boardResolver;
 
@@ -19,7 +24,7 @@ namespace Controllers
 
         private void Update()
         {
-            if (!Input.GetKeyDown(KeyCode.Space)) return;
+            if (!Input.GetKeyDown(dealKey)) return;
 
             var board = _boardResolver.GetBoard();
             var deck = _deckResolver.GetDeck();

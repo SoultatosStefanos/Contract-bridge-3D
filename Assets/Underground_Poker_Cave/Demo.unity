@@ -3174,7 +3174,6 @@ GameObject:
   - component: {fileID: 668127974}
   - component: {fileID: 668127975}
   - component: {fileID: 668127976}
-  - component: {fileID: 668127978}
   m_Layer: 0
   m_Name: East
   m_TagString: Untagged
@@ -3252,18 +3251,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
---- !u!114 &668127978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668127973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb4c8d20de35ec317867d1f8c9017895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   lockUnlockKey: 108
 --- !u!1001 &740465291
 PrefabInstance:
@@ -4124,7 +4111,6 @@ GameObject:
   - component: {fileID: 1169715019}
   - component: {fileID: 1169715020}
   - component: {fileID: 1169715021}
-  - component: {fileID: 1169715023}
   m_Layer: 0
   m_Name: South
   m_TagString: Untagged
@@ -4202,18 +4188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
---- !u!114 &1169715023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169715018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb4c8d20de35ec317867d1f8c9017895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   lockUnlockKey: 108
 --- !u!4 &1226420219 stripped
 Transform:
@@ -4288,7 +4262,6 @@ GameObject:
   - component: {fileID: 1284269346}
   - component: {fileID: 1284269347}
   - component: {fileID: 1284269348}
-  - component: {fileID: 1284269350}
   m_Layer: 0
   m_Name: North
   m_TagString: Untagged
@@ -4366,18 +4339,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
---- !u!114 &1284269350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284269345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb4c8d20de35ec317867d1f8c9017895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   lockUnlockKey: 108
 --- !u!1001 &1338900588
 PrefabInstance:
@@ -4767,7 +4728,7 @@ MonoBehaviour:
   - {fileID: 909375205}
   zOffsetStep: 0.015
   initialRotation: {x: 0, y: 0, z: 0, w: 1}
-  layerMaskName: East Layer
+  layerName: 
 --- !u!1 &1426382218
 GameObject:
   m_ObjectHideFlags: 0
@@ -5347,7 +5308,6 @@ GameObject:
   - component: {fileID: 1615160559}
   - component: {fileID: 1615160560}
   - component: {fileID: 1615160561}
-  - component: {fileID: 1615160563}
   m_Layer: 0
   m_Name: West
   m_TagString: Untagged
@@ -5425,18 +5385,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
---- !u!114 &1615160563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615160558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb4c8d20de35ec317867d1f8c9017895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   lockUnlockKey: 108
 --- !u!1001 &1722623712
 PrefabInstance:

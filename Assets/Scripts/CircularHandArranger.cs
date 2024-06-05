@@ -23,22 +23,11 @@ public class CircularHandArranger : MonoBehaviour
     [Tooltip("Set this to `identity` (default) if the card deck is facing down initially.")]
     private Quaternion initialRotation = Quaternion.identity;
 
-    [FormerlySerializedAs("Layer Name")]
-    [SerializeField]
-    private string layerName;
-
     [Inject]
     private IBoardResolver _boardResolver;
 
     [Inject]
     private ICardManager _cardManager;
-
-    private int _layer;
-
-    private void Start()
-    {
-        _layer = LayerMask.NameToLayer(layerName);
-    }
 
     private void OnEnable()
     {
@@ -65,7 +54,7 @@ public class CircularHandArranger : MonoBehaviour
         {
             var card = _cardManager.GetGameObject(cards[i]);
 
-            card.layer = _layer; // Make it invisible to other seats.
+            card.layer = gameObject.layer; // Mine!
 
             card.transform.rotation = initialRotation; // Handle face down.
 

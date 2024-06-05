@@ -4177,7 +4177,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4341,7 +4341,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4767,6 +4767,7 @@ MonoBehaviour:
   - {fileID: 909375205}
   zOffsetStep: 0.015
   initialRotation: {x: 0, y: 0, z: 0, w: 1}
+  layerMaskName: East Layer
 --- !u!1 &1426382218
 GameObject:
   m_ObjectHideFlags: 0

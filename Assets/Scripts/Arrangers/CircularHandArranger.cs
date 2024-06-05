@@ -18,11 +18,6 @@ namespace Arrangers
         [SerializeField]
         private Transform[] path;
 
-        [FormerlySerializedAs("Z Offset Step")]
-        [SerializeField]
-        [Tooltip("Use this offset variable to avoid z-fighting (clipping).")]
-        private float zOffsetStep = 0.01f;
-
         [FormerlySerializedAs("Initial Rotation (Pre-Animation)")]
         [SerializeField]
         [Tooltip("Set this to `identity` (default) if the card deck is facing down initially.")]
@@ -69,8 +64,6 @@ namespace Arrangers
                 var t = (float)i / (cards.Count - 1);
                 iTween.PutOnPath(card, path, t);
 
-                OffsetZPosition(card, i); // To avoid z-fighting (clipping).
-
                 iTween.LookTo(
                     card,
                     iTween.Hash(
@@ -80,15 +73,6 @@ namespace Arrangers
                         "easetype", iTween.EaseType.easeInOutQuad
                     )
                 );
-            }
-
-            return;
-
-            void OffsetZPosition(GameObject card, int i)
-            {
-                var cardPosition = card.transform.position;
-                cardPosition.z += i * zOffsetStep;
-                card.transform.position = cardPosition;
             }
         }
     }

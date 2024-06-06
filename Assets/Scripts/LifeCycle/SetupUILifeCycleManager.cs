@@ -34,17 +34,17 @@ namespace LifeCycle
 
         private void HandleDealerAssignEvent(DealerAssignEvent evt)
         {
-            assignDealerButton?.SetActive(false);
+            assignDealerButton.SetActive(false);
         }
 
         private void HandleDealerChipArrangedEvent(DealerChipArrangedEvent evt)
         {
-            shuffleAndDealButton?.SetActive(true);
+            shuffleAndDealButton.SetActive(true);
         }
 
         private void HandleDealEvent(DealEvent evt)
         {
-            shuffleAndDealButton?.SetActive(false);
+            shuffleAndDealButton.SetActive(false);
         }
     }
 }

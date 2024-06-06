@@ -19,6 +19,10 @@ namespace Controllers
         [Tooltip("Animation duration in seconds.")]
         private float duration = 0.25f;
 
+        [FormerlySerializedAs("Ignore for Hidden Cursor.")]
+        [SerializeField]
+        private bool ignoreForHiddenCursor = true;
+
         private bool _isCardHighlighted;
 
         private Vector3 _newPosition;
@@ -33,17 +37,18 @@ namespace Controllers
 
         private void Update()
         {
-            foreach (
-                var cam in cameras
-                    .Where(cam => cam.gameObject.activeSelf)
-                    .Where(cam => cam.enabled)
-            )
-            {
-                CheckForHighlight(cam);
-            }
+            if (ignoreForHiddenCursor && IsCursorHidden()) return;
+
+            var activeCamera = cameras.First(cam => cam.gameObject.activeSelf);
+            CheckForCardHighlight(activeCamera);
         }
 
-        private void CheckForHighlight(Camera cam)
+        private static bool IsCursorHidden()
+        {
+            return Cursor.lockState == CursorLockMode.Locked;
+        }
+
+        private void CheckForCardHighlight(Camera cam)
         {
             var ray = cam.ScreenPointToRay(Input.mousePosition);
             if (!Physics.Raycast(ray, out var hit)) return;

@@ -7211,7 +7211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dealerChip: {fileID: 6714137939069112948}
-  duration: 2.5
+  duration: 1
   eastChipPlaceholder: {fileID: 148622279}
   northChipPlaceholder: {fileID: 1960153383}
   southChipPlaceholder: {fileID: 1548733483}
@@ -8670,6 +8670,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &370218420744301451
 GameObject:
   m_ObjectHideFlags: 0
@@ -8710,6 +8711,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &379772703527065887
 GameObject:
   m_ObjectHideFlags: 0
@@ -8750,6 +8752,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &411393921734724861
 GameObject:
   m_ObjectHideFlags: 0
@@ -8790,6 +8793,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &474133003431984330
 GameObject:
   m_ObjectHideFlags: 0
@@ -8830,6 +8834,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1001 &490967709450292341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9013,6 +9018,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &596087678511556712
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9230,6 +9236,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &722694169542426230
 Transform:
   m_ObjectHideFlags: 0
@@ -9378,6 +9385,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &776340328402160837
 Transform:
   m_ObjectHideFlags: 0
@@ -9727,6 +9735,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &1716761054518597686
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9912,6 +9921,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &1942298416332546333
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10023,6 +10033,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1001 &2136207912932379248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10177,6 +10188,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &2383377297423062682
 Transform:
   m_ObjectHideFlags: 0
@@ -10259,6 +10271,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &2480383449236506283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10460,6 +10473,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!33 &2697091687259550391
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10593,6 +10607,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!33 &3018661361449519342
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10671,6 +10686,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &3156621523526342918
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10759,6 +10775,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &3250640909818106262
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10965,6 +10982,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &3552483881329896134
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11343,6 +11361,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!33 &3896713887888561443
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11399,6 +11418,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &3969913560269621732
 GameObject:
   m_ObjectHideFlags: 0
@@ -11439,6 +11459,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &4021230072257837055
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11565,6 +11586,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &4185736159456745852
 Transform:
   m_ObjectHideFlags: 0
@@ -11764,6 +11786,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &4567406712047717465
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11847,6 +11870,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &4798804431010930731
 Transform:
   m_ObjectHideFlags: 0
@@ -11952,6 +11976,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &4971056986221090160
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12142,6 +12167,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &5206760419002807474
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12225,6 +12251,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!33 &5249060314737619707
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12316,6 +12343,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &5305330319975345967
 GameObject:
   m_ObjectHideFlags: 0
@@ -12356,6 +12384,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &5333792064851435670
 Transform:
   m_ObjectHideFlags: 0
@@ -12410,6 +12439,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!33 &5399030285361771905
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12466,6 +12496,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &5615124954173487260
 GameObject:
   m_ObjectHideFlags: 0
@@ -12506,6 +12537,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &5678418759451105130
 GameObject:
   m_ObjectHideFlags: 0
@@ -12546,6 +12578,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &5780958699220762484
 GameObject:
   m_ObjectHideFlags: 0
@@ -12586,6 +12619,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &5861745725345890443
 Transform:
   m_ObjectHideFlags: 0
@@ -12754,6 +12788,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!33 &6173818104344460755
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12802,6 +12837,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &6235213722964258505
 Transform:
   m_ObjectHideFlags: 0
@@ -12972,6 +13008,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &6427527582436506041
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13165,6 +13202,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!33 &6622891128701858239
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13333,6 +13371,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!33 &6989430646310933596
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13591,6 +13630,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &7502942766747037217
 Transform:
   m_ObjectHideFlags: 0
@@ -13890,6 +13930,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &7863057461603559720
 GameObject:
   m_ObjectHideFlags: 0
@@ -13930,6 +13971,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &7884040387868646781
 GameObject:
   m_ObjectHideFlags: 0
@@ -13970,6 +14012,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &8016973405657386601
 Transform:
   m_ObjectHideFlags: 0
@@ -14081,6 +14124,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &8099648064809384302
 Transform:
   m_ObjectHideFlags: 0
@@ -14374,6 +14418,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!23 &8666560541222664325
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14455,6 +14500,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1001 &8707196306229692250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14595,6 +14641,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &8834068320056761165
 Transform:
   m_ObjectHideFlags: 0
@@ -14649,6 +14696,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!1 &8904509200716274811
 GameObject:
   m_ObjectHideFlags: 0
@@ -14689,6 +14737,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &8913619704502932654
 Transform:
   m_ObjectHideFlags: 0
@@ -14743,6 +14792,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!4 &8976595769116249231
 Transform:
   m_ObjectHideFlags: 0
@@ -14883,6 +14933,7 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1
 --- !u!33 &9146242471302871092
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14988,3 +15039,4 @@ MonoBehaviour:
   - {fileID: 1615160560}
   offsetMultiplier: 0.05
   duration: 0.25
+  ignoreForHiddenCursor: 1

@@ -4,16 +4,16 @@ namespace Events
 {
     public class DealerAssignEvent
     {
-        private readonly Seat _seat;
-
         public DealerAssignEvent(Seat seat)
         {
-            _seat = seat;
+            Seat = seat;
         }
+
+        public Seat Seat { get; }
 
         public override string ToString()
         {
-            return $"Events.DealerAssignEvent (Dealer: {_seat})";
+            return $"Events.DealerAssignEvent (Dealer: {Seat})";
         }
     }
 }

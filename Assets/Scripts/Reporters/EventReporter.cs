@@ -21,7 +21,7 @@ namespace Reporters
 
         private void HandleEvent(TEvent evt)
         {
-            Debug.Log($"Event: {evt}");
+            Debug.Log($"Event: {evt.ToString()}");
         }
     }
 }

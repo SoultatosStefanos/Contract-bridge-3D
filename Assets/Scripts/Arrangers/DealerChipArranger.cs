@@ -1,4 +1,5 @@
 using Events;
+using JetBrains.Annotations;
 using Makaretu.Bridge;
 using Resolvers;
 using UnityEngine;
@@ -42,12 +43,12 @@ namespace Arrangers
 
         private void OnEnable()
         {
-            _eventBus.On<DealerAssignEvent>(HandleAssignDealerEvent);
+            _eventBus?.On<DealerAssignEvent>(HandleAssignDealerEvent);
         }
 
         private void OnDisable()
         {
-            _eventBus.Off<DealerAssignEvent>(HandleAssignDealerEvent);
+            _eventBus?.Off<DealerAssignEvent>(HandleAssignDealerEvent);
         }
 
         private void HandleAssignDealerEvent(DealerAssignEvent evt)
@@ -67,7 +68,9 @@ namespace Arrangers
                 iTween.Hash(
                     "position", chipPlaceHolder.transform.position,
                     "time", duration,
-                    "easetype", iTween.EaseType.easeInOutSine
+                    "easetype", iTween.EaseType.easeInOutSine,
+                    "oncomplete", "OnMoveComplete",
+                    "oncompletetarget", gameObject
                 )
             );
 
@@ -84,6 +87,12 @@ namespace Arrangers
                     _ => null
                 };
             }
+        }
+
+        [UsedImplicitly]
+        private void OnMoveComplete()
+        {
+            _eventBus?.Post(new DealerChipArrangedEvent());
         }
     }
 }

@@ -24,7 +24,8 @@ namespace Handlers
             deck.Shuffle()
                 .Deal(board);
 
-            _eventBus.Post(new DealEvent());
+            _eventBus?.Post(new ShuffleEvent());
+            _eventBus?.Post(new DealEvent());
         }
     }
 }

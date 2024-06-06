@@ -24,7 +24,7 @@ namespace Handlers
             var board = _boardResolver.GetBoard();
             board.Dealer = dealerSeat;
 
-            _eventBus.Post(new DealerAssignEvent());
+            _eventBus?.Post(new DealerAssignEvent());
         }
     }
 }

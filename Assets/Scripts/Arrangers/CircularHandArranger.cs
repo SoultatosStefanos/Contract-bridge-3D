@@ -1,4 +1,5 @@
 using Events;
+using JetBrains.Annotations;
 using Makaretu.Bridge;
 using Mappers;
 using Resolvers;
@@ -34,17 +35,19 @@ namespace Arrangers
         [Inject]
         private ICardMapper _cardMapper;
 
+        private int _cardsArrangedCount;
+
         [Inject]
         private IEventBus _eventBus;
 
         private void OnEnable()
         {
-            _eventBus.On<DealEvent>(HandleDealEvent);
+            _eventBus?.On<DealEvent>(HandleDealEvent);
         }
 
         private void OnDisable()
         {
-            _eventBus.Off<DealEvent>(HandleDealEvent);
+            _eventBus?.Off<DealEvent>(HandleDealEvent);
         }
 
         private void HandleDealEvent(DealEvent evt)
@@ -75,9 +78,21 @@ namespace Arrangers
                         "looktarget", transform.position,
                         "axis", "y",
                         "time", duration,
-                        "easetype", iTween.EaseType.easeInOutQuad
+                        "easetype", iTween.EaseType.easeInOutQuad,
+                        "oncomplete", "OnLookComplete",
+                        "oncompletetarget", gameObject,
+                        "oncompleteparams", cards.Count
                     )
                 );
+            }
+        }
+
+        [UsedImplicitly]
+        private void OnLookComplete(int cardsCount)
+        {
+            if (cardsCount == ++_cardsArrangedCount)
+            {
+                _eventBus?.Post(new CardsArrangedEvent());
             }
         }
     }

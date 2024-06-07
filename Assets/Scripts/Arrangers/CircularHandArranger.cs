@@ -1,3 +1,4 @@
+using System.Linq;
 using Events;
 using JetBrains.Annotations;
 using Makaretu.Bridge;
@@ -59,7 +60,10 @@ namespace Arrangers
         {
             var board = _boardResolver.GetBoard();
             var hand = board.Hands[seat];
-            var cards = hand.Cards;
+            var cards = hand.Cards
+                .OrderBy(card => card.Suit)
+                .ThenBy(card => card.Rank)
+                .ToList();
 
             for (var i = 0; i < cards.Count; i++)
             {

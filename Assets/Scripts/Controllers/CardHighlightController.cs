@@ -37,15 +37,8 @@ namespace Controllers
 
         private void Update()
         {
-            if (ignoreForHiddenCursor && IsCursorHidden()) return;
-
             var activeCamera = cameras.First(cam => cam.gameObject.activeSelf);
             CheckForCardHighlight(activeCamera);
-        }
-
-        private static bool IsCursorHidden()
-        {
-            return Cursor.lockState == CursorLockMode.Locked;
         }
 
         private void CheckForCardHighlight(Camera cam)
@@ -76,6 +69,8 @@ namespace Controllers
         // ReSharper disable Unity.PerformanceAnalysis
         private void HighlightCard()
         {
+            if (ignoreForHiddenCursor && IsCursorHidden()) return; // Ignore when looking around.
+
             iTween.MoveTo(
                 gameObject,
                 iTween.Hash(
@@ -86,6 +81,11 @@ namespace Controllers
             );
 
             _isCardHighlighted = true;
+        }
+
+        private static bool IsCursorHidden()
+        {
+            return Cursor.lockState == CursorLockMode.Locked;
         }
 
         // NOTE: Unity simply can't prove that this will be called at each frame, but it's all good.

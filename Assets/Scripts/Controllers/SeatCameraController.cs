@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Serialization;
+using Avatar = Alteruna.Avatar;
 
 namespace Controllers
 {
@@ -15,6 +16,8 @@ namespace Controllers
         [SerializeField]
         private KeyCode lockUnlockKey = KeyCode.L;
 
+        private Avatar _avatar;
+
         private float _currentXRotation;
 
         private float _currentYRotation;
@@ -23,11 +26,19 @@ namespace Controllers
 
         private void Start()
         {
+            _avatar = GetComponent<Avatar>();
+
+            if (!_avatar.IsMe)
+                return;
+
             _initialRotation = transform.localRotation;
         }
 
         private void Update()
         {
+            if (!_avatar.IsMe)
+                return;
+
             if (Input.GetKeyDown(lockUnlockKey)) ToggleLockUnlock();
 
             if (!IsUnlocked()) return;

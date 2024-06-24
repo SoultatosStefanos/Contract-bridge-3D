@@ -16,7 +16,9 @@ namespace Domain.Installers
             _session = new SessionEventDecoratorFactory().Create(deck, board);
         }
 
+        //
         // ReSharper disable Unity.PerformanceAnalysis
+        //
         public override void InstallBindings()
         {
             Container.Bind<IBoard>().FromInstance(_session.Board).AsSingle();

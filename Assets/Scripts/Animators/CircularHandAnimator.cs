@@ -1,9 +1,8 @@
 using System.Linq;
+using ContractBridge.Core;
 using Events;
 using JetBrains.Annotations;
-using Makaretu.Bridge;
-using Mappers;
-using Resolvers;
+using Registries;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
@@ -31,10 +30,7 @@ namespace Animators
         private float duration = 0.5f;
 
         [Inject]
-        private IBoardResolver _boardResolver;
-
-        [Inject]
-        private ICardMapper _cardMapper;
+        private ICardGameObjectRegistry _cardGameObjectRegistry;
 
         private int _cardsArrangedCount;
 
@@ -43,31 +39,30 @@ namespace Animators
 
         private void OnEnable()
         {
-            _eventBus?.On<DealEvent>(HandleDealEvent);
+            _eventBus?.On<DeckDealEvent>(HandleDeckDealEvent);
         }
 
         private void OnDisable()
         {
-            _eventBus?.Off<DealEvent>(HandleDealEvent);
+            _eventBus?.Off<DeckDealEvent>(HandleDeckDealEvent);
         }
 
-        private void HandleDealEvent(DealEvent evt)
+        private void HandleDeckDealEvent(DeckDealEvent evt)
         {
-            ArrangeCardsOnSpline();
+            AnimateCardsOnSpline(evt.Deck, evt.Board);
         }
 
-        private void ArrangeCardsOnSpline()
+        private void AnimateCardsOnSpline(IDeck deck, IBoard board)
         {
-            var board = _boardResolver.GetBoard();
-            var hand = board.Hands[seat];
-            var cards = hand.Cards
+            var hand = board.Hand(seat);
+            var cards = hand
                 .OrderBy(card => card.Suit)
                 .ThenBy(card => card.Rank)
                 .ToList();
 
             for (var i = 0; i < cards.Count; i++)
             {
-                var card = _cardMapper.GetGameObject(cards[i]);
+                var card = _cardGameObjectRegistry.GetGameObject(cards[i]);
 
                 card.layer = gameObject.layer; // Mine! (Culling mask from other players perspective).
 
@@ -96,7 +91,7 @@ namespace Animators
         {
             if (cardsCount == ++_cardsArrangedCount)
             {
-                _eventBus?.Post(new CardsArrangedEvent());
+                _eventBus?.Post(new CardsAnimatedEvent());
             }
         }
     }

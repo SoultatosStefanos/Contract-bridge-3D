@@ -1,5 +1,5 @@
-using Makaretu.Bridge;
-using Resolvers;
+using ContractBridge.Core;
+using Events;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -9,21 +9,31 @@ namespace Presenters
     public class DealerPresenter : MonoBehaviour
     {
         [Inject]
-        private IBoardResolver _boardResolver;
+        private IBoard _board;
 
         private TextMeshProUGUI _dealerText;
+
+        [Inject]
+        private IEventBus _eventBus;
 
         private void Start()
         {
             _dealerText = GetComponent<TextMeshProUGUI>();
-
-            UpdateDealerTextFromBoard();
         }
 
-        private void UpdateDealerTextFromBoard()
+        private void OnEnable()
         {
-            var board = _boardResolver.GetBoard();
-            UpdateDealerText(board.Dealer);
+            _eventBus.On<BoardDealerSetEvent>(HandleDealerSetEvent);
+        }
+
+        private void OnDisable()
+        {
+            _eventBus.Off<BoardDealerSetEvent>(HandleDealerSetEvent);
+        }
+
+        private void HandleDealerSetEvent(BoardDealerSetEvent evt)
+        {
+            UpdateDealerText(evt.Dealer);
         }
 
         private void UpdateDealerText(Seat dealerSeat)

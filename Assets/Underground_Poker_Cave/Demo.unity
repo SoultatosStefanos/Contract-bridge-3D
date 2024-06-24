@@ -2292,7 +2292,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 77
+  m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &150331964
 GameObject:
@@ -3121,6 +3121,7 @@ GameObject:
   - component: {fileID: 225610646}
   - component: {fileID: 225610645}
   - component: {fileID: 225610644}
+  - component: {fileID: 225610647}
   m_Layer: 5
   m_Name: Shuffle & Deal Button
   m_TagString: Untagged
@@ -3193,9 +3194,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 471765288}
-        m_TargetAssemblyTypeName: Handlers.DealHandler, Assembly-CSharp
-        m_MethodName: Invoke
+      - m_Target: {fileID: 225610647}
+        m_TargetAssemblyTypeName: Controllers.ShuffleAndDealController, Assembly-CSharp
+        m_MethodName: ShuffleAndDeal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3243,6 +3244,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225610642}
   m_CullTransparentMesh: 1
+--- !u!114 &225610647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225610642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083bf75eefdd42e2a3da15a27e5d6e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &228006197
 GameObject:
   m_ObjectHideFlags: 0
@@ -4337,8 +4350,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 471765287}
-  - component: {fileID: 471765286}
-  - component: {fileID: 471765288}
   - component: {fileID: 471765289}
   m_Layer: 0
   m_Name: UIManager
@@ -4347,19 +4358,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &471765286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471765285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc2ae23dc648445f9dcaf4fe8629810f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dealerSeat: 0
 --- !u!4 &471765287
 Transform:
   m_ObjectHideFlags: 0
@@ -4373,20 +4371,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 83
+  m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &471765288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471765285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e3f5dde15e44ce8b5f9d33d4046e5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &471765289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5010,7 +4996,7 @@ RectTransform:
   - {fileID: 145128787}
   - {fileID: 1125372438}
   m_Father: {fileID: 0}
-  m_RootOrder: 84
+  m_RootOrder: 82
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6126,7 +6112,7 @@ GameObject:
   - component: {fileID: 819443050}
   - component: {fileID: 819443049}
   m_Layer: 0
-  m_Name: GameInstaller
+  m_Name: Events Installer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6152,12 +6138,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819443048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1566056, y: 0.81187326, z: -0.26798794}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 75
+  m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &847552863
 GameObject:
@@ -6225,7 +6211,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 82
+  m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &847595916
 PrefabInstance:
@@ -7024,7 +7010,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 80
+  m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1125372437
 GameObject:
@@ -7272,6 +7258,7 @@ MonoBehaviour:
   _monoInstallers:
   - {fileID: 819443049}
   - {fileID: 938654540}
+  - {fileID: 1261894050}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -7302,7 +7289,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 74
+  m_RootOrder: 83
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1169715018
 GameObject:
@@ -7406,6 +7393,7 @@ GameObject:
   - component: {fileID: 1171731792}
   - component: {fileID: 1171731791}
   - component: {fileID: 1171731790}
+  - component: {fileID: 1171731793}
   m_Layer: 5
   m_Name: Assign Dealer Button
   m_TagString: Untagged
@@ -7478,9 +7466,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 471765286}
-        m_TargetAssemblyTypeName: Handlers.DealerAssignHandler, Assembly-CSharp
-        m_MethodName: Invoke
+      - m_Target: {fileID: 1171731793}
+        m_TargetAssemblyTypeName: Controllers.DealerSetController, Assembly-CSharp
+        m_MethodName: SetDealer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7528,6 +7516,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171731788}
   m_CullTransparentMesh: 1
+--- !u!114 &1171731793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171731788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c9cac4845284cc1a45f6af5b17a3c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dealerSeat: 0
 --- !u!1 &1215478816
 GameObject:
   m_ObjectHideFlags: 0
@@ -7756,6 +7757,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241045972}
   m_CullTransparentMesh: 1
+--- !u!1 &1261894049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1261894051}
+  - component: {fileID: 1261894050}
+  m_Layer: 0
+  m_Name: Registry Installer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1261894050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261894049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85bbc7e9b59425da6ec7769edc8e9c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1261894051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261894049}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 86
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1276815353
 GameObject:
   m_ObjectHideFlags: 0
@@ -9816,7 +9861,6 @@ GameObject:
   - component: {fileID: 1486982742}
   - component: {fileID: 1486982744}
   - component: {fileID: 1486982747}
-  - component: {fileID: 1486982745}
   - component: {fileID: 1486982746}
   m_Layer: 0
   m_Name: Game
@@ -9875,19 +9919,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quitKey: 27
---- !u!114 &1486982745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486982741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35592a36efdd41acb28e08dcb9ad9717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardArrangementsCount: 4
 --- !u!114 &1486982746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10063,7 +10094,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1502293678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f303e87aa709469eb49939da3fb520af, type: 3}
+  m_Script: {fileID: 11500000, guid: 656ffa00b34e4acda67d6b01ca5d1ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1514744799
@@ -10237,7 +10268,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 79
+  m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1567673203
 PrefabInstance:
@@ -11803,7 +11834,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 78
+  m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2015871291
 PrefabInstance:
@@ -12228,7 +12259,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 76
+  m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &97674541024714494
 Transform:

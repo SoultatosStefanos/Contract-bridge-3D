@@ -5,8 +5,7 @@ namespace Events.Impl
 {
     public class EventBus : IEventBus
     {
-        private readonly Dictionary<Type, List<Action<object>>> _subscribers =
-            new Dictionary<Type, List<Action<object>>>();
+        private readonly Dictionary<Type, List<Action<object>>> _subscribers = new();
 
         public void Post<T>(T evt)
         {

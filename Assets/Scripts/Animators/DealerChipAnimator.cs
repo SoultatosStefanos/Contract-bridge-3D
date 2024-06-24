@@ -1,7 +1,6 @@
+using ContractBridge.Core;
 using Events;
 using JetBrains.Annotations;
-using Makaretu.Bridge;
-using Resolvers;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
@@ -36,31 +35,25 @@ namespace Animators
         private GameObject westChipPlaceholder;
 
         [Inject]
-        private IBoardResolver _boardResolver;
-
-        [Inject]
         private IEventBus _eventBus;
 
         private void OnEnable()
         {
-            _eventBus?.On<DealerAssignEvent>(HandleAssignDealerEvent);
+            _eventBus?.On<BoardDealerSetEvent>(HandleBoardDealerSetEvent);
         }
 
         private void OnDisable()
         {
-            _eventBus?.Off<DealerAssignEvent>(HandleAssignDealerEvent);
+            _eventBus?.Off<BoardDealerSetEvent>(HandleBoardDealerSetEvent);
         }
 
-        private void HandleAssignDealerEvent(DealerAssignEvent evt)
+        private void HandleBoardDealerSetEvent(BoardDealerSetEvent evt)
         {
-            ArrangeDealerChip();
+            AnimateDealerChip(evt.Dealer);
         }
 
-        private void ArrangeDealerChip()
+        private void AnimateDealerChip(Seat dealer)
         {
-            var board = _boardResolver.GetBoard();
-            var dealer = board.Dealer;
-
             var chipPlaceHolder = DispatchChipPlaceHolder(dealer);
 
             iTween.MoveTo(
@@ -92,7 +85,7 @@ namespace Animators
         [UsedImplicitly]
         private void OnMoveComplete()
         {
-            _eventBus?.Post(new DealerChipArrangedEvent());
+            _eventBus?.Post(new DealerChipAnimatedEvent());
         }
     }
 }

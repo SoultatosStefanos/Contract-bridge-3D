@@ -1,5 +1,5 @@
-using Makaretu.Bridge;
-using Mappers;
+using ContractBridge.Core;
+using Registries;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
@@ -17,15 +17,18 @@ namespace Wrappers
         private Suit suit;
 
         [Inject]
-        private ICardMapper _cardMapper;
+        private ICardGameObjectRegistry _cardGameObjectRegistry;
 
-        public Card Card { get; private set; }
+        [Inject]
+        private IDeck _deck;
+
+        public ICard Card { get; private set; }
 
         private void Start()
         {
-            Card = Card.Get(rank, suit);
+            Card = _deck[rank, suit];
 
-            _cardMapper?.MapGameObject(Card, gameObject);
+            _cardGameObjectRegistry.Register(Card, gameObject);
         }
     }
 }

@@ -6,9 +6,9 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
 
-namespace Arrangers
+namespace Animators
 {
-    public class DealerChipArranger : MonoBehaviour
+    public class DealerChipAnimator : MonoBehaviour
     {
         [FormerlySerializedAs("Dealer Chip")]
         [SerializeField]

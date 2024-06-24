@@ -8,9 +8,9 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
 
-namespace Arrangers
+namespace Animators
 {
-    public class CircularHandArranger : MonoBehaviour
+    public class CircularHandAnimator : MonoBehaviour
     {
         [FormerlySerializedAs("Seat")]
         [SerializeField]

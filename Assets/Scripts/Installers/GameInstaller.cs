@@ -1,23 +1,49 @@
+using ContractBridge.Core;
+using ContractBridge.Core.Impl;
+using Decorators;
 using Events;
 using Events.Impl;
-using Mappers;
-using Mappers.Impl;
-using Resolvers;
-using Resolvers.Impl;
+using Factories;
 using Zenject;
 
 namespace Installers
 {
     public class GameInstaller : MonoInstaller
     {
+        private readonly IBoard _board;
+
+        private readonly IDeck _deck;
+
+        private readonly IEventBus _eventBus;
+
+        private readonly ISession _session;
+
+        public GameInstaller()
+        {
+            _eventBus = new EventBus();
+
+            _deck = new DeckEventDecorator(new Deck(new CardFactory()), _eventBus);
+            _board = new BoardEventDecorator(new Board(new HandFactory()), _eventBus);
+            _session = new SessionEventDecorator(
+                new Session(
+                    _deck,
+                    _board,
+                    new PairEventDecoratorFactory(_eventBus),
+                    new AuctionEventDecoratorFactory(_eventBus),
+                    new GameEventDecoratorFactory(_eventBus),
+                    new ScoringSystem()
+                ),
+                _eventBus
+            );
+        }
+
         public override void InstallBindings()
         {
-            Container.Bind<ICardMapper>().To<CardMapper>().AsSingle();
+            Container.Bind<IEventBus>().FromInstance(_eventBus);
 
-            Container.Bind<IBoardResolver>().To<BoardResolver>().AsSingle();
-            Container.Bind<IDeckResolver>().To<DeckResolver>().AsSingle();
-
-            Container.Bind<IEventBus>().To<EventBus>().AsSingle();
+            Container.Bind<IDeck>().FromInstance(_deck);
+            Container.Bind<IBoard>().FromInstance(_board);
+            Container.Bind<ISession>().FromInstance(_session);
         }
     }
 }

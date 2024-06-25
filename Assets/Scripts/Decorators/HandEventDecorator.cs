@@ -3,20 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using ContractBridge.Core;
 using Events;
-using Zenject;
 
 namespace Decorators
 {
     public class HandEventDecorator : IHand
     {
+        private readonly IEventBus _eventBus;
         private readonly IHand _hand;
 
-        [Inject]
-        private IEventBus _eventBus;
-
-        public HandEventDecorator(IHand hand)
+        public HandEventDecorator(IHand hand, IEventBus eventBus)
         {
             _hand = hand;
+            _eventBus = eventBus;
 
             _hand.Added += OnAdded;
             _hand.Removed += OnRemoved;

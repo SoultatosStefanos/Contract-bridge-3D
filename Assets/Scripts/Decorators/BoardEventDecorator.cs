@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using ContractBridge.Core;
 using Events;
-using Zenject;
 
 namespace Decorators
 {
@@ -10,12 +9,12 @@ namespace Decorators
     {
         private readonly IBoard _board;
 
-        [Inject]
-        private IEventBus _eventBus;
+        private readonly IEventBus _eventBus;
 
-        public BoardEventDecorator(IBoard board)
+        public BoardEventDecorator(IBoard board, IEventBus eventBus)
         {
             _board = board;
+            _eventBus = eventBus;
 
             _board.DealerSet += OnDealerSet;
             _board.VulnerabilitySet += OnVulnerabilitySet;

@@ -2,20 +2,18 @@ using System;
 using System.Collections.Generic;
 using ContractBridge.Core;
 using Events;
-using Zenject;
 
 namespace Decorators
 {
     public class SessionEventDecorator : ISession
     {
+        private readonly IEventBus _eventBus;
         private readonly ISession _session;
 
-        [Inject]
-        private IEventBus _eventBus;
-
-        public SessionEventDecorator(ISession session)
+        public SessionEventDecorator(ISession session, IEventBus eventBus)
         {
             _session = session;
+            _eventBus = eventBus;
 
             _session.PhaseChanged += OnPhaseChanged;
         }

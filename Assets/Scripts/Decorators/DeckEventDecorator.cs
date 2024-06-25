@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using ContractBridge.Core;
 using Events;
-using Zenject;
 
 namespace Decorators
 {
@@ -11,12 +10,12 @@ namespace Decorators
     {
         private readonly IDeck _deck;
 
-        [Inject]
-        private IEventBus _eventBus;
+        private readonly IEventBus _eventBus;
 
-        public DeckEventDecorator(IDeck deck)
+        public DeckEventDecorator(IDeck deck, IEventBus eventBus)
         {
             _deck = deck;
+            _eventBus = eventBus;
 
             _deck.Shuffled += OnShuffled;
             _deck.Dealt += OnDealt;

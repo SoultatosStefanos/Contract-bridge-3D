@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using ContractBridge.Core;
 using Events;
-using Zenject;
 
 namespace Decorators
 {
@@ -10,12 +9,12 @@ namespace Decorators
     {
         private readonly IAuction _auction;
 
-        [Inject]
-        private IEventBus _eventBus;
+        private readonly IEventBus _eventBus;
 
-        public AuctionEventDecorator(IAuction auction)
+        public AuctionEventDecorator(IAuction auction, IEventBus eventBus)
         {
             _auction = auction;
+            _eventBus = eventBus;
 
             _auction.TurnChanged += OnTurnChanged;
             _auction.Called += OnCalled;

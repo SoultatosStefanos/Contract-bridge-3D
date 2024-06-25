@@ -2,20 +2,18 @@ using System;
 using System.Collections.Generic;
 using ContractBridge.Core;
 using Events;
-using Zenject;
 
 namespace Decorators
 {
     public class PairEventDecorator : IPair
     {
+        private readonly IEventBus _eventBus;
         private readonly IPair _pair;
 
-        [Inject]
-        private IEventBus _eventBus;
-
-        public PairEventDecorator(IPair pair)
+        public PairEventDecorator(IPair pair, IEventBus eventBus)
         {
             _pair = pair;
+            _eventBus = eventBus;
 
             _pair.TrickWon += OnTrickWon;
             _pair.Scored += OnScored;

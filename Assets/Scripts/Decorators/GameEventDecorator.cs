@@ -2,20 +2,18 @@ using System;
 using System.Collections.Generic;
 using ContractBridge.Core;
 using Events;
-using Zenject;
 
 namespace Decorators
 {
     public class GameEventDecorator : IGame
     {
+        private readonly IEventBus _eventBus;
         private readonly IGame _game;
 
-        [Inject]
-        private IEventBus _eventBus;
-
-        public GameEventDecorator(IGame game)
+        public GameEventDecorator(IGame game, IEventBus eventBus)
         {
             _game = game;
+            _eventBus = eventBus;
 
             _game.LeadChanged += OnLeadChanged;
             _game.TurnChanged += OnTurnChanged;

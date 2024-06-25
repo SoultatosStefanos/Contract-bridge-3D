@@ -48,7 +48,8 @@ namespace Presenters
 
         private void UpdateScore(int score)
         {
-            _scoreText.text = score.ToString();
+            var partnershipPrefix = partnership == Partnership.EastWest ? "E / W : " : "N / S : ";
+            _scoreText.text = partnershipPrefix + score;
         }
     }
 }

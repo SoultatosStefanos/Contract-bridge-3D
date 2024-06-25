@@ -2095,7 +2095,7 @@ GameObject:
   - component: {fileID: 145128787}
   - component: {fileID: 145128790}
   - component: {fileID: 145128789}
-  - component: {fileID: 145128788}
+  - component: {fileID: 145128791}
   m_Layer: 5
   m_Name: Dealer Text
   m_TagString: Untagged
@@ -2123,18 +2123,6 @@ RectTransform:
   m_AnchoredPosition: {x: 304, y: 172}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &145128788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145128786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 656ffa00b34e4acda67d6b01ca5d1ce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &145128789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2232,6 +2220,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145128786}
   m_CullTransparentMesh: 1
+--- !u!114 &145128791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145128786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6994201d5e4595bbe5e41cbf2bbae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &148491292
 GameObject:
   m_ObjectHideFlags: 0

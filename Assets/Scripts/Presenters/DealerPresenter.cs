@@ -1,5 +1,4 @@
 using ContractBridge.Core;
-using Events;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -13,27 +12,18 @@ namespace Presenters
 
         private TextMeshProUGUI _dealerText;
 
-        [Inject]
-        private IEventBus _eventBus;
-
         private void Start()
         {
             _dealerText = GetComponent<TextMeshProUGUI>();
+            UpdateDealerTextFromBoard();
         }
 
-        private void OnEnable()
+        private void UpdateDealerTextFromBoard()
         {
-            _eventBus.On<BoardDealerSetEvent>(HandleDealerSetEvent);
-        }
-
-        private void OnDisable()
-        {
-            _eventBus.Off<BoardDealerSetEvent>(HandleDealerSetEvent);
-        }
-
-        private void HandleDealerSetEvent(BoardDealerSetEvent evt)
-        {
-            UpdateDealerText(evt.Dealer);
+            if (_board.Dealer is { } dealer)
+            {
+                UpdateDealerText(dealer);
+            }
         }
 
         private void UpdateDealerText(Seat dealerSeat)

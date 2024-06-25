@@ -1,4 +1,6 @@
 using ContractBridge.Core;
+using ContractBridge.Core.Impl;
+using Decorators;
 using Factories;
 using Zenject;
 
@@ -6,21 +8,31 @@ namespace Installers
 {
     public class DomainInstaller : MonoInstaller
     {
-        private readonly ISession _session;
-
-        public DomainInstaller()
-        {
-            var deck = new DeckEventDecoratorFactory().Create();
-            var board = new BoardEventDecoratorFactory().Create();
-
-            _session = new SessionEventDecoratorFactory().Create(deck, board);
-        }
-
         public override void InstallBindings()
         {
-            Container.Bind<IBoard>().FromInstance(_session.Board).AsSingle();
-            Container.Bind<IDeck>().FromInstance(_session.Deck).AsSingle();
-            Container.Bind<ISession>().FromInstance(_session).AsSingle();
+            Container.Bind<IBoard>()
+                .To<BoardEventDecorator>()
+                .AsSingle()
+                .WithArguments(new Board(new HandEventDecoratorFactory()));
+
+            Container.Bind<IDeck>()
+                .To<DeckEventDecorator>()
+                .AsSingle()
+                .WithArguments(new Deck(new CardFactory()));
+
+            Container.Bind<ISession>()
+                .To<SessionEventDecorator>()
+                .AsSingle()
+                .WithArguments(
+                    new Session(
+                        Container.Resolve<IDeck>(),
+                        Container.Resolve<IBoard>(),
+                        new PairEventDecoratorFactory(),
+                        new AuctionEventDecoratorFactory(),
+                        new GameEventDecoratorFactory(),
+                        new ScoringSystem()
+                    )
+                );
         }
     }
 }

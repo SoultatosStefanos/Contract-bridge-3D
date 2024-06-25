@@ -3,7 +3,7 @@ using UnityEngine.Serialization;
 
 namespace Controllers
 {
-    // TODO Remove
+    // TODO Remove (Kept for testing only).
     public class ContextSwitchController : MonoBehaviour
     {
         [FormerlySerializedAs("Main")]

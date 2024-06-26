@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 21451896}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 81513586}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 116349222}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 127614970}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2662,7 +2662,7 @@ GameObject:
   - component: {fileID: 136612961}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2895,7 +2895,7 @@ GameObject:
   - component: {fileID: 143979175}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3555,7 +3555,7 @@ GameObject:
   - component: {fileID: 181052351}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4828,7 +4828,7 @@ GameObject:
   - component: {fileID: 240256534}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5126,7 +5126,7 @@ GameObject:
   - component: {fileID: 293032451}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5338,7 +5338,7 @@ GameObject:
   - component: {fileID: 304918134}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5557,7 +5557,7 @@ GameObject:
   - component: {fileID: 333307625}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5633,7 +5633,7 @@ GameObject:
   - component: {fileID: 351162611}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5799,7 +5799,7 @@ GameObject:
   - component: {fileID: 382224999}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5991,7 +5991,7 @@ GameObject:
   - component: {fileID: 407994221}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6828,7 +6828,7 @@ GameObject:
   - component: {fileID: 505189032}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6963,7 +6963,7 @@ GameObject:
   - component: {fileID: 523903832}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7195,7 +7195,7 @@ GameObject:
   - component: {fileID: 526230138}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7330,7 +7330,7 @@ GameObject:
   - component: {fileID: 527115391}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7995,7 +7995,7 @@ GameObject:
   - component: {fileID: 573395673}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8130,7 +8130,7 @@ GameObject:
   - component: {fileID: 579813419}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8481,7 +8481,7 @@ GameObject:
   - component: {fileID: 614004326}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8943,7 +8943,7 @@ GameObject:
   - component: {fileID: 634380747}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9139,7 +9139,7 @@ GameObject:
   - component: {fileID: 654754575}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9395,7 +9395,7 @@ GameObject:
   - component: {fileID: 680902106}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9561,7 +9561,7 @@ GameObject:
   - component: {fileID: 706311379}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9696,7 +9696,7 @@ GameObject:
   - component: {fileID: 721254684}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10049,7 +10049,7 @@ GameObject:
   - component: {fileID: 752047077}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10182,7 +10182,7 @@ GameObject:
   - component: {fileID: 764290278}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10485,7 +10485,7 @@ GameObject:
   - component: {fileID: 825581252}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10620,7 +10620,7 @@ GameObject:
   - component: {fileID: 845457375}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10755,7 +10755,7 @@ GameObject:
   - component: {fileID: 845984380}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10890,7 +10890,7 @@ GameObject:
   - component: {fileID: 847298061}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11354,7 +11354,7 @@ GameObject:
   - component: {fileID: 892170771}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11430,7 +11430,7 @@ GameObject:
   - component: {fileID: 895509752}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12851,7 +12851,7 @@ GameObject:
   - component: {fileID: 1139279368}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12986,7 +12986,7 @@ GameObject:
   - component: {fileID: 1154155427}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13424,7 +13424,7 @@ GameObject:
   - component: {fileID: 1180278712}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14692,7 +14692,7 @@ GameObject:
   - component: {fileID: 1304006125}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15442,7 +15442,7 @@ GameObject:
   - component: {fileID: 1367711114}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15583,7 +15583,7 @@ GameObject:
   - component: {fileID: 1387721922}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15958,7 +15958,7 @@ GameObject:
   - component: {fileID: 1393223946}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16258,7 +16258,7 @@ GameObject:
   - component: {fileID: 1418663349}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16695,7 +16695,7 @@ GameObject:
   - component: {fileID: 1446139522}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16828,7 +16828,7 @@ GameObject:
   - component: {fileID: 1458555208}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17402,7 +17402,7 @@ GameObject:
   - component: {fileID: 1491033552}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17478,7 +17478,7 @@ GameObject:
   - component: {fileID: 1499774999}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17822,7 +17822,7 @@ GameObject:
   - component: {fileID: 1517694763}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17957,7 +17957,7 @@ GameObject:
   - component: {fileID: 1518062433}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18114,7 +18114,7 @@ GameObject:
   - component: {fileID: 1548471478}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18367,7 +18367,7 @@ GameObject:
   - component: {fileID: 1581294733}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18507,7 +18507,7 @@ GameObject:
   - component: {fileID: 1592514239}
   m_Layer: 5
   m_Name: Suit Image
-  m_TagString: Untagged
+  m_TagString: Bidding History / Suit Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18951,7 +18951,7 @@ GameObject:
   - component: {fileID: 1624526571}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19162,7 +19162,7 @@ GameObject:
   - component: {fileID: 1642198043}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19440,7 +19440,7 @@ GameObject:
   - component: {fileID: 1664182479}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19845,7 +19845,7 @@ GameObject:
   - component: {fileID: 1698054484}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19980,7 +19980,7 @@ GameObject:
   - component: {fileID: 1721976747}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20344,7 +20344,7 @@ GameObject:
   - component: {fileID: 1741508940}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20540,7 +20540,7 @@ GameObject:
   - component: {fileID: 1749059759}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20790,7 +20790,7 @@ GameObject:
   - component: {fileID: 1785433475}
   m_Layer: 5
   m_Name: Pass / Double Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Pass or Double Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21211,7 +21211,7 @@ GameObject:
   - component: {fileID: 1824964835}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21707,7 +21707,7 @@ GameObject:
   - component: {fileID: 1960842540}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21842,7 +21842,7 @@ GameObject:
   - component: {fileID: 1977919997}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22435,7 +22435,7 @@ GameObject:
   - component: {fileID: 2049463721}
   m_Layer: 5
   m_Name: Rank Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Bidding History / Rank Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22812,7 +22812,7 @@ GameObject:
   - component: {fileID: 2120515513}
   m_Layer: 5
   m_Name: NT Text
-  m_TagString: Untagged
+  m_TagString: Bidding History / NT Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

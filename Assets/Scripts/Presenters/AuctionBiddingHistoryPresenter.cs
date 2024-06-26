@@ -2,16 +2,53 @@ using System;
 using System.Linq;
 using ContractBridge.Core;
 using Events;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Zenject;
 
 namespace Presenters
 {
+    // TODO Test, check if inactive children are included!
+
     public class AuctionBiddingHistoryPresenter : MonoBehaviour
     {
         private const int SeatCount = 4;
 
+        private const int MaxAllowedPlayCount = 4;
+
         private const string BiddingHistoryPanelTag = "Bidding History / Panel";
+
+        private const string BiddingHistoryPassDoubleTextTag = "Bidding History / Pass or Double Text";
+
+        private const string BiddingHistoryRankTextTag = "Bidding History / Rank Text";
+
+        private const string BiddingHistoryNtTextTag = "Bidding History / NT Text";
+
+        private const string BiddingSuitImageTag = "Bidding History / Suit Image";
+
+        private const string PassCaption = "Pass";
+
+        private const string DoubleCaption = "Double";
+
+        private const string NtCaption = "NT";
+
+        [FormerlySerializedAs("Club Suit")]
+        [SerializeField]
+        private Sprite clubSuit;
+
+        [FormerlySerializedAs("Diamonds Suit")]
+        [SerializeField]
+        private Sprite diamondsSuit;
+
+        [FormerlySerializedAs("Spades Suit")]
+        [SerializeField]
+        private Sprite spadesSuit;
+
+        [FormerlySerializedAs("Hearts Suit")]
+        [SerializeField]
+        private Sprite heartsSuit;
 
         private GameObject[] _bidPanels;
 
@@ -77,8 +114,54 @@ namespace Presenters
             UpdateAuctionBids(seat, panel =>
             {
                 Debug.Log($"Updating panel: {panel.name}");
-                // TODO
+
+                var rankTextGameObject = FindChildByTag(panel, BiddingHistoryRankTextTag);
+
+                Debug.Assert(!rankTextGameObject.activeSelf);
+
+                rankTextGameObject.SetActive(true);
+
+                var rankText = rankTextGameObject.GetComponent<TextMeshProUGUI>();
+                rankText.text = bid.Level.ToString();
+
+                if (bid.Denomination == Denomination.NoTrumps)
+                {
+                    var ntGameObject = FindChildByTag(panel, BiddingHistoryNtTextTag);
+
+                    Debug.Assert(!ntGameObject.activeSelf);
+
+                    ntGameObject.SetActive(true);
+
+                    var ntText = ntGameObject.GetComponent<TextMeshProUGUI>();
+                    ntText.text = NtCaption;
+                }
+                else
+                {
+                    var suitGameObject = FindChildByTag(panel, BiddingSuitImageTag);
+
+                    Debug.Assert(!suitGameObject.activeSelf);
+
+                    suitGameObject.SetActive(true);
+
+                    var suitImage = suitGameObject.GetComponent<Image>();
+                    suitImage.sprite = SuitSprite(bid.Denomination);
+                }
             });
+        }
+
+        private Sprite SuitSprite(Denomination denomination)
+        {
+            Debug.Assert(denomination != Denomination.NoTrumps);
+
+            // ReSharper disable once SwitchExpressionHandlesSomeKnownEnumValuesWithExceptionInDefault
+            return denomination switch
+            {
+                Denomination.Clubs => clubSuit,
+                Denomination.Diamonds => diamondsSuit,
+                Denomination.Hearts => heartsSuit,
+                Denomination.Spades => spadesSuit,
+                _ => throw new ArgumentOutOfRangeException(nameof(denomination), denomination, null)
+            };
         }
 
         private void UpdateAuctionBidsWithPass(Seat seat)
@@ -86,7 +169,15 @@ namespace Presenters
             UpdateAuctionBids(seat, panel =>
             {
                 Debug.Log($"Updating panel: {panel.name}");
-                // TODO
+
+                var passTextGameObject = FindChildByTag(panel, BiddingHistoryPassDoubleTextTag);
+
+                Debug.Assert(!passTextGameObject.activeSelf);
+
+                passTextGameObject.SetActive(true);
+
+                var passText = passTextGameObject.GetComponent<TextMeshProUGUI>();
+                passText.text = PassCaption;
             });
         }
 
@@ -95,14 +186,30 @@ namespace Presenters
             UpdateAuctionBids(seat, panel =>
             {
                 Debug.Log($"Updating panel: {panel.name}");
-                // TODO
+
+                var doubleTextGameObject = FindChildByTag(panel, BiddingHistoryPassDoubleTextTag);
+
+                Debug.Assert(!doubleTextGameObject.activeSelf);
+
+                doubleTextGameObject.SetActive(true);
+
+                var doubleText = doubleTextGameObject.GetComponent<TextMeshProUGUI>();
+                doubleText.text = DoubleCaption;
             });
         }
 
         private void UpdateAuctionBids(Seat seat, Action<GameObject> updateAction)
         {
             var bidPanelIndex = NextBidPanelIndex(seat);
-            updateAction.Invoke(_bidPanels[bidPanelIndex]);
+            Debug.Assert(bidPanelIndex is >= 0 and <= SeatCount * SeatCount);
+
+            var bidPanel = _bidPanels[bidPanelIndex];
+
+            Debug.Assert(!bidPanel.activeSelf);
+
+            bidPanel.SetActive(true);
+            updateAction.Invoke(bidPanel);
+
             IncrementSeatPlayCount(seat);
         }
 
@@ -129,22 +236,34 @@ namespace Presenters
             {
                 case Seat.East:
                     ++_eastPlayCount;
+                    CheckPlayCount(_eastPlayCount);
                     break;
 
                 case Seat.South:
                     ++_southPlayCount;
+                    CheckPlayCount(_southPlayCount);
                     break;
 
                 case Seat.West:
                     ++_westPlayCount;
+                    CheckPlayCount(_westPlayCount);
                     break;
 
                 case Seat.North:
                     ++_northPlayCount;
+                    CheckPlayCount(_northPlayCount);
                     break;
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(seat), seat, null);
+            }
+        }
+
+        private static void CheckPlayCount(int playCount)
+        {
+            if (playCount > MaxAllowedPlayCount)
+            {
+                throw new InvalidOperationException("Did not make as many panels!");
             }
         }
 
@@ -158,6 +277,14 @@ namespace Presenters
                 Seat.North => 3,
                 _ => throw new ArgumentOutOfRangeException(nameof(seat), seat, null)
             };
+        }
+
+        private static GameObject FindChildByTag(GameObject parent, string tag)
+        {
+            return parent.transform.Cast<Transform>()
+                .Where(child => child.CompareTag(tag))
+                .Select(child => child.gameObject)
+                .FirstOrDefault();
         }
     }
 }

@@ -5,8 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
-  - Bid History Panel
-  - Bid Action Button
+  - Bidding History / Panel
+  - Bidding History / Pass or Double Text
+  - Bidding History / Rank Text
+  - Bidding History / NT Text
+  - Bidding History / Suit Image
   layers:
   - Default
   - TransparentFX

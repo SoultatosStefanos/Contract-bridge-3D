@@ -11,7 +11,7 @@ namespace Presenters
     {
         private const int SeatCount = 4;
 
-        private const string BiddingHistoryPanelTag = "Biding History / Panel";
+        private const string BiddingHistoryPanelTag = "Bidding History / Panel";
 
         private GameObject[] _bidPanels;
 

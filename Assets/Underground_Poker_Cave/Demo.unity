@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 646128}
   m_Layer: 5
   m_Name: Bid Panel (10)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4077,7 +4077,7 @@ GameObject:
   - component: {fileID: 214028898}
   m_Layer: 5
   m_Name: Bid Panel (4)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5261,7 +5261,7 @@ GameObject:
   - component: {fileID: 295522503}
   m_Layer: 5
   m_Name: East Panel
-  m_TagString: Untagged
+  m_TagString: Bid History Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6608,7 +6608,7 @@ GameObject:
   - component: {fileID: 485837938}
   m_Layer: 5
   m_Name: Bid Panel (3)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8375,7 +8375,7 @@ GameObject:
   - component: {fileID: 605703307}
   m_Layer: 5
   m_Name: Bid Panel (8)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8617,7 +8617,7 @@ GameObject:
   - component: {fileID: 622772206}
   m_Layer: 5
   m_Name: Bid Panel (6)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8723,7 +8723,7 @@ GameObject:
   - component: {fileID: 628708670}
   m_Layer: 5
   m_Name: West Panel
-  m_TagString: Untagged
+  m_TagString: Bid History Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9772,7 +9772,7 @@ GameObject:
   - component: {fileID: 735195601}
   m_Layer: 5
   m_Name: North Panel
-  m_TagString: Untagged
+  m_TagString: Bid History Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11248,7 +11248,7 @@ GameObject:
   - component: {fileID: 879080738}
   m_Layer: 5
   m_Name: Bid Panel (5)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13501,7 +13501,7 @@ GameObject:
   - component: {fileID: 1190114234}
   m_Layer: 5
   m_Name: Bid Panel (1)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13745,7 +13745,7 @@ GameObject:
   - component: {fileID: 1210781529}
   m_Layer: 5
   m_Name: Bid Panel (16)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13852,7 +13852,7 @@ GameObject:
   - component: {fileID: 1211608669}
   m_Layer: 5
   m_Name: Bid Panel (7)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16152,7 +16152,7 @@ GameObject:
   - component: {fileID: 1405901406}
   m_Layer: 5
   m_Name: Bid Panel (11)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20238,7 +20238,7 @@ GameObject:
   - component: {fileID: 1737702706}
   m_Layer: 5
   m_Name: Bid Panel (13)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21347,7 +21347,7 @@ GameObject:
   - component: {fileID: 1850643106}
   m_Layer: 5
   m_Name: Bid Panel (2)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21599,7 +21599,7 @@ GameObject:
   - component: {fileID: 1929316671}
   m_Layer: 5
   m_Name: South Panel
-  m_TagString: Untagged
+  m_TagString: Bid History Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21978,7 +21978,7 @@ GameObject:
   - component: {fileID: 1986430160}
   m_Layer: 5
   m_Name: Bid Panel (14)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22085,7 +22085,7 @@ GameObject:
   - component: {fileID: 2012005739}
   m_Layer: 5
   m_Name: Bid Panel (12)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22253,7 +22253,7 @@ GameObject:
   - component: {fileID: 2028288134}
   m_Layer: 5
   m_Name: Bid Panel (9)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22706,7 +22706,7 @@ GameObject:
   - component: {fileID: 2108017254}
   m_Layer: 5
   m_Name: Bid Panel (15)
-  m_TagString: Bid History Panel
+  m_TagString: Bidding History / Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

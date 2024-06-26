@@ -829,6 +829,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f18739ca8d642a89046f25d416208b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clubSuit: {fileID: 21300000, guid: b09c27c0e2e6d5607922f933870f64e3, type: 3}
+  diamondsSuit: {fileID: 21300000, guid: 3b627c86d3d7cbff5b8700064a59f80b, type: 3}
+  spadesSuit: {fileID: 21300000, guid: 4d620893364298be0a72c48e686e4c69, type: 3}
+  heartsSuit: {fileID: 21300000, guid: eb789790919b4669c8df067c1c4d443f, type: 3}
 --- !u!1001 &85079039
 PrefabInstance:
   m_ObjectHideFlags: 0

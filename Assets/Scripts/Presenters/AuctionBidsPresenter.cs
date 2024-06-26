@@ -11,7 +11,7 @@ namespace Presenters
     {
         private const int SeatCount = 4;
 
-        private const string BidPanelNamePrefix = "Bid Panel";
+        private const string BidHistoryPanelTag = "Bid History Panel";
 
         private GameObject[] _bidPanels;
 
@@ -29,9 +29,11 @@ namespace Presenters
         private void Start()
         {
             _bidPanels = transform.Cast<Transform>()
-                .Where(child => child.name.StartsWith(BidPanelNamePrefix))
+                .Where(child => child.CompareTag(BidHistoryPanelTag))
                 .Select(child => child.gameObject)
                 .ToArray();
+            
+            Debug.Assert(_bidPanels.Length == 16);
         }
 
         private void OnEnable()

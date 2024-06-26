@@ -7,11 +7,11 @@ using Zenject;
 
 namespace Presenters
 {
-    public class AuctionBidsPresenter : MonoBehaviour
+    public class AuctionBiddingHistoryPresenter : MonoBehaviour
     {
         private const int SeatCount = 4;
 
-        private const string BidHistoryPanelTag = "Bid History Panel";
+        private const string BiddingHistoryPanelTag = "Biding History / Panel";
 
         private GameObject[] _bidPanels;
 
@@ -29,10 +29,10 @@ namespace Presenters
         private void Start()
         {
             _bidPanels = transform.Cast<Transform>()
-                .Where(child => child.CompareTag(BidHistoryPanelTag))
+                .Where(child => child.CompareTag(BiddingHistoryPanelTag))
                 .Select(child => child.gameObject)
                 .ToArray();
-            
+
             Debug.Assert(_bidPanels.Length == 16);
         }
 
@@ -108,7 +108,7 @@ namespace Presenters
 
         private int NextBidPanelIndex(Seat seat)
         {
-            return StartBidPanelSeatIndex(seat) + SeatPlayCount(seat) * SeatCount;
+            return FirstBidPanelSeatIndex(seat) + SeatPlayCount(seat) * SeatCount;
         }
 
         private int SeatPlayCount(Seat seat)
@@ -148,7 +148,7 @@ namespace Presenters
             }
         }
 
-        private static int StartBidPanelSeatIndex(Seat seat)
+        private static int FirstBidPanelSeatIndex(Seat seat)
         {
             return seat switch
             {

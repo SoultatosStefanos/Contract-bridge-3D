@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 40166221}
   m_Layer: 5
   m_Name: Hearts Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Denomination Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3772,7 +3772,7 @@ GameObject:
   - component: {fileID: 187119884}
   m_Layer: 5
   m_Name: 5 Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5420,7 +5420,7 @@ GameObject:
   - component: {fileID: 322075146}
   m_Layer: 5
   m_Name: 2 Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6163,7 +6163,7 @@ GameObject:
   - component: {fileID: 431881339}
   m_Layer: 5
   m_Name: 1 Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6306,7 +6306,7 @@ GameObject:
   - component: {fileID: 441897860}
   m_Layer: 5
   m_Name: 6 Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7528,7 +7528,7 @@ GameObject:
   - component: {fileID: 553734214}
   m_Layer: 5
   m_Name: Clubs Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Denomination Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8806,7 +8806,7 @@ GameObject:
   - component: {fileID: 634254459}
   m_Layer: 5
   m_Name: 7 Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9912,7 +9912,7 @@ GameObject:
   - component: {fileID: 747265985}
   m_Layer: 5
   m_Name: Spades Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Denomination Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14385,7 +14385,7 @@ GameObject:
   - component: {fileID: 1276815355}
   m_Layer: 5
   m_Name: NT Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Denomination Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15305,7 +15305,7 @@ GameObject:
   - component: {fileID: 1365312491}
   m_Layer: 5
   m_Name: Diamonds Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Denomination Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15821,7 +15821,7 @@ GameObject:
   - component: {fileID: 1390280500}
   m_Layer: 5
   m_Name: 4 Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16340,7 +16340,7 @@ GameObject:
   - component: {fileID: 1420532183}
   m_Layer: 5
   m_Name: 3 Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18814,7 +18814,7 @@ GameObject:
   - component: {fileID: 1621150224}
   m_Layer: 5
   m_Name: Double Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Double Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19303,7 +19303,7 @@ GameObject:
   - component: {fileID: 1661821794}
   m_Layer: 5
   m_Name: Pass Button
-  m_TagString: Untagged
+  m_TagString: Bidding Actions / Pass Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

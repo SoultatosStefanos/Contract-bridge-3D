@@ -10,6 +10,10 @@ TagManager:
   - Bidding History / Rank Text
   - Bidding History / NT Text
   - Bidding History / Suit Image
+  - Bidding Actions / Level Button
+  - Bidding Actions / Denomination Button
+  - Bidding Actions / Pass Button
+  - Bidding Actions / Double Button
   layers:
   - Default
   - TransparentFX

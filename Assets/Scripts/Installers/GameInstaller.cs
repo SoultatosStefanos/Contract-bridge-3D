@@ -44,6 +44,8 @@ namespace Installers
             Container.Bind<IDeck>().FromInstance(_deck);
             Container.Bind<IBoard>().FromInstance(_board);
             Container.Bind<ISession>().FromInstance(_session);
+
+            Container.Bind<IBidFactory>().To<BidFactory>().AsSingle();
         }
     }
 }

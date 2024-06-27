@@ -1,14 +1,74 @@
+using System.Collections.Generic;
+using System.Linq;
+using ContractBridge.Core;
+using Events;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Wrappers;
+using Zenject;
 
 namespace Presenters
 {
-    // TODO On AuctionTurnChangedEvent do
-    // foreach btn in { levelButtons, denomButtons, passButton, doubleButton}
-    // check if the corresponding play with btn can be played (and all other combinations if it's level or denom)
-    // activate/deactivate accordingly
-    // use tags for the buttons
-
     public class AuctionBiddingActionsPresenter : MonoBehaviour
     {
+        private const string AuctionActionButtonTag = "Auction Action Button";
+
+        [FormerlySerializedAs("Player Seat")]
+        [SerializeField]
+        private Seat playerSeat;
+
+        private IEnumerable<GameObject> _auctionActionButtons;
+
+        [Inject]
+        private IEventBus _eventBus;
+
+        [Inject]
+        private ISession _session;
+
+        private void OnEnable()
+        {
+            _eventBus.On<AuctionTurnChangeEvent>(HandleAuctionTurnChangedEvent);
+        }
+
+        private void OnDisable()
+        {
+            _eventBus.Off<AuctionTurnChangeEvent>(HandleAuctionTurnChangedEvent);
+        }
+
+        private void HandleAuctionTurnChangedEvent(AuctionTurnChangeEvent obj)
+        {
+            UpdateAuctionActionButtons();
+        }
+
+        private void UpdateAuctionActionButtons()
+        {
+            foreach (var actionButton in FindAuctionActionButtons())
+            {
+                var actionWrapper = actionButton.GetComponent<AuctionActionWrapper>();
+                actionButton.SetActive(actionWrapper.CanPlayAction());
+            }
+        }
+
+        private IEnumerable<GameObject> FindAuctionActionButtons()
+        {
+            if (_auctionActionButtons != null)
+            {
+                return _auctionActionButtons;
+            }
+
+            var children = new List<GameObject>();
+            GetChildrenInHierarchy(transform, children);
+            _auctionActionButtons = children.Where(child => child.CompareTag(AuctionActionButtonTag));
+            return _auctionActionButtons;
+        }
+
+        private static void GetChildrenInHierarchy(Transform parent, ICollection<GameObject> result)
+        {
+            foreach (Transform child in parent)
+            {
+                result.Add(child.gameObject);
+                GetChildrenInHierarchy(child, result);
+            }
+        }
     }
 }

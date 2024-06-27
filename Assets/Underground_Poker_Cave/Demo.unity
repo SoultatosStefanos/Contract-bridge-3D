@@ -489,9 +489,10 @@ GameObject:
   - component: {fileID: 40166223}
   - component: {fileID: 40166222}
   - component: {fileID: 40166221}
+  - component: {fileID: 40166225}
   m_Layer: 5
   m_Name: Hearts Button
-  m_TagString: Bidding Actions / Denomination Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -514,7 +515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 385.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 385.6363, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40166221
@@ -619,6 +620,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40166219}
   m_CullTransparentMesh: 1
+--- !u!114 &40166225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40166219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769e962fc2034bb8b91fa53796f7e432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  denomination: 3
 --- !u!1 &81513584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,9 +3785,10 @@ GameObject:
   - component: {fileID: 187119886}
   - component: {fileID: 187119885}
   - component: {fileID: 187119884}
+  - component: {fileID: 187119888}
   m_Layer: 5
   m_Name: 5 Button
-  m_TagString: Bidding Actions / Level Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3795,7 +3811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 595.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 595.6363, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187119884
@@ -3900,6 +3916,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187119882}
   m_CullTransparentMesh: 1
+--- !u!114 &187119888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187119882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  bidLevel: 5
 --- !u!1001 &204636875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5418,9 +5448,10 @@ GameObject:
   - component: {fileID: 322075148}
   - component: {fileID: 322075147}
   - component: {fileID: 322075146}
+  - component: {fileID: 322075150}
   m_Layer: 5
   m_Name: 2 Button
-  m_TagString: Bidding Actions / Level Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5443,7 +5474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 280.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 280.6363, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &322075146
@@ -5548,6 +5579,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322075144}
   m_CullTransparentMesh: 1
+--- !u!114 &322075150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322075144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  bidLevel: 2
 --- !u!1 &333307623
 GameObject:
   m_ObjectHideFlags: 0
@@ -6161,9 +6206,10 @@ GameObject:
   - component: {fileID: 431881341}
   - component: {fileID: 431881340}
   - component: {fileID: 431881339}
+  - component: {fileID: 431881343}
   m_Layer: 5
   m_Name: 1 Button
-  m_TagString: Bidding Actions / Level Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6186,7 +6232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175.63629, y: -218.53148}
+  m_AnchoredPosition: {x: 175.63629, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &431881339
@@ -6291,6 +6337,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431881337}
   m_CullTransparentMesh: 1
+--- !u!114 &431881343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431881337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  bidLevel: 1
 --- !u!1 &441897858
 GameObject:
   m_ObjectHideFlags: 0
@@ -6304,9 +6364,10 @@ GameObject:
   - component: {fileID: 441897862}
   - component: {fileID: 441897861}
   - component: {fileID: 441897860}
+  - component: {fileID: 441897864}
   m_Layer: 5
   m_Name: 6 Button
-  m_TagString: Bidding Actions / Level Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6329,7 +6390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 700.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 700.6363, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441897860
@@ -6434,6 +6495,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441897858}
   m_CullTransparentMesh: 1
+--- !u!114 &441897864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441897858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  bidLevel: 6
 --- !u!1 &465801880
 GameObject:
   m_ObjectHideFlags: 0
@@ -7526,9 +7601,10 @@ GameObject:
   - component: {fileID: 553734216}
   - component: {fileID: 553734215}
   - component: {fileID: 553734214}
+  - component: {fileID: 553734218}
   m_Layer: 5
   m_Name: Clubs Button
-  m_TagString: Bidding Actions / Denomination Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7551,7 +7627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175.63629, y: -218.53148}
+  m_AnchoredPosition: {x: 175.63629, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553734214
@@ -7656,6 +7732,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553734212}
   m_CullTransparentMesh: 1
+--- !u!114 &553734218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553734212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769e962fc2034bb8b91fa53796f7e432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  denomination: 1
 --- !u!1 &556338298
 GameObject:
   m_ObjectHideFlags: 0
@@ -8804,9 +8894,10 @@ GameObject:
   - component: {fileID: 634254461}
   - component: {fileID: 634254460}
   - component: {fileID: 634254459}
+  - component: {fileID: 634254463}
   m_Layer: 5
   m_Name: 7 Button
-  m_TagString: Bidding Actions / Level Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8829,7 +8920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 805.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 805.6363, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634254459
@@ -8934,6 +9025,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634254457}
   m_CullTransparentMesh: 1
+--- !u!114 &634254463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634254457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  bidLevel: 7
 --- !u!1 &634380745
 GameObject:
   m_ObjectHideFlags: 0
@@ -9910,9 +10015,10 @@ GameObject:
   - component: {fileID: 747265987}
   - component: {fileID: 747265986}
   - component: {fileID: 747265985}
+  - component: {fileID: 747265989}
   m_Layer: 5
   m_Name: Spades Button
-  m_TagString: Bidding Actions / Denomination Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9935,7 +10041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 490.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 490.6363, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747265985
@@ -10040,6 +10146,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 747265983}
   m_CullTransparentMesh: 1
+--- !u!114 &747265989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747265983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769e962fc2034bb8b91fa53796f7e432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  denomination: 4
 --- !u!1 &752047075
 GameObject:
   m_ObjectHideFlags: 0
@@ -12491,6 +12611,7 @@ GameObject:
   - component: {fileID: 1125372438}
   - component: {fileID: 1125372440}
   - component: {fileID: 1125372439}
+  - component: {fileID: 1125372441}
   m_Layer: 5
   m_Name: Bidding Actions Panel
   m_TagString: Untagged
@@ -12558,6 +12679,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125372437}
   m_CullTransparentMesh: 1
+--- !u!114 &1125372441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125372437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720d1b1e4c0d4e43933311db56859456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &1129646084
 GameObject:
   m_ObjectHideFlags: 0
@@ -14383,9 +14517,10 @@ GameObject:
   - component: {fileID: 1276815357}
   - component: {fileID: 1276815356}
   - component: {fileID: 1276815355}
+  - component: {fileID: 1276815359}
   m_Layer: 5
   m_Name: NT Button
-  m_TagString: Bidding Actions / Denomination Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14408,7 +14543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 545.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 545.6363, y: -227.0663}
   m_SizeDelta: {x: 100.6363, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1276815355
@@ -14513,6 +14648,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276815353}
   m_CullTransparentMesh: 1
+--- !u!114 &1276815359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276815353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769e962fc2034bb8b91fa53796f7e432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  denomination: 5
 --- !u!1 &1283754254
 GameObject:
   m_ObjectHideFlags: 0
@@ -15303,9 +15452,10 @@ GameObject:
   - component: {fileID: 1365312493}
   - component: {fileID: 1365312492}
   - component: {fileID: 1365312491}
+  - component: {fileID: 1365312495}
   m_Layer: 5
   m_Name: Diamonds Button
-  m_TagString: Bidding Actions / Denomination Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15328,7 +15478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 280.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 280.6363, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365312491
@@ -15433,6 +15583,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365312489}
   m_CullTransparentMesh: 1
+--- !u!114 &1365312495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365312489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769e962fc2034bb8b91fa53796f7e432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  denomination: 2
 --- !u!1 &1367711112
 GameObject:
   m_ObjectHideFlags: 0
@@ -15819,9 +15983,10 @@ GameObject:
   - component: {fileID: 1390280502}
   - component: {fileID: 1390280501}
   - component: {fileID: 1390280500}
+  - component: {fileID: 1390280504}
   m_Layer: 5
   m_Name: 4 Button
-  m_TagString: Bidding Actions / Level Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15844,7 +16009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 490.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 490.6363, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1390280500
@@ -15949,6 +16114,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390280498}
   m_CullTransparentMesh: 1
+--- !u!114 &1390280504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390280498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  bidLevel: 4
 --- !u!1 &1393223944
 GameObject:
   m_ObjectHideFlags: 0
@@ -16338,9 +16517,10 @@ GameObject:
   - component: {fileID: 1420532185}
   - component: {fileID: 1420532184}
   - component: {fileID: 1420532183}
+  - component: {fileID: 1420532187}
   m_Layer: 5
   m_Name: 3 Button
-  m_TagString: Bidding Actions / Level Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16363,7 +16543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 385.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 385.6363, y: -227.0663}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420532183
@@ -16468,6 +16648,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420532181}
   m_CullTransparentMesh: 1
+--- !u!114 &1420532187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420532181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  bidLevel: 3
 --- !u!1 &1426382218
 GameObject:
   m_ObjectHideFlags: 0
@@ -18812,9 +19006,10 @@ GameObject:
   - component: {fileID: 1621150226}
   - component: {fileID: 1621150225}
   - component: {fileID: 1621150224}
+  - component: {fileID: 1621150228}
   m_Layer: 5
   m_Name: Double Button
-  m_TagString: Bidding Actions / Double Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18837,7 +19032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 120.6363, y: -227.0663}
   m_SizeDelta: {x: 100.6363, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1621150224
@@ -18942,6 +19137,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621150222}
   m_CullTransparentMesh: 1
+--- !u!114 &1621150228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621150222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66575d30cc034bd4b1655cc1fd0a5401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &1624526569
 GameObject:
   m_ObjectHideFlags: 0
@@ -19301,9 +19509,10 @@ GameObject:
   - component: {fileID: 1661821796}
   - component: {fileID: 1661821795}
   - component: {fileID: 1661821794}
+  - component: {fileID: 1661821798}
   m_Layer: 5
   m_Name: Pass Button
-  m_TagString: Bidding Actions / Pass Button
+  m_TagString: Auction Action Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19326,7 +19535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120.6363, y: -218.53148}
+  m_AnchoredPosition: {x: 120.6363, y: -227.0663}
   m_SizeDelta: {x: 100.6363, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1661821794
@@ -19431,6 +19640,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661821792}
   m_CullTransparentMesh: 1
+--- !u!114 &1661821798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661821792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f5c40d1fd349d9b306dcf7a81f67da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &1664182477
 GameObject:
   m_ObjectHideFlags: 0

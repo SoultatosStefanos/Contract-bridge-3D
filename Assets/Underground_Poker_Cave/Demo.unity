@@ -4490,6 +4490,7 @@ GameObject:
   - component: {fileID: 249590556}
   - component: {fileID: 249590561}
   - component: {fileID: 249590562}
+  - component: {fileID: 249590563}
   m_Layer: 5
   m_Name: Clubs Button
   m_TagString: Auction Action Button
@@ -4679,6 +4680,19 @@ MonoBehaviour:
   playerSeat: 1
   denomination: 1
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &249590563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249590554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &267050092
 GameObject:
   m_ObjectHideFlags: 0
@@ -5416,6 +5430,7 @@ GameObject:
   - component: {fileID: 348959368}
   - component: {fileID: 348959373}
   - component: {fileID: 348959374}
+  - component: {fileID: 348959375}
   m_Layer: 5
   m_Name: Hearts Button
   m_TagString: Auction Action Button
@@ -5605,6 +5620,19 @@ MonoBehaviour:
   playerSeat: 1
   denomination: 3
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &348959375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348959366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &351162609
 GameObject:
   m_ObjectHideFlags: 0
@@ -6145,6 +6173,7 @@ GameObject:
   - component: {fileID: 448997093}
   - component: {fileID: 448997098}
   - component: {fileID: 448997099}
+  - component: {fileID: 448997100}
   m_Layer: 5
   m_Name: 4 Button
   m_TagString: Auction Action Button
@@ -6333,6 +6362,19 @@ MonoBehaviour:
   playerSeat: 1
   level: 4
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &448997100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448997091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &456309391
 GameObject:
   m_ObjectHideFlags: 0
@@ -6349,6 +6391,7 @@ GameObject:
   - component: {fileID: 456309393}
   - component: {fileID: 456309398}
   - component: {fileID: 456309399}
+  - component: {fileID: 456309400}
   m_Layer: 5
   m_Name: 3 Button
   m_TagString: Auction Action Button
@@ -6537,6 +6580,19 @@ MonoBehaviour:
   playerSeat: 1
   level: 3
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &456309400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456309391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &465801880
 GameObject:
   m_ObjectHideFlags: 0
@@ -7073,6 +7129,7 @@ GameObject:
   - component: {fileID: 507770390}
   - component: {fileID: 507770395}
   - component: {fileID: 507770396}
+  - component: {fileID: 507770397}
   m_Layer: 5
   m_Name: 1 Button
   m_TagString: Auction Action Button
@@ -7261,6 +7318,19 @@ MonoBehaviour:
   playerSeat: 1
   level: 1
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &507770397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507770388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &515569870
 GameObject:
   m_ObjectHideFlags: 0
@@ -8436,6 +8506,7 @@ GameObject:
   - component: {fileID: 574663635}
   - component: {fileID: 574663640}
   - component: {fileID: 574663641}
+  - component: {fileID: 574663642}
   m_Layer: 5
   m_Name: 6 Button
   m_TagString: Auction Action Button
@@ -8624,6 +8695,19 @@ MonoBehaviour:
   playerSeat: 1
   level: 6
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &574663642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574663633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &579813417
 GameObject:
   m_ObjectHideFlags: 0
@@ -13283,6 +13367,7 @@ GameObject:
   - component: {fileID: 1139573294}
   - component: {fileID: 1139573299}
   - component: {fileID: 1139573300}
+  - component: {fileID: 1139573301}
   m_Layer: 5
   m_Name: Spades Button
   m_TagString: Auction Action Button
@@ -13472,6 +13557,19 @@ MonoBehaviour:
   playerSeat: 1
   denomination: 4
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &1139573301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139573292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &1154155425
 GameObject:
   m_ObjectHideFlags: 0
@@ -14688,6 +14786,7 @@ GameObject:
   - component: {fileID: 1252857905}
   - component: {fileID: 1252857910}
   - component: {fileID: 1252857911}
+  - component: {fileID: 1252857912}
   m_Layer: 5
   m_Name: NT Button
   m_TagString: Auction Action Button
@@ -14877,6 +14976,19 @@ MonoBehaviour:
   playerSeat: 1
   denomination: 5
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &1252857912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252857903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &1258606214
 GameObject:
   m_ObjectHideFlags: 0
@@ -14893,6 +15005,7 @@ GameObject:
   - component: {fileID: 1258606216}
   - component: {fileID: 1258606221}
   - component: {fileID: 1258606222}
+  - component: {fileID: 1258606223}
   m_Layer: 5
   m_Name: 7 Button
   m_TagString: Auction Action Button
@@ -15081,6 +15194,19 @@ MonoBehaviour:
   playerSeat: 1
   level: 7
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &1258606223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258606214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &1261894049
 GameObject:
   m_ObjectHideFlags: 0
@@ -18615,6 +18741,7 @@ GameObject:
   - component: {fileID: 1554554653}
   - component: {fileID: 1554554658}
   - component: {fileID: 1554554659}
+  - component: {fileID: 1554554660}
   m_Layer: 5
   m_Name: Diamonds Button
   m_TagString: Auction Action Button
@@ -18804,6 +18931,19 @@ MonoBehaviour:
   playerSeat: 1
   denomination: 2
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &1554554660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554554651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1001 &1567673203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22073,6 +22213,7 @@ GameObject:
   - component: {fileID: 1940354403}
   - component: {fileID: 1940354408}
   - component: {fileID: 1940354409}
+  - component: {fileID: 1940354410}
   m_Layer: 5
   m_Name: 5 Button
   m_TagString: Auction Action Button
@@ -22261,6 +22402,19 @@ MonoBehaviour:
   playerSeat: 1
   level: 5
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &1940354410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940354401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &1960153383
 GameObject:
   m_ObjectHideFlags: 0
@@ -22443,6 +22597,7 @@ GameObject:
   - component: {fileID: 1974967872}
   - component: {fileID: 1974967877}
   - component: {fileID: 1974967878}
+  - component: {fileID: 1974967879}
   m_Layer: 5
   m_Name: 2 Button
   m_TagString: Auction Action Button
@@ -22631,6 +22786,19 @@ MonoBehaviour:
   playerSeat: 1
   level: 2
   auctionCallController: {fileID: 1125372442}
+--- !u!114 &1974967879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974967870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!1 &1977919995
 GameObject:
   m_ObjectHideFlags: 0

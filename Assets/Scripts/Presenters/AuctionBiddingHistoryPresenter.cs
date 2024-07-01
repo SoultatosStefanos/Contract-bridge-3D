@@ -122,7 +122,7 @@ namespace Presenters
                 rankTextGameObject.SetActive(true);
 
                 var rankText = rankTextGameObject.GetComponent<TextMeshProUGUI>();
-                rankText.text = bid.Level.ToString();
+                rankText.text = FormatLevel(bid.Level);
 
                 if (bid.Denomination == Denomination.NoTrumps)
                 {
@@ -147,6 +147,21 @@ namespace Presenters
                     suitImage.sprite = SuitSprite(bid.Denomination);
                 }
             });
+        }
+
+        private static string FormatLevel(Level level)
+        {
+            return level switch
+            {
+                Level.One => "1",
+                Level.Two => "2",
+                Level.Three => "3",
+                Level.Four => "4",
+                Level.Five => "5",
+                Level.Six => "6",
+                Level.Seven => "7",
+                _ => throw new ArgumentOutOfRangeException(nameof(level), level, null)
+            };
         }
 
         private Sprite SuitSprite(Denomination denomination)

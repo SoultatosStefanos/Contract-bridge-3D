@@ -113,8 +113,6 @@ namespace Presenters
         {
             UpdateAuctionBids(seat, panel =>
             {
-                Debug.Log($"Updating panel: {panel.name}");
-
                 var rankTextGameObject = FindChildByTag(panel, BiddingHistoryRankTextTag);
 
                 Debug.Assert(!rankTextGameObject.activeSelf);
@@ -183,8 +181,6 @@ namespace Presenters
         {
             UpdateAuctionBids(seat, panel =>
             {
-                Debug.Log($"Updating panel: {panel.name}");
-
                 var passTextGameObject = FindChildByTag(panel, BiddingHistoryPassDoubleTextTag);
 
                 Debug.Assert(!passTextGameObject.activeSelf);
@@ -200,8 +196,6 @@ namespace Presenters
         {
             UpdateAuctionBids(seat, panel =>
             {
-                Debug.Log($"Updating panel: {panel.name}");
-
                 var doubleTextGameObject = FindChildByTag(panel, BiddingHistoryPassDoubleTextTag);
 
                 Debug.Assert(!doubleTextGameObject.activeSelf);

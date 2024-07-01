@@ -4595,20 +4595,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 249590559}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 249590562}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
-          Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &249590559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4661,7 +4648,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 249590562}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
+          Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
 --- !u!114 &249590562
@@ -5521,20 +5521,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 348959371}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 348959374}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
-          Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &348959371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5587,7 +5574,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348959374}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
+          Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
 --- !u!114 &348959374
@@ -6250,19 +6250,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 448997096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 448997099}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &448997096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6315,7 +6303,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 448997099}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
 --- !u!114 &448997099
@@ -6454,19 +6454,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 456309396}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 456309399}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &456309396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6519,7 +6507,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 456309399}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
 --- !u!114 &456309399
@@ -7178,19 +7178,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 507770393}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 507770396}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &507770393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7243,7 +7231,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 507770396}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
 --- !u!114 &507770396
@@ -8541,19 +8541,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 574663638}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 574663641}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &574663638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8606,7 +8594,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 574663641}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
 --- !u!114 &574663641
@@ -13388,20 +13388,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1139573297}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1139573300}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
-          Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1139573297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13454,7 +13441,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1139573300}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
+          Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
 --- !u!114 &1139573300
@@ -14793,20 +14793,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1252857908}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1252857911}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
-          Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1252857908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14859,7 +14846,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1252857911}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
+          Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
 --- !u!114 &1252857911
@@ -14998,19 +14998,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1258606219}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1258606222}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1258606219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15063,7 +15051,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1258606222}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
 --- !u!114 &1258606222
@@ -18720,20 +18720,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1554554656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1554554659}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
-          Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1554554656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18786,7 +18773,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554554659}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
+          Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
 --- !u!114 &1554554659
@@ -22178,19 +22178,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1940354406}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1940354409}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1940354406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22243,7 +22231,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1940354409}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
 --- !u!114 &1940354409
@@ -22548,19 +22548,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1974967875}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1974967878}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1974967875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22613,7 +22601,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1974967878}
+        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
+        m_MethodName: HandleToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
 --- !u!114 &1974967878

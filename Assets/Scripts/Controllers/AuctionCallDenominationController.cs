@@ -20,17 +20,16 @@ namespace Controllers
         [SerializeField]
         private AuctionCallController auctionCallController;
 
-        private bool _checked;
+        private ToggleButton _toggleButton;
 
-        public void HandleClick()
+        private void Start()
         {
-            _checked = !_checked;
+            _toggleButton = GetComponent<ToggleButton>();
+        }
 
-            if (_checked)
-            {
-                Debug.Log("HandleDenominationCall");
-                auctionCallController.HandleDenominationCall(denomination);
-            }
+        public void HandleToggle()
+        {
+            auctionCallController.HandleDenominationCall(_toggleButton.Checked ? denomination : null);
         }
     }
 }

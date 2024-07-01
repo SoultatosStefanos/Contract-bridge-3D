@@ -23,13 +23,13 @@ namespace Controllers
         [Inject]
         private ISession _session;
 
-        public void HandleLevelCall(Level level)
+        public void HandleLevelCall(Level? level)
         {
             _level = level;
             CallIfPlayIsSet();
         }
 
-        public void HandleDenominationCall(Denomination denomination)
+        public void HandleDenominationCall(Denomination? denomination)
         {
             _denomination = denomination;
             CallIfPlayIsSet();

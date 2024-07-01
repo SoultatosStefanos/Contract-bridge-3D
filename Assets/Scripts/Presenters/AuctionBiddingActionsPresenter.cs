@@ -28,14 +28,21 @@ namespace Presenters
         private void OnEnable()
         {
             _eventBus.On<AuctionTurnChangeEvent>(HandleAuctionTurnChangedEvent);
+            _eventBus.On<AuctionFinalContractEvent>(HandleAuctionTurnFinalContractEvent);
         }
 
         private void OnDisable()
         {
             _eventBus.Off<AuctionTurnChangeEvent>(HandleAuctionTurnChangedEvent);
+            _eventBus.Off<AuctionFinalContractEvent>(HandleAuctionTurnFinalContractEvent);
         }
 
         private void HandleAuctionTurnChangedEvent(AuctionTurnChangeEvent obj)
+        {
+            UpdateAuctionActionButtons();
+        }
+
+        private void HandleAuctionTurnFinalContractEvent(AuctionFinalContractEvent obj)
         {
             UpdateAuctionActionButtons();
         }

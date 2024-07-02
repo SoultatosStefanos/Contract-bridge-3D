@@ -6460,6 +6460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 471765287}
   - component: {fileID: 471765289}
+  - component: {fileID: 471765290}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -6496,6 +6497,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupCanvas: {fileID: 150331964}
   auctionCanvas: {fileID: 556338298}
+--- !u!114 &471765290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471765285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b8da6e80ef47fbb2744ae826588a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setupCanvas: {fileID: 150331964}
+  auctionCanvas: {fileID: 556338298}
+  hideShowKey: 117
 --- !u!1001 &477836373
 PrefabInstance:
   m_ObjectHideFlags: 0

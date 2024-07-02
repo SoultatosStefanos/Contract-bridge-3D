@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Buttons
+namespace Components
 {
     [RequireComponent(typeof(Image))]
     public class ToggleButton : MonoBehaviour, IPointerClickHandler

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Buttons;
+using Components;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -21,10 +21,10 @@ namespace Groups
         // unchecks the active toggle.
         private ToggleButton _toggle;
 
-        public ToggleButton Toggle
+        private ToggleButton Toggle
         {
             get => _toggle;
-            private set
+            set
             {
                 _toggle = value;
                 toggled.Invoke(Toggle);

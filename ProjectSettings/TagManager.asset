@@ -15,7 +15,6 @@ TagManager:
   - Bidding Actions / Pass Button
   - Bidding Actions / Double Button
   - Bid History Panel
-  - Auction Action Button
   layers:
   - Default
   - TransparentFX

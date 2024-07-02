@@ -4487,17 +4487,15 @@ GameObject:
   - component: {fileID: 249590559}
   - component: {fileID: 249590558}
   - component: {fileID: 249590557}
-  - component: {fileID: 249590556}
   - component: {fileID: 249590561}
-  - component: {fileID: 249590563}
   - component: {fileID: 249590564}
   m_Layer: 5
   m_Name: Clubs Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Denomination Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &249590555
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4519,20 +4517,6 @@ RectTransform:
   m_AnchoredPosition: {x: 70, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &249590556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249590554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769e962fc2034bb8b91fa53796f7e432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  denomination: 1
 --- !u!114 &249590557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4652,19 +4636,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
---- !u!114 &249590563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249590554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &249590564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5412,17 +5383,15 @@ GameObject:
   - component: {fileID: 348959371}
   - component: {fileID: 348959370}
   - component: {fileID: 348959369}
-  - component: {fileID: 348959368}
   - component: {fileID: 348959373}
-  - component: {fileID: 348959375}
   - component: {fileID: 348959376}
   m_Layer: 5
   m_Name: Hearts Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Denomination Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &348959367
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5444,20 +5413,6 @@ RectTransform:
   m_AnchoredPosition: {x: 280, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &348959368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348959366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769e962fc2034bb8b91fa53796f7e432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  denomination: 3
 --- !u!114 &348959369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5577,19 +5532,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
---- !u!114 &348959375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348959366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &348959376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6140,13 +6082,11 @@ GameObject:
   - component: {fileID: 448997096}
   - component: {fileID: 448997095}
   - component: {fileID: 448997094}
-  - component: {fileID: 448997093}
   - component: {fileID: 448997098}
-  - component: {fileID: 448997100}
   - component: {fileID: 448997101}
   m_Layer: 5
   m_Name: 4 Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6172,20 +6112,6 @@ RectTransform:
   m_AnchoredPosition: {x: 385, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &448997093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448997091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  bidLevel: 4
 --- !u!114 &448997094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6305,19 +6231,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &448997100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448997091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &448997101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6344,13 +6257,11 @@ GameObject:
   - component: {fileID: 456309396}
   - component: {fileID: 456309395}
   - component: {fileID: 456309394}
-  - component: {fileID: 456309393}
   - component: {fileID: 456309398}
-  - component: {fileID: 456309400}
   - component: {fileID: 456309401}
   m_Layer: 5
   m_Name: 3 Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6376,20 +6287,6 @@ RectTransform:
   m_AnchoredPosition: {x: 280, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &456309393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456309391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  bidLevel: 3
 --- !u!114 &456309394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6509,19 +6406,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &456309400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456309391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &456309401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7068,13 +6952,11 @@ GameObject:
   - component: {fileID: 507770393}
   - component: {fileID: 507770392}
   - component: {fileID: 507770391}
-  - component: {fileID: 507770390}
   - component: {fileID: 507770395}
-  - component: {fileID: 507770397}
   - component: {fileID: 507770398}
   m_Layer: 5
   m_Name: 1 Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7100,20 +6982,6 @@ RectTransform:
   m_AnchoredPosition: {x: 70, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &507770390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507770388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  bidLevel: 1
 --- !u!114 &507770391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7233,19 +7101,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &507770397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507770388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &507770398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8431,13 +8286,11 @@ GameObject:
   - component: {fileID: 574663638}
   - component: {fileID: 574663637}
   - component: {fileID: 574663636}
-  - component: {fileID: 574663635}
   - component: {fileID: 574663640}
-  - component: {fileID: 574663642}
   - component: {fileID: 574663643}
   m_Layer: 5
   m_Name: 6 Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8463,20 +8316,6 @@ RectTransform:
   m_AnchoredPosition: {x: 595, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &574663635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574663633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  bidLevel: 6
 --- !u!114 &574663636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8596,19 +8435,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &574663642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574663633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &574663643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12886,8 +12712,10 @@ GameObject:
   - component: {fileID: 1125372438}
   - component: {fileID: 1125372440}
   - component: {fileID: 1125372439}
-  - component: {fileID: 1125372441}
   - component: {fileID: 1125372442}
+  - component: {fileID: 1125372443}
+  - component: {fileID: 1125372445}
+  - component: {fileID: 1125372444}
   m_Layer: 5
   m_Name: Bidding Actions Panel
   m_TagString: Untagged
@@ -12955,19 +12783,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125372437}
   m_CullTransparentMesh: 1
---- !u!114 &1125372441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125372437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 720d1b1e4c0d4e43933311db56859456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &1125372442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12983,6 +12798,48 @@ MonoBehaviour:
   playerSeat: 1
   levelButtonGroup: {fileID: 1780905577}
   denominationButtonGroup: {fileID: 1635826350}
+--- !u!114 &1125372443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125372437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712359c5427e4d1e9762e501d6f65b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  levelButtonGroup: {fileID: 1780905577}
+--- !u!114 &1125372444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125372437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e797e8b76d4e55bf6d594c34cc6525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  doubleButton: {fileID: 1621150222}
+--- !u!114 &1125372445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125372437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c2e67dffd643f7a76aaad4563486b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSeat: 1
+  passButton: {fileID: 1661821792}
 --- !u!1 &1129646084
 GameObject:
   m_ObjectHideFlags: 0
@@ -13280,17 +13137,15 @@ GameObject:
   - component: {fileID: 1139573297}
   - component: {fileID: 1139573296}
   - component: {fileID: 1139573295}
-  - component: {fileID: 1139573294}
   - component: {fileID: 1139573299}
-  - component: {fileID: 1139573301}
   - component: {fileID: 1139573302}
   m_Layer: 5
   m_Name: Spades Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Denomination Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1139573293
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13312,20 +13167,6 @@ RectTransform:
   m_AnchoredPosition: {x: 385, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1139573294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139573292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769e962fc2034bb8b91fa53796f7e432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  denomination: 4
 --- !u!114 &1139573295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13445,19 +13286,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
---- !u!114 &1139573301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139573292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &1139573302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14684,17 +14512,15 @@ GameObject:
   - component: {fileID: 1252857908}
   - component: {fileID: 1252857907}
   - component: {fileID: 1252857906}
-  - component: {fileID: 1252857905}
   - component: {fileID: 1252857910}
-  - component: {fileID: 1252857912}
   - component: {fileID: 1252857913}
   m_Layer: 5
   m_Name: NT Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Denomination Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1252857904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14716,20 +14542,6 @@ RectTransform:
   m_AnchoredPosition: {x: 440, y: 0}
   m_SizeDelta: {x: 100.6363, y: 50}
   m_Pivot: {x: 0, y: 0.5}
---- !u!114 &1252857905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252857903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769e962fc2034bb8b91fa53796f7e432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  denomination: 5
 --- !u!114 &1252857906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14849,19 +14661,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
---- !u!114 &1252857912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252857903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &1252857913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14888,13 +14687,11 @@ GameObject:
   - component: {fileID: 1258606219}
   - component: {fileID: 1258606218}
   - component: {fileID: 1258606217}
-  - component: {fileID: 1258606216}
   - component: {fileID: 1258606221}
-  - component: {fileID: 1258606223}
   - component: {fileID: 1258606224}
   m_Layer: 5
   m_Name: 7 Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14920,20 +14717,6 @@ RectTransform:
   m_AnchoredPosition: {x: 700, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1258606216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258606214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  bidLevel: 7
 --- !u!114 &1258606217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15053,19 +14836,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &1258606223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258606214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &1258606224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18610,17 +18380,15 @@ GameObject:
   - component: {fileID: 1554554656}
   - component: {fileID: 1554554655}
   - component: {fileID: 1554554654}
-  - component: {fileID: 1554554653}
   - component: {fileID: 1554554658}
-  - component: {fileID: 1554554660}
   - component: {fileID: 1554554661}
   m_Layer: 5
   m_Name: Diamonds Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Denomination Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1554554652
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18642,20 +18410,6 @@ RectTransform:
   m_AnchoredPosition: {x: 175, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1554554653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554554651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769e962fc2034bb8b91fa53796f7e432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  denomination: 2
 --- !u!114 &1554554654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18775,19 +18529,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
---- !u!114 &1554554660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554554651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &1554554661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19207,11 +18948,10 @@ GameObject:
   - component: {fileID: 1621150226}
   - component: {fileID: 1621150225}
   - component: {fileID: 1621150224}
-  - component: {fileID: 1621150228}
   - component: {fileID: 1621150229}
   m_Layer: 5
   m_Name: Double Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Double Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19351,19 +19091,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621150222}
   m_CullTransparentMesh: 1
---- !u!114 &1621150228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621150222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66575d30cc034bd4b1655cc1fd0a5401, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &1621150229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19602,7 +19329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c94cb2675894376b373902dbdc667c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeToggleSet:
+  toggled:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1642198041
@@ -19753,11 +19480,10 @@ GameObject:
   - component: {fileID: 1661821796}
   - component: {fileID: 1661821795}
   - component: {fileID: 1661821794}
-  - component: {fileID: 1661821798}
   - component: {fileID: 1661821799}
   m_Layer: 5
   m_Name: Pass Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Pass Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19897,19 +19623,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661821792}
   m_CullTransparentMesh: 1
---- !u!114 &1661821798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661821792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4f5c40d1fd349d9b306dcf7a81f67da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &1661821799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21038,7 +20751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c94cb2675894376b373902dbdc667c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeToggleSet:
+  toggled:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &1782002637
@@ -22073,13 +21786,11 @@ GameObject:
   - component: {fileID: 1940354406}
   - component: {fileID: 1940354405}
   - component: {fileID: 1940354404}
-  - component: {fileID: 1940354403}
   - component: {fileID: 1940354408}
-  - component: {fileID: 1940354410}
   - component: {fileID: 1940354411}
   m_Layer: 5
   m_Name: 5 Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22105,20 +21816,6 @@ RectTransform:
   m_AnchoredPosition: {x: 490, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1940354403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940354401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  bidLevel: 5
 --- !u!114 &1940354404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22238,19 +21935,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &1940354410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940354401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &1940354411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22443,13 +22127,11 @@ GameObject:
   - component: {fileID: 1974967875}
   - component: {fileID: 1974967874}
   - component: {fileID: 1974967873}
-  - component: {fileID: 1974967872}
   - component: {fileID: 1974967877}
-  - component: {fileID: 1974967879}
   - component: {fileID: 1974967880}
   m_Layer: 5
   m_Name: 2 Button
-  m_TagString: Auction Action Button
+  m_TagString: Bidding Actions / Level Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22475,20 +22157,6 @@ RectTransform:
   m_AnchoredPosition: {x: 175, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1974967872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974967870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a786e52e257a45ad933c04a7382bcd41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  bidLevel: 2
 --- !u!114 &1974967873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22608,19 +22276,6 @@ MonoBehaviour:
       m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &1974967879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974967870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b4cd56b63a46fdac7f9288ba05f6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
 --- !u!114 &1974967880
 MonoBehaviour:
   m_ObjectHideFlags: 0

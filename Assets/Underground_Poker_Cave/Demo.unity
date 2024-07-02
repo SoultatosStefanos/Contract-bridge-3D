@@ -4489,8 +4489,8 @@ GameObject:
   - component: {fileID: 249590557}
   - component: {fileID: 249590556}
   - component: {fileID: 249590561}
-  - component: {fileID: 249590562}
   - component: {fileID: 249590563}
+  - component: {fileID: 249590564}
   m_Layer: 5
   m_Name: Clubs Button
   m_TagString: Auction Action Button
@@ -4649,37 +4649,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 249590562}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
-          Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
---- !u!114 &249590562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249590554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b28a37194a47b89a6cb3a0347661b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  denomination: 1
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &249590563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4693,6 +4665,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &249590564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249590554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28940ab25d6f431f907c2e906fc27750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denomination: 1
 --- !u!1 &267050092
 GameObject:
   m_ObjectHideFlags: 0
@@ -5429,8 +5414,8 @@ GameObject:
   - component: {fileID: 348959369}
   - component: {fileID: 348959368}
   - component: {fileID: 348959373}
-  - component: {fileID: 348959374}
   - component: {fileID: 348959375}
+  - component: {fileID: 348959376}
   m_Layer: 5
   m_Name: Hearts Button
   m_TagString: Auction Action Button
@@ -5589,37 +5574,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 348959374}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
-          Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
---- !u!114 &348959374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348959366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b28a37194a47b89a6cb3a0347661b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  denomination: 3
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &348959375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5633,6 +5590,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &348959376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348959366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28940ab25d6f431f907c2e906fc27750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denomination: 3
 --- !u!1 &351162609
 GameObject:
   m_ObjectHideFlags: 0
@@ -6172,8 +6142,8 @@ GameObject:
   - component: {fileID: 448997094}
   - component: {fileID: 448997093}
   - component: {fileID: 448997098}
-  - component: {fileID: 448997099}
   - component: {fileID: 448997100}
+  - component: {fileID: 448997101}
   m_Layer: 5
   m_Name: 4 Button
   m_TagString: Auction Action Button
@@ -6332,36 +6302,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 448997099}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &448997099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448997091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94edcc514cc494b85bd29d4c454470e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  level: 4
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &448997100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6375,6 +6318,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &448997101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448997091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a599ca3851b44bd8d23d3cada6fcd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 4
 --- !u!1 &456309391
 GameObject:
   m_ObjectHideFlags: 0
@@ -6390,8 +6346,8 @@ GameObject:
   - component: {fileID: 456309394}
   - component: {fileID: 456309393}
   - component: {fileID: 456309398}
-  - component: {fileID: 456309399}
   - component: {fileID: 456309400}
+  - component: {fileID: 456309401}
   m_Layer: 5
   m_Name: 3 Button
   m_TagString: Auction Action Button
@@ -6550,36 +6506,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 456309399}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &456309399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456309391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94edcc514cc494b85bd29d4c454470e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  level: 3
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &456309400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6593,6 +6522,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &456309401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456309391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a599ca3851b44bd8d23d3cada6fcd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 3
 --- !u!1 &465801880
 GameObject:
   m_ObjectHideFlags: 0
@@ -7128,8 +7070,8 @@ GameObject:
   - component: {fileID: 507770391}
   - component: {fileID: 507770390}
   - component: {fileID: 507770395}
-  - component: {fileID: 507770396}
   - component: {fileID: 507770397}
+  - component: {fileID: 507770398}
   m_Layer: 5
   m_Name: 1 Button
   m_TagString: Auction Action Button
@@ -7288,36 +7230,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 507770396}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &507770396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507770388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94edcc514cc494b85bd29d4c454470e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  level: 1
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &507770397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7331,6 +7246,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &507770398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507770388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a599ca3851b44bd8d23d3cada6fcd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
 --- !u!1 &515569870
 GameObject:
   m_ObjectHideFlags: 0
@@ -8505,8 +8433,8 @@ GameObject:
   - component: {fileID: 574663636}
   - component: {fileID: 574663635}
   - component: {fileID: 574663640}
-  - component: {fileID: 574663641}
   - component: {fileID: 574663642}
+  - component: {fileID: 574663643}
   m_Layer: 5
   m_Name: 6 Button
   m_TagString: Auction Action Button
@@ -8665,36 +8593,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 574663641}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &574663641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574663633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94edcc514cc494b85bd29d4c454470e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  level: 6
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &574663642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8708,6 +8609,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &574663643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574663633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a599ca3851b44bd8d23d3cada6fcd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 6
 --- !u!1 &579813417
 GameObject:
   m_ObjectHideFlags: 0
@@ -13067,6 +12981,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+  levelButtonGroup: {fileID: 1780905577}
+  denominationButtonGroup: {fileID: 1635826350}
 --- !u!1 &1129646084
 GameObject:
   m_ObjectHideFlags: 0
@@ -13366,8 +13282,8 @@ GameObject:
   - component: {fileID: 1139573295}
   - component: {fileID: 1139573294}
   - component: {fileID: 1139573299}
-  - component: {fileID: 1139573300}
   - component: {fileID: 1139573301}
+  - component: {fileID: 1139573302}
   m_Layer: 5
   m_Name: Spades Button
   m_TagString: Auction Action Button
@@ -13526,37 +13442,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1139573300}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
-          Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
---- !u!114 &1139573300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139573292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b28a37194a47b89a6cb3a0347661b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  denomination: 4
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &1139573301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13570,6 +13458,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &1139573302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139573292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28940ab25d6f431f907c2e906fc27750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denomination: 4
 --- !u!1 &1154155425
 GameObject:
   m_ObjectHideFlags: 0
@@ -14785,8 +14686,8 @@ GameObject:
   - component: {fileID: 1252857906}
   - component: {fileID: 1252857905}
   - component: {fileID: 1252857910}
-  - component: {fileID: 1252857911}
   - component: {fileID: 1252857912}
+  - component: {fileID: 1252857913}
   m_Layer: 5
   m_Name: NT Button
   m_TagString: Auction Action Button
@@ -14945,37 +14846,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1252857911}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
-          Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
---- !u!114 &1252857911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252857903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b28a37194a47b89a6cb3a0347661b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  denomination: 5
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &1252857912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14989,6 +14862,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &1252857913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252857903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28940ab25d6f431f907c2e906fc27750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denomination: 5
 --- !u!1 &1258606214
 GameObject:
   m_ObjectHideFlags: 0
@@ -15004,8 +14890,8 @@ GameObject:
   - component: {fileID: 1258606217}
   - component: {fileID: 1258606216}
   - component: {fileID: 1258606221}
-  - component: {fileID: 1258606222}
   - component: {fileID: 1258606223}
+  - component: {fileID: 1258606224}
   m_Layer: 5
   m_Name: 7 Button
   m_TagString: Auction Action Button
@@ -15164,36 +15050,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1258606222}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &1258606222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258606214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94edcc514cc494b85bd29d4c454470e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  level: 7
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &1258606223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15207,6 +15066,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &1258606224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258606214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a599ca3851b44bd8d23d3cada6fcd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 7
 --- !u!1 &1261894049
 GameObject:
   m_ObjectHideFlags: 0
@@ -18740,8 +18612,8 @@ GameObject:
   - component: {fileID: 1554554654}
   - component: {fileID: 1554554653}
   - component: {fileID: 1554554658}
-  - component: {fileID: 1554554659}
   - component: {fileID: 1554554660}
+  - component: {fileID: 1554554661}
   m_Layer: 5
   m_Name: Diamonds Button
   m_TagString: Auction Action Button
@@ -18900,37 +18772,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1554554659}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallDenominationController,
-          Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1635826350}
---- !u!114 &1554554659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554554651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b28a37194a47b89a6cb3a0347661b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  denomination: 2
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &1554554660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18944,6 +18788,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &1554554661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554554651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28940ab25d6f431f907c2e906fc27750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denomination: 2
 --- !u!1001 &1567673203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19745,6 +19602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c94cb2675894376b373902dbdc667c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeToggleSet:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1642198041
 GameObject:
   m_ObjectHideFlags: 0
@@ -21178,6 +21038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c94cb2675894376b373902dbdc667c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeToggleSet:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1782002637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22212,8 +22075,8 @@ GameObject:
   - component: {fileID: 1940354404}
   - component: {fileID: 1940354403}
   - component: {fileID: 1940354408}
-  - component: {fileID: 1940354409}
   - component: {fileID: 1940354410}
+  - component: {fileID: 1940354411}
   m_Layer: 5
   m_Name: 5 Button
   m_TagString: Auction Action Button
@@ -22372,36 +22235,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1940354409}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &1940354409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940354401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94edcc514cc494b85bd29d4c454470e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  level: 5
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &1940354410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22415,6 +22251,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &1940354411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940354401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a599ca3851b44bd8d23d3cada6fcd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 5
 --- !u!1 &1960153383
 GameObject:
   m_ObjectHideFlags: 0
@@ -22596,8 +22445,8 @@ GameObject:
   - component: {fileID: 1974967873}
   - component: {fileID: 1974967872}
   - component: {fileID: 1974967877}
-  - component: {fileID: 1974967878}
   - component: {fileID: 1974967879}
+  - component: {fileID: 1974967880}
   m_Layer: 5
   m_Name: 2 Button
   m_TagString: Auction Action Button
@@ -22756,36 +22605,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1974967878}
-        m_TargetAssemblyTypeName: Controllers.AuctionCallLevelController, Assembly-CSharp
-        m_MethodName: HandleToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   checkedColor: {r: 0.99215686, g: 0.8509804, b: 0, a: 1}
   group: {fileID: 1780905577}
---- !u!114 &1974967878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974967870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94edcc514cc494b85bd29d4c454470e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSeat: 1
-  level: 2
-  auctionCallController: {fileID: 1125372442}
 --- !u!114 &1974967879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22799,6 +22621,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+--- !u!114 &1974967880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974967870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a599ca3851b44bd8d23d3cada6fcd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 2
 --- !u!1 &1977919995
 GameObject:
   m_ObjectHideFlags: 0

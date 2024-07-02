@@ -1,9 +1,11 @@
+using Buttons;
 using ContractBridge.Core;
 using ContractBridge.Core.Impl;
+using Groups;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Wrappers;
 using Zenject;
-using Debug = System.Diagnostics.Debug;
 
 namespace Controllers
 {
@@ -13,45 +15,73 @@ namespace Controllers
         [SerializeField]
         private Seat playerSeat;
 
+        [FormerlySerializedAs("Level Button Group")]
+        [SerializeField]
+        private ToggleButtonGroup levelButtonGroup;
+
+        [FormerlySerializedAs("Denomination Button Group")]
+        [SerializeField]
+        private ToggleButtonGroup denominationButtonGroup;
+
+        private Denomination? _activeDenomination;
+
+        private Level? _activeLevel;
+
         [Inject]
         private IBidFactory _bidFactory;
-
-        private Denomination? _denomination;
-
-        private Level? _level;
 
         [Inject]
         private ISession _session;
 
-        public void HandleLevelCall(Level? level)
+        private void OnEnable()
         {
-            _level = level;
-            CallIfPlayIsSet();
+            levelButtonGroup.toggled.AddListener(OnLevelToggle);
+            denominationButtonGroup.toggled.AddListener(OnDenominationToggle);
         }
 
-        public void HandleDenominationCall(Denomination? denomination)
+        private void OnDisable()
         {
-            _denomination = denomination;
-            CallIfPlayIsSet();
+            levelButtonGroup.toggled.RemoveListener(OnLevelToggle);
+            denominationButtonGroup.toggled.RemoveListener(OnDenominationToggle);
         }
 
-        private void CallIfPlayIsSet()
+        private void OnLevelToggle(ToggleButton button)
         {
-            if (_level is not { } level || _denomination is not { } denomination)
+            if (button.Checked)
+            {
+                var levelWrapper = button.GetComponentInParent<LevelWrapper>();
+                _activeLevel = levelWrapper.Level;
+                PlayCallIfBidIsSet();
+            }
+            else
+            {
+                _activeLevel = null;
+            }
+        }
+
+        private void OnDenominationToggle(ToggleButton button)
+        {
+            if (button.Checked)
+            {
+                var denominationWrapper = button.GetComponentInParent<DenominationWrapper>();
+                _activeDenomination = denominationWrapper.Denomination;
+                PlayCallIfBidIsSet();
+            }
+            else
+            {
+                _activeDenomination = null;
+            }
+        }
+
+        private void PlayCallIfBidIsSet()
+        {
+            if (_activeLevel is not { } activeLevel || _activeDenomination is not { } activeDenomination)
             {
                 return;
             }
 
             Debug.Assert(_session.Auction != null, "_session.Auction != null");
-            _session.Auction.Call(_bidFactory.Create(level, denomination), playerSeat);
-
-            ResetCallValues(); // TODO(?) Remove? Probably doesn't matter.
-        }
-
-        private void ResetCallValues()
-        {
-            _level = null;
-            _denomination = null;
+            _session.Auction.Call(_bidFactory.Create(activeLevel, activeDenomination), playerSeat);
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using ContractBridge.Core;
 using Events;
+using Extensions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -10,8 +11,6 @@ using Zenject;
 
 namespace Presenters
 {
-    // TODO Test, check if inactive children are included!
-
     public class AuctionBiddingHistoryPresenter : MonoBehaviour
     {
         private const int SeatCount = 4;
@@ -290,10 +289,9 @@ namespace Presenters
 
         private static GameObject FindChildByTag(GameObject parent, string tag)
         {
-            return parent.transform.Cast<Transform>()
-                .Where(child => child.CompareTag(tag))
-                .Select(child => child.gameObject)
-                .FirstOrDefault();
+            return parent
+                .FindChildrenInHierarchy()
+                .FirstOrDefault(child => child.CompareTag(tag));
         }
     }
 }

@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 28424956}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 78080888}
   m_Layer: 5
   m_Name: North Panel
-  m_TagString: 'Makeable Contracts / Seat '
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1560,7 +1560,7 @@ GameObject:
   - component: {fileID: 108113488}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3681,7 +3681,7 @@ GameObject:
   - component: {fileID: 137927224}
   m_Layer: 5
   m_Name: Panel (14)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3759,7 +3759,7 @@ GameObject:
   - component: {fileID: 139902930}
   m_Layer: 5
   m_Name: NT Panel
-  m_TagString: Makeable Contracts / Denomination
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4935,7 +4935,7 @@ GameObject:
   - component: {fileID: 194441695}
   m_Layer: 5
   m_Name: Panel (27)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6295,7 +6295,7 @@ GameObject:
   - component: {fileID: 254527233}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7212,7 +7212,7 @@ GameObject:
   - component: {fileID: 309613846}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7824,7 +7824,7 @@ GameObject:
   - component: {fileID: 363442068}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8317,7 +8317,7 @@ GameObject:
   - component: {fileID: 427570126}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8483,7 +8483,7 @@ GameObject:
   - component: {fileID: 448411431}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9382,7 +9382,7 @@ GameObject:
   - component: {fileID: 487828730}
   m_Layer: 5
   m_Name: Panel (26)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10251,7 +10251,7 @@ GameObject:
   - component: {fileID: 526184896}
   m_Layer: 5
   m_Name: Diamonds Panel
-  m_TagString: Makeable Contracts / Denomination
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10669,7 +10669,7 @@ GameObject:
   - component: {fileID: 547344916}
   m_Layer: 5
   m_Name: Hearts Panel
-  m_TagString: Makeable Contracts / Denomination
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10997,7 +10997,7 @@ GameObject:
   - component: {fileID: 562720842}
   m_Layer: 5
   m_Name: Panel (7)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11479,7 +11479,7 @@ GameObject:
   - component: {fileID: 575243610}
   m_Layer: 5
   m_Name: Clubs Panel
-  m_TagString: Makeable Contracts / Denomination
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11780,7 +11780,7 @@ GameObject:
   - component: {fileID: 587252483}
   m_Layer: 5
   m_Name: Panel (17)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11888,7 +11888,7 @@ GameObject:
   - component: {fileID: 590399260}
   m_Layer: 5
   m_Name: Panel (10)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12119,7 +12119,7 @@ GameObject:
   - component: {fileID: 611651849}
   m_Layer: 5
   m_Name: Panel (9)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13209,7 +13209,7 @@ GameObject:
   - component: {fileID: 705425455}
   m_Layer: 5
   m_Name: Panel (29)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13974,7 +13974,7 @@ GameObject:
   - component: {fileID: 763713789}
   m_Layer: 5
   m_Name: Panel (13)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16168,7 +16168,7 @@ GameObject:
   - component: {fileID: 949285634}
   m_Layer: 5
   m_Name: Panel (28)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17140,7 +17140,7 @@ GameObject:
   - component: {fileID: 1087812411}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18044,7 +18044,7 @@ GameObject:
   - component: {fileID: 1144669896}
   m_Layer: 5
   m_Name: Panel (23)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18121,7 +18121,7 @@ GameObject:
   - component: {fileID: 1145984727}
   m_Layer: 5
   m_Name: Panel (22)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18198,7 +18198,7 @@ GameObject:
   - component: {fileID: 1153777521}
   m_Layer: 5
   m_Name: Panel (20)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18410,7 +18410,7 @@ GameObject:
   - component: {fileID: 1162889455}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19059,7 +19059,7 @@ GameObject:
   - component: {fileID: 1184765725}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19683,7 +19683,7 @@ GameObject:
   - component: {fileID: 1216078041}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20039,7 +20039,7 @@ GameObject:
   - component: {fileID: 1249490680}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21170,7 +21170,7 @@ GameObject:
   - component: {fileID: 1309751534}
   m_Layer: 5
   m_Name: Panel (21)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21247,7 +21247,7 @@ GameObject:
   - component: {fileID: 1314106955}
   m_Layer: 5
   m_Name: Panel (16)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21987,7 +21987,7 @@ GameObject:
   - component: {fileID: 1381977417}
   m_Layer: 5
   m_Name: Panel (19)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22297,7 +22297,7 @@ GameObject:
   - component: {fileID: 1390800952}
   m_Layer: 5
   m_Name: Spades Panel
-  m_TagString: Makeable Contracts / Denomination
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23787,7 +23787,7 @@ GameObject:
   - component: {fileID: 1471974467}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25710,7 +25710,7 @@ GameObject:
   - component: {fileID: 1607513470}
   m_Layer: 5
   m_Name: Empty Panel
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26683,7 +26683,7 @@ GameObject:
   - component: {fileID: 1687245099}
   m_Layer: 5
   m_Name: East Panel
-  m_TagString: 'Makeable Contracts / Seat '
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26984,7 +26984,7 @@ GameObject:
   - component: {fileID: 1716451251}
   m_Layer: 5
   m_Name: Panel (15)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27061,7 +27061,7 @@ GameObject:
   - component: {fileID: 1721212889}
   m_Layer: 5
   m_Name: Panel (8)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27138,7 +27138,7 @@ GameObject:
   - component: {fileID: 1721479265}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27606,7 +27606,7 @@ GameObject:
   - component: {fileID: 1737337605}
   m_Layer: 5
   m_Name: Panel (25)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29022,7 +29022,7 @@ GameObject:
   - component: {fileID: 1829990686}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29264,7 +29264,7 @@ GameObject:
   - component: {fileID: 1850755832}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29669,7 +29669,7 @@ GameObject:
   - component: {fileID: 1872042486}
   m_Layer: 5
   m_Name: Panel (11)
-  m_TagString: Makeable Contracts / Level
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30366,7 +30366,7 @@ GameObject:
   - component: {fileID: 1928706327}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31556,7 +31556,7 @@ GameObject:
   - component: {fileID: 1975287741}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32320,7 +32320,7 @@ GameObject:
   - component: {fileID: 2015250437}
   m_Layer: 5
   m_Name: West Panel
-  m_TagString: 'Makeable Contracts / Seat '
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33370,7 +33370,7 @@ GameObject:
   - component: {fileID: 2124397144}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33581,7 +33581,7 @@ GameObject:
   - component: {fileID: 2129334286}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33717,7 +33717,7 @@ GameObject:
   - component: {fileID: 2130156264}
   m_Layer: 5
   m_Name: South Panel
-  m_TagString: 'Makeable Contracts / Seat '
+  m_TagString: Makeable Contracts / Any
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

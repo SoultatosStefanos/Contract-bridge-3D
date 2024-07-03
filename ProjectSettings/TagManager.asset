@@ -18,6 +18,8 @@ TagManager:
   - 'Makeable Contracts / Seat '
   - Makeable Contracts / Denomination
   - Makeable Contracts / Level
+  - Makeable Contracts / Any
+  - Makeable Contracts / Level Text
   layers:
   - Default
   - TransparentFX

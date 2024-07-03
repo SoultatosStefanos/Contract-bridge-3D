@@ -17112,7 +17112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3c1379183a46719aff3ce24d4e37a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 2
+  delay: 0.5
   playerSeat: 1
 --- !u!4 &1283964199
 Transform:

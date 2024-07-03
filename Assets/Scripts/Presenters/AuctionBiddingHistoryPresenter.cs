@@ -208,6 +208,8 @@ namespace Presenters
 
         private void UpdateAuctionBids(Seat seat, Action<GameObject> updateAction)
         {
+            CheckForBidPanelClear();
+
             var bidPanelIndex = NextBidPanelIndex(seat);
             Debug.Assert(bidPanelIndex is >= 0 and <= SeatCount * SeatCount);
 
@@ -223,7 +225,7 @@ namespace Presenters
 
         private int NextBidPanelIndex(Seat seat)
         {
-            return FirstBidPanelSeatIndex(seat) + SeatPlayCount(seat) * SeatCount;
+            return FirstBidPanelSeatIndex(seat) + SeatPlayCount(seat) % MaxAllowedPlayCount * SeatCount;
         }
 
         private int SeatPlayCount(Seat seat)
@@ -244,22 +246,18 @@ namespace Presenters
             {
                 case Seat.East:
                     ++_eastPlayCount;
-                    CheckPlayCount(_eastPlayCount);
                     break;
 
                 case Seat.South:
                     ++_southPlayCount;
-                    CheckPlayCount(_southPlayCount);
                     break;
 
                 case Seat.West:
                     ++_westPlayCount;
-                    CheckPlayCount(_westPlayCount);
                     break;
 
                 case Seat.North:
                     ++_northPlayCount;
-                    CheckPlayCount(_northPlayCount);
                     break;
 
                 default:
@@ -267,11 +265,31 @@ namespace Presenters
             }
         }
 
-        private static void CheckPlayCount(int playCount)
+        private void CheckForBidPanelClear()
         {
-            if (playCount > MaxAllowedPlayCount)
+            if (_bidPanels.All(panel => panel.activeSelf))
             {
-                throw new InvalidOperationException("Did not make as many panels!");
+                ClearBidPanels();
+            }
+        }
+
+        private void ClearBidPanels()
+        {
+            foreach (var panel in _bidPanels)
+            {
+                var ntGameObject = FindChildByTag(panel, BiddingHistoryNtTextTag);
+                ntGameObject.SetActive(false);
+
+                var suitGameObject = FindChildByTag(panel, BiddingSuitImageTag);
+                suitGameObject.SetActive(false);
+
+                var passTextGameObject = FindChildByTag(panel, BiddingHistoryPassDoubleTextTag);
+                passTextGameObject.SetActive(false);
+
+                var doubleTextGameObject = FindChildByTag(panel, BiddingHistoryPassDoubleTextTag);
+                doubleTextGameObject.SetActive(false);
+
+                panel.SetActive(false);
             }
         }
 

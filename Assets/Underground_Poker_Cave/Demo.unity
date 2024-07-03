@@ -909,9 +909,10 @@ GameObject:
   - component: {fileID: 78080885}
   - component: {fileID: 78080887}
   - component: {fileID: 78080886}
+  - component: {fileID: 78080888}
   m_Layer: 5
   m_Name: North Panel
-  m_TagString: Untagged
+  m_TagString: 'Makeable Contracts / Seat '
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -932,10 +933,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 62.2, y: -110.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &78080886
 MonoBehaviour:
@@ -975,6 +976,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78080884}
   m_CullTransparentMesh: 1
+--- !u!114 &78080888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78080884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c6b35ca2664b0998241e846e30b3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 0
 --- !u!1 &81513584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,7 +3681,7 @@ GameObject:
   - component: {fileID: 137927224}
   m_Layer: 5
   m_Name: Panel (14)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3688,10 +3702,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 271, y: -177.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137927224
 MonoBehaviour:
@@ -3742,9 +3756,10 @@ GameObject:
   - component: {fileID: 139902927}
   - component: {fileID: 139902929}
   - component: {fileID: 139902928}
+  - component: {fileID: 139902930}
   m_Layer: 5
   m_Name: NT Panel
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Denomination
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3765,10 +3780,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 584.2, y: -43.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139902928
 MonoBehaviour:
@@ -3808,6 +3823,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139902926}
   m_CullTransparentMesh: 1
+--- !u!114 &139902930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139902926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28940ab25d6f431f907c2e906fc27750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denomination: 5
 --- !u!1 &142053081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,7 +4298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &150331965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4907,7 +4935,7 @@ GameObject:
   - component: {fileID: 194441695}
   m_Layer: 5
   m_Name: Panel (27)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4928,10 +4956,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 375.40002, y: -311.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194441695
 MonoBehaviour:
@@ -7052,10 +7080,10 @@ RectTransform:
   m_Father: {fileID: 83806653}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -43.5}
+  m_SizeDelta: {x: 200, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &295522503
 MonoBehaviour:
@@ -8615,9 +8643,9 @@ RectTransform:
   m_Father: {fileID: 1780905574}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 385, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448997094
@@ -8790,9 +8818,9 @@ RectTransform:
   m_Father: {fileID: 1780905574}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 280, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &456309394
@@ -9354,7 +9382,7 @@ GameObject:
   - component: {fileID: 487828730}
   m_Layer: 5
   m_Name: Panel (26)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9375,10 +9403,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 271, y: -311.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487828730
 MonoBehaviour:
@@ -9705,9 +9733,9 @@ RectTransform:
   m_Father: {fileID: 1780905574}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 70, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &507770391
@@ -10220,9 +10248,10 @@ GameObject:
   - component: {fileID: 526184893}
   - component: {fileID: 526184895}
   - component: {fileID: 526184894}
+  - component: {fileID: 526184896}
   m_Layer: 5
   m_Name: Diamonds Panel
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Denomination
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10243,10 +10272,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 271, y: -43.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526184894
 MonoBehaviour:
@@ -10286,6 +10315,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526184892}
   m_CullTransparentMesh: 1
+--- !u!114 &526184896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526184892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28940ab25d6f431f907c2e906fc27750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denomination: 2
 --- !u!1 &526230136
 GameObject:
   m_ObjectHideFlags: 0
@@ -10624,9 +10666,10 @@ GameObject:
   - component: {fileID: 547344913}
   - component: {fileID: 547344915}
   - component: {fileID: 547344914}
+  - component: {fileID: 547344916}
   m_Layer: 5
   m_Name: Hearts Panel
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Denomination
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10647,10 +10690,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 375.40002, y: -43.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &547344914
 MonoBehaviour:
@@ -10690,6 +10733,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547344912}
   m_CullTransparentMesh: 1
+--- !u!114 &547344916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547344912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28940ab25d6f431f907c2e906fc27750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denomination: 3
 --- !u!1 &556338298
 GameObject:
   m_ObjectHideFlags: 0
@@ -10709,7 +10765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &556338299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10941,7 +10997,7 @@ GameObject:
   - component: {fileID: 562720842}
   m_Layer: 5
   m_Name: Panel (7)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10962,10 +11018,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 166.6, y: -110.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &562720842
 MonoBehaviour:
@@ -11272,9 +11328,9 @@ RectTransform:
   m_Father: {fileID: 1780905574}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 595, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574663636
@@ -11420,9 +11476,10 @@ GameObject:
   - component: {fileID: 575243607}
   - component: {fileID: 575243609}
   - component: {fileID: 575243608}
+  - component: {fileID: 575243610}
   m_Layer: 5
   m_Name: Clubs Panel
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Denomination
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11443,10 +11500,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 166.6, y: -43.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575243608
 MonoBehaviour:
@@ -11486,6 +11543,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575243606}
   m_CullTransparentMesh: 1
+--- !u!114 &575243610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575243606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28940ab25d6f431f907c2e906fc27750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denomination: 1
 --- !u!1 &579813417
 GameObject:
   m_ObjectHideFlags: 0
@@ -11710,7 +11780,7 @@ GameObject:
   - component: {fileID: 587252483}
   m_Layer: 5
   m_Name: Panel (17)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11731,10 +11801,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 584.2, y: -177.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &587252483
 MonoBehaviour:
@@ -11818,7 +11888,7 @@ GameObject:
   - component: {fileID: 590399260}
   m_Layer: 5
   m_Name: Panel (10)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11839,10 +11909,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 479.80002, y: -110.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590399260
 MonoBehaviour:
@@ -12049,7 +12119,7 @@ GameObject:
   - component: {fileID: 611651849}
   m_Layer: 5
   m_Name: Panel (9)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12070,10 +12140,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 375.40002, y: -110.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &611651849
 MonoBehaviour:
@@ -12389,10 +12459,10 @@ RectTransform:
   m_Father: {fileID: 83806653}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -43.5}
+  m_SizeDelta: {x: 200, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &628708670
 MonoBehaviour:
@@ -13139,7 +13209,7 @@ GameObject:
   - component: {fileID: 705425455}
   m_Layer: 5
   m_Name: Panel (29)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13160,10 +13230,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 584.2, y: -311.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &705425455
 MonoBehaviour:
@@ -13570,10 +13640,10 @@ RectTransform:
   m_Father: {fileID: 83806653}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 700, y: -43.5}
+  m_SizeDelta: {x: 200, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &735195601
 MonoBehaviour:
@@ -13904,7 +13974,7 @@ GameObject:
   - component: {fileID: 763713789}
   m_Layer: 5
   m_Name: Panel (13)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13925,10 +13995,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 166.6, y: -177.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763713789
 MonoBehaviour:
@@ -16098,7 +16168,7 @@ GameObject:
   - component: {fileID: 949285634}
   m_Layer: 5
   m_Name: Panel (28)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16119,10 +16189,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 479.80002, y: -311.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949285634
 MonoBehaviour:
@@ -17974,7 +18044,7 @@ GameObject:
   - component: {fileID: 1144669896}
   m_Layer: 5
   m_Name: Panel (23)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17995,10 +18065,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 584.2, y: -244.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1144669896
 MonoBehaviour:
@@ -18051,7 +18121,7 @@ GameObject:
   - component: {fileID: 1145984727}
   m_Layer: 5
   m_Name: Panel (22)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18072,10 +18142,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 479.80002, y: -244.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1145984727
 MonoBehaviour:
@@ -18128,7 +18198,7 @@ GameObject:
   - component: {fileID: 1153777521}
   m_Layer: 5
   m_Name: Panel (20)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18149,10 +18219,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 271, y: -244.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1153777521
 MonoBehaviour:
@@ -19778,9 +19848,9 @@ RectTransform:
   m_Father: {fileID: 722312048}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 776.5523, y: -227.0663}
   m_SizeDelta: {x: 57.817, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234675285
@@ -20304,9 +20374,9 @@ RectTransform:
   m_Father: {fileID: 1780905574}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 700, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258606217
@@ -21100,7 +21170,7 @@ GameObject:
   - component: {fileID: 1309751534}
   m_Layer: 5
   m_Name: Panel (21)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21121,10 +21191,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 375.40002, y: -244.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1309751534
 MonoBehaviour:
@@ -21177,7 +21247,7 @@ GameObject:
   - component: {fileID: 1314106955}
   m_Layer: 5
   m_Name: Panel (16)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21198,10 +21268,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 479.80002, y: -177.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314106955
 MonoBehaviour:
@@ -21917,7 +21987,7 @@ GameObject:
   - component: {fileID: 1381977417}
   m_Layer: 5
   m_Name: Panel (19)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21938,10 +22008,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 166.6, y: -244.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1381977417
 MonoBehaviour:
@@ -22224,9 +22294,10 @@ GameObject:
   - component: {fileID: 1390800949}
   - component: {fileID: 1390800951}
   - component: {fileID: 1390800950}
+  - component: {fileID: 1390800952}
   m_Layer: 5
   m_Name: Spades Panel
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Denomination
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22247,10 +22318,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 479.80002, y: -43.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1390800950
 MonoBehaviour:
@@ -22290,6 +22361,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390800948}
   m_CullTransparentMesh: 1
+--- !u!114 &1390800952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390800948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28940ab25d6f431f907c2e906fc27750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denomination: 4
 --- !u!1 &1393223944
 GameObject:
   m_ObjectHideFlags: 0
@@ -25646,10 +25730,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 62.2, y: -43.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1607513470
 CanvasRenderer:
@@ -26596,9 +26680,10 @@ GameObject:
   - component: {fileID: 1687245096}
   - component: {fileID: 1687245098}
   - component: {fileID: 1687245097}
+  - component: {fileID: 1687245099}
   m_Layer: 5
   m_Name: East Panel
-  m_TagString: Untagged
+  m_TagString: 'Makeable Contracts / Seat '
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26619,10 +26704,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 62.2, y: -244.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1687245097
 MonoBehaviour:
@@ -26662,6 +26747,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687245095}
   m_CullTransparentMesh: 1
+--- !u!114 &1687245099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687245095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c6b35ca2664b0998241e846e30b3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 1
 --- !u!1 &1695055909
 GameObject:
   m_ObjectHideFlags: 0
@@ -26886,7 +26984,7 @@ GameObject:
   - component: {fileID: 1716451251}
   m_Layer: 5
   m_Name: Panel (15)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26907,10 +27005,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 375.40002, y: -177.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716451251
 MonoBehaviour:
@@ -26963,7 +27061,7 @@ GameObject:
   - component: {fileID: 1721212889}
   m_Layer: 5
   m_Name: Panel (8)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26984,10 +27082,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 271, y: -110.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721212889
 MonoBehaviour:
@@ -27508,7 +27606,7 @@ GameObject:
   - component: {fileID: 1737337605}
   m_Layer: 5
   m_Name: Panel (25)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27529,10 +27627,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 166.6, y: -311.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737337605
 MonoBehaviour:
@@ -29326,9 +29424,9 @@ RectTransform:
   m_Father: {fileID: 722312048}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 471.93137, y: -227.0663}
   m_SizeDelta: {x: 57.817, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854078515
@@ -29571,7 +29669,7 @@ GameObject:
   - component: {fileID: 1872042486}
   m_Layer: 5
   m_Name: Panel (11)
-  m_TagString: Untagged
+  m_TagString: Makeable Contracts / Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29592,10 +29690,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 584.2, y: -110.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1872042486
 MonoBehaviour:
@@ -30424,10 +30522,10 @@ RectTransform:
   m_Father: {fileID: 83806653}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -43.5}
+  m_SizeDelta: {x: 200, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929316671
 MonoBehaviour:
@@ -30542,9 +30640,9 @@ RectTransform:
   m_Father: {fileID: 1780905574}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 490, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1940354404
@@ -31153,9 +31251,9 @@ RectTransform:
   m_Father: {fileID: 722312048}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 167.31046, y: -227.0663}
   m_SizeDelta: {x: 57.817, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974027119
@@ -31308,9 +31406,9 @@ RectTransform:
   m_Father: {fileID: 1780905574}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: 0}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974967873
@@ -32206,9 +32304,10 @@ GameObject:
   - component: {fileID: 2015250434}
   - component: {fileID: 2015250436}
   - component: {fileID: 2015250435}
+  - component: {fileID: 2015250437}
   m_Layer: 5
   m_Name: West Panel
-  m_TagString: Untagged
+  m_TagString: 'Makeable Contracts / Seat '
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32229,10 +32328,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 62.2, y: -311.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2015250435
 MonoBehaviour:
@@ -32272,6 +32371,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015250433}
   m_CullTransparentMesh: 1
+--- !u!114 &2015250437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015250433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c6b35ca2664b0998241e846e30b3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 3
 --- !u!1001 &2015871291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33589,9 +33701,10 @@ GameObject:
   - component: {fileID: 2130156261}
   - component: {fileID: 2130156263}
   - component: {fileID: 2130156262}
+  - component: {fileID: 2130156264}
   m_Layer: 5
   m_Name: South Panel
-  m_TagString: Untagged
+  m_TagString: 'Makeable Contracts / Seat '
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33612,10 +33725,10 @@ RectTransform:
   m_Father: {fileID: 1980753796}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 62.2, y: -177.5}
+  m_SizeDelta: {x: 104.4, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2130156262
 MonoBehaviour:
@@ -33655,6 +33768,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130156260}
   m_CullTransparentMesh: 1
+--- !u!114 &2130156264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130156260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c6b35ca2664b0998241e846e30b3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 2
 --- !u!1001 &2133308780
 PrefabInstance:
   m_ObjectHideFlags: 0

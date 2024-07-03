@@ -15,6 +15,9 @@ TagManager:
   - Bidding Actions / Pass Button
   - Bidding Actions / Double Button
   - Bid History Panel
+  - 'Makeable Contracts / Seat '
+  - Makeable Contracts / Denomination
+  - Makeable Contracts / Level
   layers:
   - Default
   - TransparentFX

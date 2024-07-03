@@ -1,5 +1,6 @@
 using System.Collections;
 using ContractBridge.Core;
+using Domain;
 using Events;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -22,6 +23,9 @@ namespace AI
         private Seat playerSeat;
 
         [Inject]
+        private IAuctionExtras _auctionExtras;
+
+        [Inject]
         private IEventBus _eventBus;
 
         [Inject]
@@ -39,9 +43,7 @@ namespace AI
 
         private void HandleAuctionTurnChangeEvent(AuctionTurnChangeEvent e)
         {
-            var isPlayersTurn = e.Seat == playerSeat;
-
-            if (isPlayersTurn)
+            if (e.Seat == playerSeat)
             {
                 return;
             }
@@ -53,8 +55,40 @@ namespace AI
         {
             yield return new WaitForSeconds(delay);
 
-            Debug.Assert(_session.Auction != null, "_session.Auction != null");
-            _session.Auction.Pass(aiSeat);
+            var auction = _session.Auction;
+            Debug.Assert(auction != null, "auction != null");
+
+            if (_auctionExtras.PickedContract is { } pickedContract)
+            {
+                if (pickedContract.Declarer != aiSeat)
+                {
+                    TryPass(auction, aiSeat); // Not this "bot's" turn!
+                    yield break;
+                }
+
+                Debug.Assert(pickedContract.Risk == null, "Not handling doubling/redoubling!");
+
+                if (auction.CanCall(pickedContract, aiSeat)) // Maybe the player ignored his choice!
+                {
+                    auction.Call(pickedContract, aiSeat);
+                }
+                else
+                {
+                    TryPass(auction, aiSeat); // What to do...
+                }
+            }
+            else
+            {
+                TryPass(auction, aiSeat); // Always pass if no contract has been picked.
+            }
+        }
+
+        private static void TryPass(IAuction auction, Seat aiSeat)
+        {
+            if (auction.CanPass(aiSeat))
+            {
+                auction.Pass(aiSeat);
+            }
         }
     }
 }

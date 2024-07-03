@@ -17142,7 +17142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3c1379183a46719aff3ce24d4e37a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.5
+  delay: 1
   playerSeat: 1
 --- !u!4 &1283964199
 Transform:
@@ -25806,8 +25806,6 @@ MonoBehaviour:
   m_Options:
     m_Options:
     - m_Text: 
-      m_Image: {fileID: 0}
-    - m_Text: E
       m_Image: {fileID: 0}
     - m_Text: S
       m_Image: {fileID: 0}

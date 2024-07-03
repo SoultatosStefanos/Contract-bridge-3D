@@ -106,10 +106,9 @@ namespace Controllers
             return index switch
             {
                 0 => null,
-                1 => Seat.East,
-                2 => Seat.South,
-                3 => Seat.West,
-                4 => Seat.North,
+                1 => Seat.South,
+                2 => Seat.West,
+                3 => Seat.North,
                 _ => throw new ArgumentOutOfRangeException(nameof(index), index, null)
             };
         }

@@ -1,9 +1,9 @@
-using ContractBridge.Core.Impl;
+using ContractBridge.Core;
 
 namespace Domain
 {
     public interface IAuctionExtras
     {
-        Contract PickedContract { get; set; }
+        IContract PickedContract { get; set; }
     }
 }

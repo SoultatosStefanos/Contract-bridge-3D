@@ -48,6 +48,7 @@ namespace Installers
             Container.Bind<ISession>().FromInstance(_session);
 
             Container.Bind<IBidFactory>().To<BidFactory>().AsSingle();
+            Container.Bind<IContractFactory>().To<ContractFactory>().AsSingle();
 
             Container.Bind<IAuctionExtras>().To<AuctionExtras>().AsSingle();
         }

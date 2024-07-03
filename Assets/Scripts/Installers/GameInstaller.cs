@@ -1,5 +1,6 @@
 using ContractBridge.Core;
 using ContractBridge.Core.Impl;
+using ContractBridge.Solver.Impl;
 using Decorators;
 using Domain;
 using Domain.Impl;
@@ -12,6 +13,7 @@ namespace Installers
 {
     public class GameInstaller : MonoInstaller
     {
+        private readonly IAuctionExtras _auctionExtras;
         private readonly IBoard _board;
 
         private readonly IDeck _deck;
@@ -24,18 +26,25 @@ namespace Installers
         {
             _eventBus = new EventBus();
 
+            _auctionExtras = new AuctionExtras(_eventBus);
+
             _deck = new DeckEventDecorator(new Deck(new CardFactory()), _eventBus);
             _board = new BoardEventDecorator(new Board(new HandFactory()), _eventBus);
-            _session = new SessionEventDecorator(
-                new Session(
-                    _deck,
-                    _board,
-                    new PairEventDecoratorFactory(_eventBus),
-                    new AuctionEventDecoratorFactory(_eventBus),
-                    new GameEventDecoratorFactory(_eventBus),
-                    new ScoringSystem()
+
+            _session = new SessionAuctionExtrasDecorator(
+                new SessionEventDecorator(
+                    new Session(
+                        _deck,
+                        _board,
+                        new PairEventDecoratorFactory(_eventBus),
+                        new AuctionEventDecoratorFactory(_eventBus),
+                        new GameEventDecoratorFactory(_eventBus),
+                        new ScoringSystem()
+                    ),
+                    _eventBus
                 ),
-                _eventBus
+                _auctionExtras,
+                new BoHaglundDoubleDummySolver(new ContractFactory())
             );
         }
 
@@ -50,7 +59,7 @@ namespace Installers
             Container.Bind<IBidFactory>().To<BidFactory>().AsSingle();
             Container.Bind<IContractFactory>().To<ContractFactory>().AsSingle();
 
-            Container.Bind<IAuctionExtras>().To<AuctionExtras>().AsSingle();
+            Container.Bind<IAuctionExtras>().FromInstance(_auctionExtras);
         }
     }
 }

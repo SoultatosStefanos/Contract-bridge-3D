@@ -11266,8 +11266,9 @@ GameObject:
   - component: {fileID: 722312051}
   - component: {fileID: 722312050}
   - component: {fileID: 722312049}
+  - component: {fileID: 722312052}
   m_Layer: 5
-  m_Name: Contract Choose Panel
+  m_Name: Contract Pick Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11360,6 +11361,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722312047}
   m_CullTransparentMesh: 1
+--- !u!114 &722312052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722312047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87176ee9b5af493caa7da5efe02fc63c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seatDropdown: {fileID: 1974027119}
+  levelDropdown: {fileID: 1854078515}
+  denominationDropdown: {fileID: 1234675285}
 --- !u!1 &735195599
 GameObject:
   m_ObjectHideFlags: 0
@@ -16396,7 +16412,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 722312052}
+        m_TargetAssemblyTypeName: Controllers.ContractPickController, Assembly-CSharp
+        m_MethodName: PickedDenominationChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1234675286
 MonoBehaviour:
@@ -24446,7 +24474,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 722312052}
+        m_TargetAssemblyTypeName: Controllers.ContractPickController, Assembly-CSharp
+        m_MethodName: PickedLevelChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1854078516
 MonoBehaviour:
@@ -25771,7 +25811,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 722312052}
+        m_TargetAssemblyTypeName: Controllers.ContractPickController, Assembly-CSharp
+        m_MethodName: PickedSeatChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1974027120
 MonoBehaviour:

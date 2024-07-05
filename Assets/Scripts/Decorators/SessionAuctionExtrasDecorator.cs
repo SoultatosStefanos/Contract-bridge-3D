@@ -9,6 +9,8 @@ namespace Decorators
 {
     public class SessionAuctionExtrasDecorator : ISession
     {
+        private const int AnalyzeBoardDelay = 3000; // More intuitive for the user :)
+
         private readonly IAuctionExtras _auctionExtras;
 
         private readonly IDoubleDummySolver _doubleDummySolver;
@@ -71,6 +73,8 @@ namespace Decorators
 
         private async Task AnalyzeBoard()
         {
+            await Task.Delay(AnalyzeBoardDelay);
+
             var solution = await Task.Run(() => _doubleDummySolver.Analyze(this));
 
             _auctionExtras.Solution = solution;

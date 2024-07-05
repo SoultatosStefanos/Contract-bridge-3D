@@ -16,6 +16,10 @@ namespace Controllers
         [SerializeField]
         private GameObject auctionCanvas;
 
+        [FormerlySerializedAs("Game Canvas")]
+        [SerializeField]
+        private GameObject gameCanvas;
+
         [FormerlySerializedAs("Hide / Show Key")]
         [SerializeField]
         private KeyCode hideShowKey = KeyCode.U;
@@ -40,7 +44,7 @@ namespace Controllers
             {
                 Phase.Setup => setupCanvas,
                 Phase.Auction => auctionCanvas,
-                Phase.Play => throw new ArgumentOutOfRangeException(), // TODO
+                Phase.Play => gameCanvas,
                 Phase.Scoring => throw new ArgumentOutOfRangeException(), // TODO
                 _ => throw new ArgumentOutOfRangeException()
             };

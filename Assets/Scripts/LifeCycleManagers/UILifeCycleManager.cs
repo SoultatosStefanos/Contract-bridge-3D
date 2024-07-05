@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using ContractBridge.Core;
 using Events;
 using UnityEngine;
@@ -16,6 +18,18 @@ namespace LifeCycleManagers
         [SerializeField]
         private GameObject auctionCanvas;
 
+        [FormerlySerializedAs("Game Canvas")]
+        [SerializeField]
+        private GameObject gameCanvas;
+
+        [FormerlySerializedAs("Auction Transition Delay")]
+        [SerializeField]
+        private float auctionTransitionDelay = 0.5F;
+
+        [FormerlySerializedAs("Game Transition Delay")]
+        [SerializeField]
+        private float gameTransitionDelay = 1.0F;
+
         [Inject]
         private IEventBus _eventBus;
 
@@ -31,13 +45,48 @@ namespace LifeCycleManagers
 
         private void HandleSessionChangedEvent(SessionPhaseChangedEvent evt)
         {
-            if (evt.Phase != Phase.Auction)
+            switch (evt.Phase)
             {
-                return;
-            }
+                case Phase.Auction:
+                    HandleAuctionTransition();
+                    break;
 
-            setupCanvas.SetActive(false);
-            auctionCanvas.SetActive(true);
+                case Phase.Play:
+                    HandleGameTransition();
+                    break;
+
+                case Phase.Setup:
+                case Phase.Scoring:
+                    break;
+
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private void HandleAuctionTransition()
+        {
+            StartCoroutine(WaitAndThen(auctionTransitionDelay, () =>
+            {
+                setupCanvas.SetActive(false);
+                auctionCanvas.SetActive(true);
+            }));
+        }
+
+        private void HandleGameTransition()
+        {
+            StartCoroutine(WaitAndThen(gameTransitionDelay, () =>
+            {
+                auctionCanvas.SetActive(false);
+                gameCanvas.SetActive(true);
+            }));
+        }
+
+        private static IEnumerator WaitAndThen(float delay, Action action)
+        {
+            yield return new WaitForSeconds(delay);
+
+            action.Invoke();
         }
     }
 }

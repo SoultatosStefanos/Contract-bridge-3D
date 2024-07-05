@@ -3,36 +3,37 @@ using Events;
 using TMPro;
 using UnityEngine;
 using Zenject;
+using Debug = System.Diagnostics.Debug;
 
 namespace Presenters
 {
-    public class AuctionTurnPresenter : MonoBehaviour
+    public class GameTurnPresenter : MonoBehaviour
     {
         [Inject]
         private IEventBus _eventBus;
 
         [Inject]
         private ISession _session;
-
+        
         private TextMeshProUGUI _turnText;
 
         private void OnEnable()
         {
             _turnText = GetComponent<TextMeshProUGUI>();
 
-            _eventBus.On<AuctionTurnChangeEvent>(HandleTurnChangedEvent);
-            
-            Debug.Assert(_session.Auction != null, "_session.Auction != null");
-            Debug.Assert(_session.Auction.Turn != null, "_session.Auction.Turn != null");
-            UpdateTurn((Seat)_session.Auction.Turn);
+            _eventBus.On<GameTurnChangeEvent>(HandleGameTurnChangeEvent);
+
+            Debug.Assert(_session.Game != null, "_session.Game != null");
+            Debug.Assert(_session.Game.Turn != null, "_session.Game.Turn != null");
+            UpdateTurn((Seat)_session.Game.Turn);
         }
 
         private void OnDisable()
         {
-            _eventBus.Off<AuctionTurnChangeEvent>(HandleTurnChangedEvent);
+            _eventBus.Off<GameTurnChangeEvent>(HandleGameTurnChangeEvent);
         }
 
-        private void HandleTurnChangedEvent(AuctionTurnChangeEvent e)
+        private void HandleGameTurnChangeEvent(GameTurnChangeEvent e)
         {
             UpdateTurn(e.Seat);
         }

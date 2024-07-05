@@ -16,15 +16,19 @@ namespace Presenters
 
         private TextMeshProUGUI _turnText;
 
-        private void OnEnable()
+        private void Awake()
         {
             _turnText = GetComponent<TextMeshProUGUI>();
+        }
 
+        private void OnEnable()
+        {
             _eventBus.On<AuctionTurnChangeEvent>(HandleTurnChangedEvent);
-            
-            Debug.Assert(_session.Auction != null, "_session.Auction != null");
-            Debug.Assert(_session.Auction.Turn != null, "_session.Auction.Turn != null");
-            UpdateTurn((Seat)_session.Auction.Turn);
+
+            if (_session.Auction?.Turn is { } turn)
+            {
+                UpdateVisual(turn);
+            }
         }
 
         private void OnDisable()
@@ -34,10 +38,10 @@ namespace Presenters
 
         private void HandleTurnChangedEvent(AuctionTurnChangeEvent e)
         {
-            UpdateTurn(e.Seat);
+            UpdateVisual(e.Seat);
         }
 
-        private void UpdateTurn(Seat turnSeat)
+        private void UpdateVisual(Seat turnSeat)
         {
             _turnText.text = $"Turn: {turnSeat}";
         }

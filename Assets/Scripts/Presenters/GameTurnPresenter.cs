@@ -3,7 +3,6 @@ using Events;
 using TMPro;
 using UnityEngine;
 using Zenject;
-using Debug = System.Diagnostics.Debug;
 
 namespace Presenters
 {
@@ -14,18 +13,22 @@ namespace Presenters
 
         [Inject]
         private ISession _session;
-        
+
         private TextMeshProUGUI _turnText;
+
+        private void Awake()
+        {
+            _turnText = GetComponent<TextMeshProUGUI>();
+        }
 
         private void OnEnable()
         {
-            _turnText = GetComponent<TextMeshProUGUI>();
-
             _eventBus.On<GameTurnChangeEvent>(HandleGameTurnChangeEvent);
 
-            Debug.Assert(_session.Game != null, "_session.Game != null");
-            Debug.Assert(_session.Game.Turn != null, "_session.Game.Turn != null");
-            UpdateTurn((Seat)_session.Game.Turn);
+            if (_session.Game?.Turn is { } turn)
+            {
+                UpdateVisual(turn);
+            }
         }
 
         private void OnDisable()
@@ -35,10 +38,10 @@ namespace Presenters
 
         private void HandleGameTurnChangeEvent(GameTurnChangeEvent e)
         {
-            UpdateTurn(e.Seat);
+            UpdateVisual(e.Seat);
         }
 
-        private void UpdateTurn(Seat turnSeat)
+        private void UpdateVisual(Seat turnSeat)
         {
             _turnText.text = $"Turn: {turnSeat}";
         }

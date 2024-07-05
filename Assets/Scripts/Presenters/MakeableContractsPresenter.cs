@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using ContractBridge.Solver;
+using Domain;
 using Events;
 using Extensions;
 using TMPro;
@@ -17,11 +18,14 @@ namespace Presenters
         private const string MakeableContractsLevelTextTag = "Makeable Contracts / Level Text";
 
         [Inject]
+        private IAuctionExtras _auctionExtras;
+
+        [Inject]
         private IEventBus _eventBus;
 
         private GameObject[] _panels;
 
-        private void Start()
+        private void Awake()
         {
             _panels = gameObject.FindChildrenInHierarchy()
                 .Where(child => child.CompareTag(MakeableContractsPanelTag))
@@ -31,6 +35,11 @@ namespace Presenters
         private void OnEnable()
         {
             _eventBus.On<AuctionExtrasSolutionSetEvent>(HandleAuctionExtrasSolutionSetEvent);
+
+            if (_auctionExtras.Solution is { } solution)
+            {
+                UpdateVisual(solution);
+            }
         }
 
         private void OnDisable()

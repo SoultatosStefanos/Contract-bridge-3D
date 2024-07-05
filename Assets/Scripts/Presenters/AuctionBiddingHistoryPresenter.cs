@@ -62,7 +62,7 @@ namespace Presenters
 
         private int _westPlayCount;
 
-        private void Start()
+        private void Awake()
         {
             _bidPanels = transform.Cast<Transform>()
                 .Where(child => child.CompareTag(BiddingHistoryPanelTag))

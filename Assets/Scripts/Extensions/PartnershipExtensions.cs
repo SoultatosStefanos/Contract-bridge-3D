@@ -9,8 +9,8 @@ namespace Extensions
         {
             return partnership switch
             {
-                Partnership.NorthSouth => "N/S",
-                Partnership.EastWest => "E/W",
+                Partnership.NorthSouth => "N / S",
+                Partnership.EastWest => "E / W",
                 _ => throw new ArgumentOutOfRangeException(nameof(partnership), partnership, null)
             };
         }

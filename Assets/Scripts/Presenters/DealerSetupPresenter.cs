@@ -16,7 +16,7 @@ namespace Presenters
         [Inject]
         private IEventBus _eventBus;
 
-        private void Start()
+        private void Awake()
         {
             _dealerText = GetComponent<TextMeshProUGUI>();
         }
@@ -33,10 +33,10 @@ namespace Presenters
 
         private void HandleDealerSetEvent(BoardDealerSetEvent evt)
         {
-            UpdateDealerText(evt.Dealer);
+            UpdateVisual(evt.Dealer);
         }
 
-        private void UpdateDealerText(Seat dealerSeat)
+        private void UpdateVisual(Seat dealerSeat)
         {
             _dealerText.text = $"Dealer: {dealerSeat}";
         }

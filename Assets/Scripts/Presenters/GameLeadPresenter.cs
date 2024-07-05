@@ -3,7 +3,6 @@ using Events;
 using TMPro;
 using UnityEngine;
 using Zenject;
-using Debug = System.Diagnostics.Debug;
 
 namespace Presenters
 {
@@ -17,15 +16,19 @@ namespace Presenters
         [Inject]
         private ISession _session;
 
-        private void OnEnable()
+        private void Awake()
         {
             _leadText = GetComponent<TextMeshProUGUI>();
+        }
 
+        private void OnEnable()
+        {
             _eventBus.On<GameLeadChangeEvent>(HandleGameLeadChangeEvent);
 
-            Debug.Assert(_session.Game != null, "_session.Game != null");
-            Debug.Assert(_session.Game.Lead != null, "_session.Game.Lead != null");
-            UpdateLead((Seat)_session.Game.Lead);
+            if (_session.Game?.Lead is { } lead)
+            {
+                UpdateVisual(lead);
+            }
         }
 
         private void OnDisable()
@@ -35,10 +38,10 @@ namespace Presenters
 
         private void HandleGameLeadChangeEvent(GameLeadChangeEvent e)
         {
-            UpdateLead(e.Seat);
+            UpdateVisual(e.Seat);
         }
 
-        private void UpdateLead(Seat leadSeat)
+        private void UpdateVisual(Seat leadSeat)
         {
             _leadText.text = $"Lead: {leadSeat}";
         }

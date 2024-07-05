@@ -40,10 +40,8 @@ namespace Presenters
         [Inject]
         private ISession _session;
 
-        public void OnEnable()
+        private void Awake()
         {
-            // NOTE: It's ok, this is enabled only once ...
-
             _levelButtons = gameObject.FindChildrenInHierarchy()
                 .Where(child => child.CompareTag(BiddingActionsLevelButtonTag))
                 .ToList();
@@ -51,7 +49,10 @@ namespace Presenters
             _denominationButtons = gameObject.FindChildrenInHierarchy()
                 .Where(child => child.CompareTag(BiddingActionsDenominationButtonTag))
                 .ToList();
+        }
 
+        public void OnEnable()
+        {
             _eventBus.On<AuctionTurnChangeEvent>(HandleAuctionTurnChangeEvent);
             _eventBus.On<AuctionFinalContractEvent>(HandleAuctionFinalContractEvent);
             _eventBus.On<AuctionCallEvent>(HandleAuctionCallEvent);

@@ -3,7 +3,6 @@ using Events;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
-using Debug = System.Diagnostics.Debug;
 
 namespace Presenters
 {
@@ -27,6 +26,8 @@ namespace Presenters
         {
             _eventBus.On<AuctionTurnChangeEvent>(HandleAuctionTurnChangeEvent);
             _eventBus.On<AuctionFinalContractEvent>(HandleAuctionFinalContractEvent);
+
+            UpdateVisual();
         }
 
         private void OnDisable()
@@ -47,8 +48,10 @@ namespace Presenters
 
         private void UpdateVisual()
         {
-            Debug.Assert(_session.Auction != null, "_session.Auction != null");
-            passButton.SetActive(_session.Auction.CanPass(playerSeat));
+            if (_session.Auction != null)
+            {
+                passButton.SetActive(_session.Auction.CanPass(playerSeat));
+            }
         }
     }
 }

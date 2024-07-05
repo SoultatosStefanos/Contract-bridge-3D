@@ -1,5 +1,6 @@
 using ContractBridge.Core;
 using Events;
+using Extensions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -18,7 +19,7 @@ namespace Presenters
 
         private TextMeshProUGUI _scoreText;
 
-        private void Start()
+        private void Awake()
         {
             _scoreText = GetComponent<TextMeshProUGUI>();
         }
@@ -43,13 +44,12 @@ namespace Presenters
                 return;
             }
 
-            UpdateScore(eventPair.Score);
+            UpdateVisual(eventPair.Score);
         }
 
-        private void UpdateScore(int score)
+        private void UpdateVisual(int score)
         {
-            var partnershipPrefix = partnership == Partnership.EastWest ? "E / W : " : "N / S : ";
-            _scoreText.text = partnershipPrefix + score;
+            _scoreText.text = partnership.ToShortHandString() + score;
         }
     }
 }

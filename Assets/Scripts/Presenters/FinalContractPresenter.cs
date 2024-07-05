@@ -4,7 +4,6 @@ using Extensions;
 using TMPro;
 using UnityEngine;
 using Zenject;
-using Debug = System.Diagnostics.Debug;
 
 namespace Presenters
 {
@@ -18,14 +17,19 @@ namespace Presenters
         [Inject]
         private ISession _session;
 
-        private void OnEnable()
+        private void Awake()
         {
             _contractText = GetComponent<TextMeshProUGUI>();
+        }
 
+        private void OnEnable()
+        {
             _eventBus.On<AuctionFinalContractEvent>(HandleAuctionFinalContractEvent);
 
-            Debug.Assert(_session.Auction != null, "_session.Auction != null");
-            UpdateVisual(_session.Auction.FinalContract);
+            if (_session.Auction is { } auction)
+            {
+                UpdateVisual(auction.FinalContract);
+            }
         }
 
         private void OnDisable()

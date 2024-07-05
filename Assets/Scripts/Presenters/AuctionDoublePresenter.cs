@@ -26,6 +26,8 @@ namespace Presenters
         {
             _eventBus.On<AuctionTurnChangeEvent>(HandleAuctionTurnChangeEvent);
             _eventBus.On<AuctionFinalContractEvent>(HandleAuctionFinalContractEvent);
+
+            UpdateVisual();
         }
 
         private void OnDisable()
@@ -46,8 +48,10 @@ namespace Presenters
 
         private void UpdateVisual()
         {
-            Debug.Assert(_session.Auction != null, "_session.Auction != null");
-            doubleButton.SetActive(_session.Auction.CanDouble(playerSeat));
+            if (_session.Auction != null)
+            {
+                doubleButton.SetActive(_session.Auction.CanDouble(playerSeat));
+            }
         }
     }
 }

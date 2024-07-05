@@ -12,21 +12,20 @@ namespace Presenters
 
         private TextMeshProUGUI _dealerText;
 
-        private void Start()
+        private void Awake()
         {
             _dealerText = GetComponent<TextMeshProUGUI>();
-            UpdateDealerTextFromBoard();
         }
 
-        private void UpdateDealerTextFromBoard()
+        private void OnEnable()
         {
             if (_board.Dealer is { } dealer)
             {
-                UpdateDealerText(dealer);
+                UpdateVisual(dealer);
             }
         }
 
-        private void UpdateDealerText(Seat dealerSeat)
+        private void UpdateVisual(Seat dealerSeat)
         {
             _dealerText.text = $"Dealer: {dealerSeat}";
         }

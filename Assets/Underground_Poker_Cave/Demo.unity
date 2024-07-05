@@ -13376,7 +13376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Contract: 1 C (E/W)
+  m_text: 'Contract: 1 C (E)
 
 '
   m_isRightToLeft: 0

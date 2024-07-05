@@ -51,8 +51,8 @@ namespace Presenters
         {
             var level = contract.Level.ToNumeralString();
             var denomination = contract.Denomination.ToShortHandString();
-            var partnership = contract.Declarer.Partnership().ToShortHandString();
-            return $"Contract: {level} {denomination} ({partnership})";
+            var declarer = contract.Declarer.ToShortHandString();
+            return $"Contract: {level} {denomination} ({declarer})";
         }
     }
 }

@@ -39,8 +39,8 @@ namespace LifeCycleManagers
             {
                 var cardGameObject = _cardGameObjectRegistry.GetGameObject(card);
 
-                var cardHighlightComponent = cardGameObject.GetComponent<CardHighlightController>();
-                cardHighlightComponent.enabled = true;
+                var cardPopUpComponent = cardGameObject.GetComponent<CardPopUpController>();
+                cardPopUpComponent.enabled = true;
             }
         }
     }

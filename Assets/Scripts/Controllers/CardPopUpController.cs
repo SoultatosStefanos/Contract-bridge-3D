@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 namespace Controllers
 {
-    public class CardHighlightController : MonoBehaviour
+    public class CardPopUpController : MonoBehaviour
     {
         [FormerlySerializedAs("Cameras")]
         [SerializeField]
@@ -23,7 +23,7 @@ namespace Controllers
         [SerializeField]
         private bool ignoreForHiddenCursor = true;
 
-        private bool _isCardHighlighted;
+        private bool _isCardPoppedUp;
 
         private Vector3 _newPosition;
 
@@ -38,10 +38,10 @@ namespace Controllers
         private void Update()
         {
             var activeCamera = cameras.First(cam => cam.gameObject.activeSelf);
-            CheckForCardHighlight(activeCamera);
+            CheckForCardPopUp(activeCamera);
         }
 
-        private void CheckForCardHighlight(Camera cam)
+        private void CheckForCardPopUp(Camera cam)
         {
             var ray = cam.ScreenPointToRay(Input.mousePosition);
             if (!Physics.Raycast(ray, out var hit)) return;
@@ -51,23 +51,23 @@ namespace Controllers
             var hitCard = selection == transform;
             if (hitCard)
             {
-                if (!_isCardHighlighted)
+                if (!_isCardPoppedUp)
                 {
-                    HighlightCard();
+                    PopUpCard();
                 }
             }
             else
             {
-                if (_isCardHighlighted)
+                if (_isCardPoppedUp)
                 {
-                    UnhighlightCard();
+                    UndoCardPopUp();
                 }
             }
         }
 
         // NOTE: Unity simply can't prove that this will be called at each frame, but it's all good.
         // ReSharper disable Unity.PerformanceAnalysis
-        private void HighlightCard()
+        private void PopUpCard()
         {
             if (ignoreForHiddenCursor && IsCursorHidden()) return; // Ignore when looking around.
 
@@ -80,7 +80,7 @@ namespace Controllers
                 )
             );
 
-            _isCardHighlighted = true;
+            _isCardPoppedUp = true;
         }
 
         private static bool IsCursorHidden()
@@ -90,7 +90,7 @@ namespace Controllers
 
         // NOTE: Unity simply can't prove that this will be called at each frame, but it's all good.
         // ReSharper disable Unity.PerformanceAnalysis
-        private void UnhighlightCard()
+        private void UndoCardPopUp()
         {
             iTween.MoveTo(
                 gameObject,
@@ -101,7 +101,7 @@ namespace Controllers
                 )
             );
 
-            _isCardHighlighted = false;
+            _isCardPoppedUp = false;
         }
     }
 }

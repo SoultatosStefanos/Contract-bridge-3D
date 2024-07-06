@@ -1,4 +1,5 @@
 using ContractBridge.Core;
+using Events;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Wrappers;
@@ -9,11 +10,16 @@ namespace Controllers
     // TODO Handle dummy click
     public class CardFollowController : MonoBehaviour
     {
+        private const string IllegalFollowErrorMsg = "Can't play card!";
+
         [FormerlySerializedAs("Player Seat")]
         [SerializeField]
         private Seat playerSeat;
 
         private CardWrapper _cardWrapper;
+
+        [Inject]
+        private IEventBus _eventBus;
 
         [Inject]
         private ISession _session;
@@ -43,13 +49,13 @@ namespace Controllers
             }
             else
             {
-                ShowIllegalFollowToast();
+                FireIllegalFollowError();
             }
         }
 
-        private void ShowIllegalFollowToast()
+        private void FireIllegalFollowError()
         {
-            // TODO
+            _eventBus.Post(new ErrorEvent(IllegalFollowErrorMsg));
         }
     }
 }

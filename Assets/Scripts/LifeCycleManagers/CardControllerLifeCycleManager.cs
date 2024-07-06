@@ -22,11 +22,13 @@ namespace LifeCycleManagers
         private void OnEnable()
         {
             _eventBus.On<SessionPhaseChangedEvent>(HandleSessionPhaseChangedEvent);
+            _eventBus.On<GameFollowEvent>(HandleGameFollowEvent);
         }
 
         private void OnDisable()
         {
             _eventBus.Off<SessionPhaseChangedEvent>(HandleSessionPhaseChangedEvent);
+            _eventBus.Off<GameFollowEvent>(HandleGameFollowEvent);
         }
 
         private void HandleSessionPhaseChangedEvent(SessionPhaseChangedEvent evt)
@@ -70,6 +72,17 @@ namespace LifeCycleManagers
                 var cardFollowComponent = cardGameObject.GetComponent<CardFollowController>();
                 cardFollowComponent.enabled = true;
             }
+        }
+
+        private void HandleGameFollowEvent(GameFollowEvent e)
+        {
+            var cardGameObject = _cardGameObjectRegistry.GetGameObject(e.Card);
+
+            var cardPopUpComponent = cardGameObject.GetComponent<CardPopUpController>();
+            cardPopUpComponent.enabled = false;
+
+            var cardFollowComponent = cardGameObject.GetComponent<CardFollowController>();
+            cardFollowComponent.enabled = false;
         }
     }
 }

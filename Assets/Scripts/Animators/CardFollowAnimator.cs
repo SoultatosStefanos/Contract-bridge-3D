@@ -1,5 +1,6 @@
 using System;
 using Events;
+using Extensions;
 using Registries;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -7,7 +8,6 @@ using Zenject;
 
 namespace Animators
 {
-    // TODO Change layer
     public class CardFollowAnimator : MonoBehaviour
     {
         [FormerlySerializedAs("Played Card Placeholder 1")]
@@ -35,6 +35,10 @@ namespace Animators
         [SerializeField]
         [Tooltip("Animation rotation.")]
         private Vector3 rotation = new(0, 0, -90);
+
+        [FormerlySerializedAs("Player Layer")]
+        [SerializeField]
+        private LayerMask playerLayerMask;
 
         [Inject]
         private ICardGameObjectRegistry _cardGameObjectRegistry;
@@ -64,6 +68,8 @@ namespace Animators
         private void AnimateCard(GameObject card)
         {
             var placeHolder = PickPlaceHolder();
+
+            card.layer = playerLayerMask.LayerNumber(); // Make visible to player.
 
             iTween.MoveTo(
                 card,

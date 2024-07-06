@@ -7,8 +7,6 @@ using UnityEngine.Serialization;
 using Zenject;
 using Debug = System.Diagnostics.Debug;
 
-// TODO Work with predefined set contract, instead of always passing.
-
 namespace AI
 {
     public class AuctionAI : MonoBehaviour

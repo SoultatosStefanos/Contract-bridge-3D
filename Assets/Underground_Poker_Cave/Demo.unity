@@ -846,7 +846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43432481}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.286, y: 0.72, z: -0.223}
+  m_LocalPosition: {x: 1.355, y: 0.72, z: -0.223}
   m_LocalScale: {x: 0.05000001, y: 0.050000016, z: 0.05000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13675,7 +13675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696355730}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.256, y: 0.697, z: -0.546}
+  m_LocalPosition: {x: 1.311, y: 0.72, z: -0.553}
   m_LocalScale: {x: 0.05000001, y: 0.050000016, z: 0.05000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15553,7 +15553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853981266}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.24, y: 0.697, z: -0.28}
+  m_LocalPosition: {x: 1.311, y: 0.72, z: -0.318}
   m_LocalScale: {x: 0.05000001, y: 0.050000016, z: 0.05000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21576,6 +21576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283964199}
   - component: {fileID: 1283964198}
+  - component: {fileID: 1283964200}
   m_Layer: 0
   m_Name: AI
   m_TagString: Untagged
@@ -21612,6 +21613,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1283964200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283964197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a154aac7b0423a87f3ca820a0cebc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 3
+  playerSeat: 1
 --- !u!1 &1284269345
 GameObject:
   m_ObjectHideFlags: 0
@@ -24421,7 +24436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459407593}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.276, y: 0.697, z: -0.421}
+  m_LocalPosition: {x: 1.355, y: 0.72, z: -0.438}
   m_LocalScale: {x: 0.05000001, y: 0.050000016, z: 0.05000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25078,8 +25093,11 @@ MonoBehaviour:
   playedCardPlaceholder2: {fileID: 853981266}
   playedCardPlaceholder3: {fileID: 1459407593}
   playedCardPlaceholder4: {fileID: 696355730}
-  duration: 3
+  duration: 1.7
   rotation: {x: -90, y: 0, z: -90}
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1491033550
 GameObject:
   m_ObjectHideFlags: 0

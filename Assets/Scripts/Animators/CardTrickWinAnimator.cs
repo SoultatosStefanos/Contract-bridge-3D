@@ -16,7 +16,7 @@ namespace Animators
 
         [FormerlySerializedAs("Tricks Inter-Placeholder")]
         [SerializeField]
-        private GameObject tricksInterPlaceholder;
+        private GameObject tricksInterPlaceholder; // For the 180 turn of the cards.
 
         [FormerlySerializedAs("Tricks Placeholder")]
         [SerializeField]

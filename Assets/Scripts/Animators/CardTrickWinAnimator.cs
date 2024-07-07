@@ -14,6 +14,10 @@ namespace Animators
         [SerializeField]
         private Seat seat;
 
+        [FormerlySerializedAs("Tricks Inter-Placeholder")]
+        [SerializeField]
+        private GameObject tricksInterPlaceholder;
+
         [FormerlySerializedAs("Tricks Placeholder")]
         [SerializeField]
         private GameObject tricksPlaceholder;
@@ -87,13 +91,15 @@ namespace Animators
 
         private void AnimateTrickCard(GameObject card)
         {
-            var position = tricksPlaceholder.transform.position;
-            position.y += _yOffset;
+            var position1 = tricksInterPlaceholder.transform.position;
+
+            var position2 = tricksPlaceholder.transform.position;
+            position2.y += _yOffset;
 
             iTween.MoveTo(
                 card,
                 iTween.Hash(
-                    "position", position,
+                    "path", new[] { position1, position2 },
                     "time", duration,
                     "easetype", iTween.EaseType.easeInOutSine
                 )

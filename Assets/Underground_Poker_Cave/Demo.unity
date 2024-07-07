@@ -4291,7 +4291,7 @@ GameObject:
   m_Layer: 0
   m_Name: East Dealer Chip Placeholder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4410,7 +4410,7 @@ RectTransform:
   - {fileID: 1794983474}
   - {fileID: 1267902759}
   m_Father: {fileID: 0}
-  m_RootOrder: 83
+  m_RootOrder: 87
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4655,6 +4655,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &169558870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169558871}
+  m_Layer: 0
+  m_Name: West Tricks Placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169558871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169558870}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.882, y: 0.72, z: -0.245}
+  m_LocalScale: {x: 0.05000001, y: 0.050000016, z: 0.05000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 83
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &177705184
 GameObject:
   m_ObjectHideFlags: 0
@@ -9196,7 +9227,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 82
+  m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &471765289
 MonoBehaviour:
@@ -11046,7 +11077,7 @@ RectTransform:
   - {fileID: 83806653}
   - {fileID: 1980753796}
   m_Father: {fileID: 0}
-  m_RootOrder: 84
+  m_RootOrder: 88
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11739,6 +11770,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   denomination: 1
+--- !u!1 &577476435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 577476436}
+  m_Layer: 0
+  m_Name: North Tricks Placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &577476436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577476435}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.08, y: 0.72, z: -0.038}
+  m_LocalScale: {x: 0.05000001, y: 0.050000016, z: 0.05000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 82
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &579813417
 GameObject:
   m_ObjectHideFlags: 0
@@ -12608,6 +12670,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622772204}
   m_CullTransparentMesh: 1
+--- !u!1 &623012877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 623012878}
+  m_Layer: 0
+  m_Name: South Tricks Placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &623012878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623012877}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.379, y: 0.72, z: -0.792}
+  m_LocalScale: {x: 0.05000001, y: 0.050000016, z: 0.05000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 84
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &628708668
 GameObject:
   m_ObjectHideFlags: 0
@@ -13154,7 +13247,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1226420219}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!20 &668127975
 Camera:
@@ -13646,7 +13739,7 @@ RectTransform:
   - {fileID: 682075325}
   - {fileID: 1258571694}
   m_Father: {fileID: 0}
-  m_RootOrder: 85
+  m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15488,7 +15581,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 81
+  m_RootOrder: 85
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &847595916
 PrefabInstance:
@@ -16553,7 +16646,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 87
+  m_RootOrder: 91
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &946827404
 GameObject:
@@ -18112,7 +18205,7 @@ GameObject:
   m_Layer: 0
   m_Name: West Dealer Chip Placeholder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -19428,7 +19521,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 86
+  m_RootOrder: 90
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1169715018
 GameObject:
@@ -19461,7 +19554,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1586023516}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!20 &1169715020
 Camera:
@@ -21463,7 +21556,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 88
+  m_RootOrder: 92
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1267902758
 GameObject:
@@ -21706,7 +21799,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 89
+  m_RootOrder: 93
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1283964200
 MonoBehaviour:
@@ -23469,7 +23562,7 @@ Transform:
   - {fileID: 1485709710}
   - {fileID: 909375205}
   m_Father: {fileID: 1226420219}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1398850534
 MonoBehaviour:
@@ -25085,6 +25178,10 @@ GameObject:
   - component: {fileID: 1486982747}
   - component: {fileID: 1486982746}
   - component: {fileID: 1486982748}
+  - component: {fileID: 1486982752}
+  - component: {fileID: 1486982751}
+  - component: {fileID: 1486982750}
+  - component: {fileID: 1486982749}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -25188,11 +25285,79 @@ MonoBehaviour:
   playedCardPlaceholder2: {fileID: 853981266}
   playedCardPlaceholder3: {fileID: 1459407593}
   playedCardPlaceholder4: {fileID: 696355730}
-  duration: 1.7
+  duration: 1.4
   rotation: {x: -90, y: 0, z: -90}
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1486982749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486982741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4ac002f89c4ea9b5eb34876f979d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 2
+  tricksPlaceholder: {fileID: 623012877}
+  duration: 0.7
+  rotation: {x: 0, y: 180, z: 0}
+  yStackOffset: 0.001
+--- !u!114 &1486982750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486982741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4ac002f89c4ea9b5eb34876f979d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 3
+  tricksPlaceholder: {fileID: 169558870}
+  duration: 0.7
+  rotation: {x: 0, y: 180, z: 0}
+  yStackOffset: 0.001
+--- !u!114 &1486982751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486982741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4ac002f89c4ea9b5eb34876f979d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 0
+  tricksPlaceholder: {fileID: 577476435}
+  duration: 0.7
+  rotation: {x: 0, y: 180, z: 0}
+  yStackOffset: 0.001
+--- !u!114 &1486982752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486982741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4ac002f89c4ea9b5eb34876f979d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seat: 1
+  tricksPlaceholder: {fileID: 1841240820}
+  duration: 0.7
+  rotation: {x: 0, y: 180, z: 0}
+  yStackOffset: 0.001
 --- !u!1 &1491033550
 GameObject:
   m_ObjectHideFlags: 0
@@ -26103,7 +26268,7 @@ GameObject:
   m_Layer: 0
   m_Name: South Dealer Chip Placeholder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -30270,6 +30435,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829990684}
   m_CullTransparentMesh: 1
+--- !u!1 &1841240820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841240821}
+  m_Layer: 0
+  m_Name: East Tricks Placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1841240821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841240820}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.58, y: 0.72, z: -0.183}
+  m_LocalScale: {x: 0.05000001, y: 0.050000016, z: 0.05000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 81
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1850643104
 GameObject:
   m_ObjectHideFlags: 0
@@ -31406,7 +31602,7 @@ Transform:
   - {fileID: 1215478817}
   - {fileID: 1081992600}
   m_Father: {fileID: 1586023516}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 3.934, z: 0}
 --- !u!114 &1904074697
 MonoBehaviour:
@@ -32050,7 +32246,7 @@ GameObject:
   m_Layer: 0
   m_Name: North Dealer Chip Placeholder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -36430,6 +36626,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3058989578197789165, guid: 6440615f4d3ace04e9756efd733ef084, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5430481285014861683, guid: 6440615f4d3ace04e9756efd733ef084, type: 3}
       propertyPath: m_RootOrder
       value: 58

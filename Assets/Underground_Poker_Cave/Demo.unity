@@ -25305,7 +25305,7 @@ MonoBehaviour:
   seat: 2
   tricksPlaceholder: {fileID: 623012877}
   duration: 0.7
-  rotation: {x: 0, y: 180, z: 0}
+  rotation: {x: 90, y: 0, z: 0}
   yStackOffset: 0.001
 --- !u!114 &1486982750
 MonoBehaviour:
@@ -25322,7 +25322,7 @@ MonoBehaviour:
   seat: 3
   tricksPlaceholder: {fileID: 169558870}
   duration: 0.7
-  rotation: {x: 0, y: 180, z: 0}
+  rotation: {x: 90, y: 0, z: 90}
   yStackOffset: 0.001
 --- !u!114 &1486982751
 MonoBehaviour:
@@ -25339,7 +25339,7 @@ MonoBehaviour:
   seat: 0
   tricksPlaceholder: {fileID: 577476435}
   duration: 0.7
-  rotation: {x: 0, y: 180, z: 0}
+  rotation: {x: 90, y: 0, z: 0}
   yStackOffset: 0.001
 --- !u!114 &1486982752
 MonoBehaviour:
@@ -25356,7 +25356,7 @@ MonoBehaviour:
   seat: 1
   tricksPlaceholder: {fileID: 1841240820}
   duration: 0.7
-  rotation: {x: 0, y: 180, z: 0}
+  rotation: {x: 90, y: 0, z: 90}
   yStackOffset: 0.001
 --- !u!1 &1491033550
 GameObject:

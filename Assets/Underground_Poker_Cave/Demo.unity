@@ -25285,7 +25285,7 @@ MonoBehaviour:
   playedCardPlaceholder2: {fileID: 853981266}
   playedCardPlaceholder3: {fileID: 1459407593}
   playedCardPlaceholder4: {fileID: 696355730}
-  duration: 1.4
+  duration: 1
   rotation: {x: -90, y: 0, z: -90}
   playerLayerMask:
     serializedVersion: 2
@@ -25305,6 +25305,7 @@ MonoBehaviour:
   seat: 2
   tricksPlaceholder: {fileID: 623012877}
   duration: 0.7
+  delay: 1.5
   rotation: {x: 90, y: 0, z: 0}
   yStackOffset: 0.001
 --- !u!114 &1486982750
@@ -25322,6 +25323,7 @@ MonoBehaviour:
   seat: 3
   tricksPlaceholder: {fileID: 169558870}
   duration: 0.7
+  delay: 1.5
   rotation: {x: 90, y: 0, z: 90}
   yStackOffset: 0.001
 --- !u!114 &1486982751
@@ -25339,6 +25341,7 @@ MonoBehaviour:
   seat: 0
   tricksPlaceholder: {fileID: 577476435}
   duration: 0.7
+  delay: 1.5
   rotation: {x: 90, y: 0, z: 0}
   yStackOffset: 0.001
 --- !u!114 &1486982752
@@ -25356,6 +25359,7 @@ MonoBehaviour:
   seat: 1
   tricksPlaceholder: {fileID: 1841240820}
   duration: 0.7
+  delay: 1.5
   rotation: {x: 90, y: 0, z: 90}
   yStackOffset: 0.001
 --- !u!1 &1491033550

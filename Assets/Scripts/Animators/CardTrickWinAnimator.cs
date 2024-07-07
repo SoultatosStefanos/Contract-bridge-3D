@@ -1,3 +1,4 @@
+using System.Collections;
 using ContractBridge.Core;
 using Events;
 using Registries;
@@ -7,8 +8,6 @@ using Zenject;
 
 namespace Animators
 {
-    // TODO Introduce short delay
-
     public class CardTrickWinAnimator : MonoBehaviour
     {
         [FormerlySerializedAs("Seat")]
@@ -23,6 +22,11 @@ namespace Animators
         [SerializeField]
         [Tooltip("Animation duration in seconds.")]
         private float duration = 0.7f;
+
+        [FormerlySerializedAs("Delay")]
+        [SerializeField]
+        [Tooltip("Delay before starting the animation.")]
+        private float delay = 1f;
 
         [FormerlySerializedAs("Rotation")]
         [SerializeField]
@@ -59,11 +63,15 @@ namespace Animators
                 return;
             }
 
-            AnimateTrick(e.Trick);
+            StartCoroutine(AnimateTrick(e.Trick));
         }
 
-        private void AnimateTrick(ITrick trick)
+        // NOTE: This is fine.
+        // ReSharper disable Unity.PerformanceAnalysis
+        private IEnumerator AnimateTrick(ITrick trick)
         {
+            yield return new WaitForSeconds(delay);
+
             foreach (var card in trick)
             {
                 var cardGameObject = _cardGameObjectRegistry.GetGameObject(card);

@@ -46,6 +46,11 @@ namespace Animators
 
         private float _yOffset;
 
+        private void Start()
+        {
+            _yOffset = yStackOffset;
+        }
+
         private void OnEnable()
         {
             _eventBus.On<GameTrickWonEvent>(HandleTrickWonEvent);

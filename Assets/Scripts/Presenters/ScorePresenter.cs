@@ -49,7 +49,7 @@ namespace Presenters
 
         private void UpdateVisual(int score)
         {
-            _scoreText.text = $"{partnership.ToShortHandString()}: {score}";
+            _scoreText.text = $"Score ({partnership.ToShortHandString()}): {score}";
         }
     }
 }

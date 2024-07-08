@@ -33,6 +33,7 @@ namespace Presenters
         }
 
         private void OnEnable()
+
         {
             _eventBus.On<AuctionExtrasSolutionSetEvent>(HandleAuctionExtrasSolutionSetEvent);
 

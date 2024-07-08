@@ -1,3 +1,4 @@
+using Animators;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -24,6 +25,10 @@ namespace Controllers
         [FormerlySerializedAs("Snap Transform")]
         [SerializeField]
         private Transform snapTransform;
+
+        [FormerlySerializedAs("Camera Snap Animator")]
+        [SerializeField]
+        private CameraSnapAnimator cameraSnapAnimator;
 
         private float _currentXRotation;
 
@@ -116,19 +121,21 @@ namespace Controllers
             return transform.position == snapTransform.position && transform.rotation == snapTransform.rotation;
         }
 
+        // NOTE: This is ok, it won't be called at each frame.
+        // ReSharper disable Unity.PerformanceAnalysis
         private void Snap()
         {
             _originalPosition = transform.position;
             _originalRotation = transform.rotation;
 
-            transform.position = snapTransform.position;
-            transform.rotation = snapTransform.rotation;
+            cameraSnapAnimator.SnapAnimate(gameObject, snapTransform);
         }
 
+        // NOTE: This is ok, it won't be called at each frame.
+        // ReSharper disable Unity.PerformanceAnalysis
         private void SnapBack()
         {
-            transform.position = _originalPosition;
-            transform.rotation = _originalRotation;
+            cameraSnapAnimator.SnapBackAnimate(gameObject, _originalPosition, _originalRotation);
         }
     }
 }

@@ -11,9 +11,19 @@ namespace Controllers
         [SerializeField]
         private float rotationSpeed = 100.0f;
 
-        [FormerlySerializedAs("Lock / Unlock Key")]
+        [FormerlySerializedAs("Lock / Unlock Mouse Button Index")]
         [SerializeField]
-        private KeyCode lockUnlockKey = KeyCode.L;
+        [Tooltip("Left: 0, Right: 1, Middle: 2")]
+        private int lockUnlockMouseButtonIndex = 2;
+
+        [FormerlySerializedAs("Snap Mouse Button Index")]
+        [SerializeField]
+        [Tooltip("Left: 0, Right: 1, Middle: 2")]
+        private int snapMouseButtonIndex = 1;
+
+        [FormerlySerializedAs("Snap Transform")]
+        [SerializeField]
+        private Transform snapTransform;
 
         private float _currentXRotation;
 
@@ -21,17 +31,57 @@ namespace Controllers
 
         private Quaternion _initialRotation;
 
-        private void Start()
+        private Vector3 _originalPosition;
+
+        private Quaternion _originalRotation;
+
+        private void Awake()
         {
             _initialRotation = transform.localRotation;
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(lockUnlockKey)) ToggleLockUnlock();
+            if (Input.GetMouseButtonDown(snapMouseButtonIndex))
+            {
+                Snap();
+            }
 
-            if (!IsUnlocked()) return;
+            if (Input.GetMouseButtonUp(snapMouseButtonIndex))
+            {
+                SnapBack();
+            }
 
+            if (IsSnapped())
+            {
+                return;
+            }
+
+            if (Input.GetMouseButtonDown(lockUnlockMouseButtonIndex))
+            {
+                Unlock();
+            }
+
+            if (Input.GetMouseButtonUp(lockUnlockMouseButtonIndex))
+            {
+                Lock();
+            }
+
+            if (!IsUnlocked())
+            {
+                return;
+            }
+
+            RotateCamera();
+        }
+
+        private void OnEnable()
+        {
+            Lock();
+        }
+
+        private void RotateCamera()
+        {
             var horizontalInput = Input.GetAxis("Mouse X");
             var verticalInput = Input.GetAxis("Mouse Y");
 
@@ -42,19 +92,6 @@ namespace Controllers
             _currentXRotation = Mathf.Clamp(_currentXRotation - rotationAmountY, -MaxRotation, MaxRotation);
 
             transform.localRotation = _initialRotation * Quaternion.Euler(_currentXRotation, _currentYRotation, 0);
-        }
-
-        private void OnEnable()
-        {
-            Unlock();
-        }
-
-        private static void ToggleLockUnlock()
-        {
-            if (IsUnlocked())
-                Lock();
-            else
-                Unlock();
         }
 
         private static bool IsUnlocked()
@@ -72,6 +109,26 @@ namespace Controllers
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+        }
+
+        private bool IsSnapped()
+        {
+            return transform.position == snapTransform.position && transform.rotation == snapTransform.rotation;
+        }
+
+        private void Snap()
+        {
+            _originalPosition = transform.position;
+            _originalRotation = transform.rotation;
+
+            transform.position = snapTransform.position;
+            transform.rotation = snapTransform.rotation;
+        }
+
+        private void SnapBack()
+        {
+            transform.position = _originalPosition;
+            transform.rotation = _originalRotation;
         }
     }
 }

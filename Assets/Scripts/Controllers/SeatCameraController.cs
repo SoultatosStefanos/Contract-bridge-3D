@@ -17,18 +17,18 @@ namespace Controllers
         [Tooltip("Left: 0, Right: 1, Middle: 2")]
         private int lockUnlockMouseButtonIndex = 2;
 
-        [FormerlySerializedAs("Snap Mouse Button Index")]
+        [FormerlySerializedAs("Half Stand Mouse Button Index")]
         [SerializeField]
         [Tooltip("Left: 0, Right: 1, Middle: 2")]
-        private int snapMouseButtonIndex = 1;
+        private int halfStandMouseButtonIndex = 1;
 
-        [FormerlySerializedAs("Snap Transform")]
+        [FormerlySerializedAs("Half Stand Transform")]
         [SerializeField]
-        private Transform snapTransform;
+        private Transform halfStandTransform;
 
-        [FormerlySerializedAs("Camera Snap Animator")]
+        [FormerlySerializedAs("Camera Half Stand Animator")]
         [SerializeField]
-        private CameraSnapAnimator cameraSnapAnimator;
+        private CameraHalfStandAnimator cameraHalfStandAnimator;
 
         private float _currentXRotation;
 
@@ -47,17 +47,17 @@ namespace Controllers
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(snapMouseButtonIndex))
+            if (Input.GetMouseButtonDown(halfStandMouseButtonIndex))
             {
-                Snap();
+                HalfStand();
             }
 
-            if (Input.GetMouseButtonUp(snapMouseButtonIndex))
+            if (Input.GetMouseButtonUp(halfStandMouseButtonIndex))
             {
-                SnapBack();
+                SitDown();
             }
 
-            if (IsSnapped())
+            if (IsHalfStanding())
             {
                 return;
             }
@@ -116,26 +116,27 @@ namespace Controllers
             Cursor.visible = false;
         }
 
-        private bool IsSnapped()
+        private bool IsHalfStanding()
         {
-            return transform.position == snapTransform.position && transform.rotation == snapTransform.rotation;
+            return transform.position == halfStandTransform.position &&
+                   transform.rotation == halfStandTransform.rotation;
         }
 
         // NOTE: This is ok, it won't be called at each frame.
         // ReSharper disable Unity.PerformanceAnalysis
-        private void Snap()
+        private void HalfStand()
         {
             _originalPosition = transform.position;
             _originalRotation = transform.rotation;
 
-            cameraSnapAnimator.SnapAnimate(gameObject, snapTransform);
+            cameraHalfStandAnimator.HalfStand(gameObject, halfStandTransform);
         }
 
         // NOTE: This is ok, it won't be called at each frame.
         // ReSharper disable Unity.PerformanceAnalysis
-        private void SnapBack()
+        private void SitDown()
         {
-            cameraSnapAnimator.SnapBackAnimate(gameObject, _originalPosition, _originalRotation);
+            cameraHalfStandAnimator.SitDown(gameObject, _originalPosition, _originalRotation);
         }
     }
 }

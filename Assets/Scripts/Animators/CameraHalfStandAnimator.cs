@@ -3,13 +3,13 @@ using UnityEngine.Serialization;
 
 namespace Animators
 {
-    public class CameraSnapAnimator : MonoBehaviour
+    public class CameraHalfStandAnimator : MonoBehaviour
     {
         [FormerlySerializedAs("Duration")]
         [SerializeField]
         private float duration = 0.5F;
 
-        public void SnapAnimate(GameObject cameraGameObject, Transform snapTransform)
+        public void HalfStand(GameObject cameraGameObject, Transform snapTransform)
         {
             iTween.MoveTo(
                 cameraGameObject,
@@ -30,7 +30,7 @@ namespace Animators
             );
         }
 
-        public void SnapBackAnimate(GameObject cameraGameObject, Vector3 originalPosition, Quaternion originalRotation)
+        public void SitDown(GameObject cameraGameObject, Vector3 originalPosition, Quaternion originalRotation)
         {
             iTween.MoveTo(
                 cameraGameObject,

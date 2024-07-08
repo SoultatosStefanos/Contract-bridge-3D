@@ -4472,7 +4472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 151452331}
   m_Layer: 0
-  m_Name: East Snap
+  m_Name: East Half Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13369,9 +13369,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   lockUnlockMouseButtonIndex: 2
-  snapMouseButtonIndex: 1
-  snapTransform: {fileID: 151452331}
-  cameraSnapAnimator: {fileID: 668127977}
+  halfStandMouseButtonIndex: 1
+  halfStandTransform: {fileID: 151452331}
+  cameraHalfStandAnimator: {fileID: 668127977}
 --- !u!114 &668127977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19754,9 +19754,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   lockUnlockMouseButtonIndex: 0
-  snapMouseButtonIndex: 1
-  snapTransform: {fileID: 0}
-  cameraSnapAnimator: {fileID: 0}
+  halfStandMouseButtonIndex: 1
+  halfStandTransform: {fileID: 0}
+  cameraHalfStandAnimator: {fileID: 0}
 --- !u!1 &1171731788
 GameObject:
   m_ObjectHideFlags: 0
@@ -22049,9 +22049,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   lockUnlockMouseButtonIndex: 0
-  snapMouseButtonIndex: 1
-  snapTransform: {fileID: 0}
-  cameraSnapAnimator: {fileID: 0}
+  halfStandMouseButtonIndex: 1
+  halfStandTransform: {fileID: 0}
+  cameraHalfStandAnimator: {fileID: 0}
 --- !u!1 &1300974886
 GameObject:
   m_ObjectHideFlags: 0
@@ -27162,9 +27162,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   lockUnlockMouseButtonIndex: 0
-  snapMouseButtonIndex: 1
-  snapTransform: {fileID: 0}
-  cameraSnapAnimator: {fileID: 0}
+  halfStandMouseButtonIndex: 1
+  halfStandTransform: {fileID: 0}
+  cameraHalfStandAnimator: {fileID: 0}
 --- !u!1 &1621150222
 GameObject:
   m_ObjectHideFlags: 0

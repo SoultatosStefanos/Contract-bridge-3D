@@ -27,6 +27,9 @@ namespace LifeCycleManagers
         [Inject]
         private IEventBus _eventBus;
 
+        [Inject]
+        private ISession _session;
+
         private void OnEnable()
         {
             _eventBus.On<SessionPhaseChangedEvent>(HandleSessionPhaseChangedEvent);
@@ -81,15 +84,30 @@ namespace LifeCycleManagers
 
                 if (inPlayerHand)
                 {
+                    // TODO Conditionally enable follow controller
+
                     var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
                     cardFollowController.enabled = true;
+
+                    if (DummySeat() is not { } dummySeat)
+                    {
+                        continue;
+                    }
+
+                    var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
+                    cardPopUpController.enabled = dummySeat != playerSeat;
                 }
                 else
                 {
-                    // NOTE: Disable for all dummies
+                    // TODO Conditionally enable follow controller
+
+                    if (DummySeat() is not { } dummySeat)
+                    {
+                        continue;
+                    }
 
                     var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
-                    cardPopUpController.enabled = false;
+                    cardPopUpController.enabled = dummySeat == playerSeat.Partner();
                 }
             }
         }
@@ -103,6 +121,11 @@ namespace LifeCycleManagers
 
             var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
             cardFollowController.enabled = false;
+        }
+
+        private Seat? DummySeat()
+        {
+            return _session.Auction?.FinalContract?.Dummy();
         }
     }
 }

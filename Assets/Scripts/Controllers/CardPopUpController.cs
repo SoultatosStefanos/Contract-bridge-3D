@@ -1,23 +1,16 @@
 using System.Linq;
+using Animators;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Controllers
 {
+    [RequireComponent(typeof(CardPopUpAnimator))]
     public class CardPopUpController : MonoBehaviour
     {
         [FormerlySerializedAs("Cameras")]
         [SerializeField]
         private Camera[] cameras;
-
-        [FormerlySerializedAs("Offset Multiplier")]
-        [SerializeField]
-        private float offsetMultiplier = 0.05F;
-
-        [FormerlySerializedAs("Duration")]
-        [SerializeField]
-        [Tooltip("Animation duration in seconds.")]
-        private float duration = 0.25f;
 
         [FormerlySerializedAs("Ignore for Hidden Cursor.")]
         [SerializeField]
@@ -25,14 +18,11 @@ namespace Controllers
 
         private bool _isCardPoppedUp;
 
-        private Vector3 _newPosition;
+        private CardPopUpAnimator _popUpAnimator;
 
-        private Vector3 _originalPosition;
-
-        private void Start()
+        private void Awake()
         {
-            _originalPosition = transform.position;
-            _newPosition = transform.position + Vector3.up * offsetMultiplier;
+            _popUpAnimator = GetComponent<CardPopUpAnimator>();
         }
 
         private void Update()
@@ -65,24 +55,6 @@ namespace Controllers
             }
         }
 
-        // NOTE: Unity simply can't prove that this will be called at each frame, but it's all good.
-        // ReSharper disable Unity.PerformanceAnalysis
-        private void PopUpCard()
-        {
-            if (ignoreForHiddenCursor && IsCursorHidden()) return; // Ignore when looking around.
-
-            iTween.MoveTo(
-                gameObject,
-                iTween.Hash(
-                    "position", _newPosition,
-                    "time", duration,
-                    "easetype", iTween.EaseType.easeInOutQuad
-                )
-            );
-
-            _isCardPoppedUp = true;
-        }
-
         private static bool IsCursorHidden()
         {
             return Cursor.lockState == CursorLockMode.Locked;
@@ -90,16 +62,23 @@ namespace Controllers
 
         // NOTE: Unity simply can't prove that this will be called at each frame, but it's all good.
         // ReSharper disable Unity.PerformanceAnalysis
+        private void PopUpCard()
+        {
+            if (ignoreForHiddenCursor && IsCursorHidden()) // Ignore when looking around.
+            {
+                return;
+            }
+
+            _popUpAnimator.PopUpCard();
+
+            _isCardPoppedUp = true;
+        }
+
+        // NOTE: Unity simply can't prove that this will be called at each frame, but it's all good.
+        // ReSharper disable Unity.PerformanceAnalysis
         private void UndoCardPopUp()
         {
-            iTween.MoveTo(
-                gameObject,
-                iTween.Hash(
-                    "position", _originalPosition,
-                    "time", duration,
-                    "easetype", iTween.EaseType.easeInOutQuad
-                )
-            );
+            _popUpAnimator.UndoCardPopUp();
 
             _isCardPoppedUp = false;
         }

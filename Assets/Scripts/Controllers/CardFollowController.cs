@@ -36,6 +36,13 @@ namespace Controllers
 
         private void OnMouseDown()
         {
+            // NOTE: Disabled components still callback functions like these!
+            // The flag only affects Start() and Update().
+            if (!enabled)
+            {
+                return;
+            }
+
             if (_session.Game is not { } game)
             {
                 return;

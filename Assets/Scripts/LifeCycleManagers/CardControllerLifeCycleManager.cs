@@ -6,7 +6,6 @@ using Registries;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
-using Debug = System.Diagnostics.Debug;
 
 namespace LifeCycleManagers
 {
@@ -17,6 +16,9 @@ namespace LifeCycleManagers
         private Seat playerSeat;
 
         [Inject]
+        private IBoard _board;
+
+        [Inject]
         private ICardGameObjectRegistry _cardGameObjectRegistry;
 
         [Inject]
@@ -24,9 +26,6 @@ namespace LifeCycleManagers
 
         [Inject]
         private IEventBus _eventBus;
-
-        [Inject]
-        private ISession _session;
 
         private void OnEnable()
         {
@@ -67,29 +66,30 @@ namespace LifeCycleManagers
             {
                 var cardGameObject = _cardGameObjectRegistry.GetGameObject(card);
 
-                var cardPopUpComponent = cardGameObject.GetComponent<CardPopUpController>();
-                cardPopUpComponent.enabled = true;
+                var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
+                cardPopUpController.enabled = true;
             }
         }
 
         private void HandleGameTransition()
         {
-            Debug.Assert(_session.Auction != null, "_session.Auction != null");
-            Debug.Assert(_session.Auction.FinalContract != null, "_session.Auction.FinalContract != null");
-
-            var isPlayerDummy = playerSeat == _session.Auction.FinalContract.Dummy();
-
             foreach (var card in _deck)
             {
                 var cardGameObject = _cardGameObjectRegistry.GetGameObject(card);
 
-                var cardFollowComponent = cardGameObject.GetComponent<CardFollowController>();
-                cardFollowComponent.enabled = true;
+                var inPlayerHand = _board.Hand(playerSeat).Contains(card);
 
-                if (isPlayerDummy)
+                if (inPlayerHand)
                 {
-                    var cardPopUpComponent = cardGameObject.GetComponent<CardPopUpController>();
-                    cardPopUpComponent.enabled = false;
+                    var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
+                    cardFollowController.enabled = true;
+                }
+                else
+                {
+                    // NOTE: Disable for all dummies
+
+                    var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
+                    cardPopUpController.enabled = false;
                 }
             }
         }
@@ -98,11 +98,11 @@ namespace LifeCycleManagers
         {
             var cardGameObject = _cardGameObjectRegistry.GetGameObject(e.Card);
 
-            var cardPopUpComponent = cardGameObject.GetComponent<CardPopUpController>();
-            cardPopUpComponent.enabled = false;
+            var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
+            cardPopUpController.enabled = false;
 
-            var cardFollowComponent = cardGameObject.GetComponent<CardFollowController>();
-            cardFollowComponent.enabled = false;
+            var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
+            cardFollowController.enabled = false;
         }
     }
 }

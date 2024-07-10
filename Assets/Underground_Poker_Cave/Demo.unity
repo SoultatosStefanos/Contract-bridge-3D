@@ -26346,6 +26346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499cb84d7ea4dca9022444742f2c15b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSeat: 1
 --- !u!114 &1486982747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37981,7 +37982,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3058989578197789165, guid: 6440615f4d3ace04e9756efd733ef084, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5430481285014861683, guid: 6440615f4d3ace04e9756efd733ef084, type: 3}
       propertyPath: m_RootOrder

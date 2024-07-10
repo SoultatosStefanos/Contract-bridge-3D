@@ -4,12 +4,18 @@ using Controllers;
 using Events;
 using Registries;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
+using Debug = System.Diagnostics.Debug;
 
 namespace LifeCycleManagers
 {
     public class CardControllerLifeCycleManager : MonoBehaviour
     {
+        [FormerlySerializedAs("Player Seat")]
+        [SerializeField]
+        private Seat playerSeat;
+
         [Inject]
         private ICardGameObjectRegistry _cardGameObjectRegistry;
 
@@ -18,6 +24,9 @@ namespace LifeCycleManagers
 
         [Inject]
         private IEventBus _eventBus;
+
+        [Inject]
+        private ISession _session;
 
         private void OnEnable()
         {
@@ -65,12 +74,23 @@ namespace LifeCycleManagers
 
         private void HandleGameTransition()
         {
+            Debug.Assert(_session.Auction != null, "_session.Auction != null");
+            Debug.Assert(_session.Auction.FinalContract != null, "_session.Auction.FinalContract != null");
+
+            var isPlayerDummy = playerSeat == _session.Auction.FinalContract.Dummy();
+
             foreach (var card in _deck)
             {
                 var cardGameObject = _cardGameObjectRegistry.GetGameObject(card);
 
                 var cardFollowComponent = cardGameObject.GetComponent<CardFollowController>();
                 cardFollowComponent.enabled = true;
+
+                if (isPlayerDummy)
+                {
+                    var cardPopUpComponent = cardGameObject.GetComponent<CardPopUpController>();
+                    cardPopUpComponent.enabled = false;
+                }
             }
         }
 

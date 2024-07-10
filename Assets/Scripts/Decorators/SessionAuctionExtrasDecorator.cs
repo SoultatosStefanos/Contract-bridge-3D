@@ -7,6 +7,8 @@ using Domain;
 
 namespace Decorators
 {
+    // TODO Simply work only with the event bus on this file.
+
     public class SessionAuctionExtrasDecorator : ISession
     {
         private readonly IAuctionExtras _auctionExtras;

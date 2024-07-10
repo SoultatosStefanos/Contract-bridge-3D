@@ -1,4 +1,5 @@
 using System;
+using Animators;
 using ContractBridge.Core;
 using Controllers;
 using Events;
@@ -10,6 +11,7 @@ using Debug = System.Diagnostics.Debug;
 
 namespace LifeCycleManagers
 {
+    // NOTE: Not ideal (non-local), but what to do
     public class CardControllerLifeCycleManager : MonoBehaviour
     {
         [FormerlySerializedAs("Player Seat")]
@@ -70,8 +72,11 @@ namespace LifeCycleManagers
             {
                 var cardGameObject = _cardGameObjectRegistry.GetGameObject(card);
 
-                var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
-                cardPopUpController.enabled = true;
+                var playerCardPopUpController = cardGameObject.GetComponent<PlayerCardPopUpController>();
+                playerCardPopUpController.enabled = true;
+
+                var playerCardPopUpAnimator = cardGameObject.GetComponent<PlayerCardPopUpAnimator>();
+                playerCardPopUpAnimator.enabled = true;
             }
         }
 
@@ -89,8 +94,11 @@ namespace LifeCycleManagers
                 {
                     var isPlayerNotDummy = dummySeat != playerSeat;
 
-                    var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
-                    cardPopUpController.enabled = isPlayerNotDummy;
+                    var playerCardPopUpController = cardGameObject.GetComponent<PlayerCardPopUpController>();
+                    playerCardPopUpController.enabled = isPlayerNotDummy;
+
+                    var playerCardPopUpAnimator = cardGameObject.GetComponent<PlayerCardPopUpAnimator>();
+                    playerCardPopUpAnimator.enabled = isPlayerNotDummy;
 
                     var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
                     cardFollowController.enabled = isPlayerNotDummy;
@@ -99,21 +107,27 @@ namespace LifeCycleManagers
                 {
                     var inPartnerHand = _board.Hand(playerSeat.Partner()).Contains(card);
 
+                    var playerCardPopUpController = cardGameObject.GetComponent<PlayerCardPopUpController>();
+                    playerCardPopUpController.enabled = false;
+
+                    var playerCardPopUpAnimator = cardGameObject.GetComponent<PlayerCardPopUpAnimator>();
+                    playerCardPopUpAnimator.enabled = false;
+
                     if (inPartnerHand)
                     {
                         var isPartnerDummy = dummySeat == playerSeat.Partner();
 
-                        var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
-                        cardPopUpController.enabled = isPartnerDummy;
+                        var dummyCardPopUpController = cardGameObject.GetComponent<DummyCardPopUpController>();
+                        dummyCardPopUpController.enabled = isPartnerDummy;
+
+                        var dummyCardPopUpAnimator = cardGameObject.GetComponent<DummyCardPopUpAnimator>();
+                        dummyCardPopUpAnimator.enabled = isPartnerDummy;
 
                         var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
                         cardFollowController.enabled = isPartnerDummy;
                     }
                     else
                     {
-                        var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
-                        cardPopUpController.enabled = false;
-
                         var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
                         cardFollowController.enabled = false;
                     }
@@ -125,11 +139,20 @@ namespace LifeCycleManagers
         {
             var cardGameObject = _cardGameObjectRegistry.GetGameObject(e.Card);
 
-            var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
+            var cardPopUpController = cardGameObject.GetComponent<PlayerCardPopUpController>();
             cardPopUpController.enabled = false;
+
+            var cardPopUpAnimator = cardGameObject.GetComponent<PlayerCardPopUpAnimator>();
+            cardPopUpAnimator.enabled = false;
 
             var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
             cardFollowController.enabled = false;
+
+            var dummyCardPopUpController = cardGameObject.GetComponent<DummyCardPopUpController>();
+            dummyCardPopUpController.enabled = false;
+
+            var dummyCardPopUpAnimator = cardGameObject.GetComponent<DummyCardPopUpAnimator>();
+            dummyCardPopUpAnimator.enabled = false;
         }
 
         private Seat DummySeat()

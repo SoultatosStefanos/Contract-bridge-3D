@@ -5,8 +5,7 @@ using UnityEngine.Serialization;
 
 namespace Controllers
 {
-    [RequireComponent(typeof(CardPopUpAnimator))]
-    public class CardPopUpController : MonoBehaviour
+    public abstract class CardPopUpController : MonoBehaviour
     {
         [FormerlySerializedAs("Cameras")]
         [SerializeField]
@@ -22,7 +21,7 @@ namespace Controllers
 
         private void Awake()
         {
-            _popUpAnimator = GetComponent<CardPopUpAnimator>();
+            _popUpAnimator = GetCardPopUpAnimator();
         }
 
         private void Update()
@@ -30,6 +29,8 @@ namespace Controllers
             var activeCamera = cameras.First(cam => cam.gameObject.activeSelf);
             CheckForCardPopUp(activeCamera);
         }
+
+        protected abstract CardPopUpAnimator GetCardPopUpAnimator();
 
         private void CheckForCardPopUp(Camera cam)
         {

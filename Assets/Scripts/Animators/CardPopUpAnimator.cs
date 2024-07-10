@@ -3,7 +3,7 @@ using UnityEngine.Serialization;
 
 namespace Animators
 {
-    public class CardPopUpAnimator : MonoBehaviour
+    public abstract class CardPopUpAnimator : MonoBehaviour
     {
         [FormerlySerializedAs("Offset Multiplier")]
         [SerializeField]
@@ -16,16 +16,20 @@ namespace Animators
 
         private Vector3 _newPosition;
 
-        private Vector3 _originalPosition = Vector3.zero;
+        protected Vector3 OriginalPosition { get; private set; }
+
+        protected float OffsetMultiplier => offsetMultiplier;
+
+        private void Start()
+        {
+            OriginalPosition = transform.position;
+            _newPosition = NewPosition();
+        }
+
+        protected abstract Vector3 NewPosition();
 
         public void PopUpCard()
         {
-            if (_originalPosition == Vector3.zero)
-            {
-                _originalPosition = transform.position;
-                _newPosition = transform.position + Vector3.up * offsetMultiplier;
-            }
-
             iTween.MoveTo(
                 gameObject,
                 iTween.Hash(
@@ -41,7 +45,7 @@ namespace Animators
             iTween.MoveTo(
                 gameObject,
                 iTween.Hash(
-                    "position", _originalPosition,
+                    "position", OriginalPosition,
                     "time", duration,
                     "easetype", iTween.EaseType.easeInOutQuad
                 )

@@ -6,6 +6,7 @@ using Registries;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
+using Debug = System.Diagnostics.Debug;
 
 namespace LifeCycleManagers
 {
@@ -76,6 +77,8 @@ namespace LifeCycleManagers
 
         private void HandleGameTransition()
         {
+            var dummySeat = DummySeat();
+
             foreach (var card in _deck)
             {
                 var cardGameObject = _cardGameObjectRegistry.GetGameObject(card);
@@ -84,30 +87,36 @@ namespace LifeCycleManagers
 
                 if (inPlayerHand)
                 {
-                    // TODO Conditionally enable follow controller
-
-                    var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
-                    cardFollowController.enabled = true;
-
-                    if (DummySeat() is not { } dummySeat)
-                    {
-                        continue;
-                    }
+                    var isPlayerNotDummy = dummySeat != playerSeat;
 
                     var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
-                    cardPopUpController.enabled = dummySeat != playerSeat;
+                    cardPopUpController.enabled = isPlayerNotDummy;
+
+                    var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
+                    cardFollowController.enabled = isPlayerNotDummy;
                 }
                 else
                 {
-                    // TODO Conditionally enable follow controller
+                    var inPartnerHand = _board.Hand(playerSeat.Partner()).Contains(card);
 
-                    if (DummySeat() is not { } dummySeat)
+                    if (inPartnerHand)
                     {
-                        continue;
-                    }
+                        var isPartnerDummy = dummySeat == playerSeat.Partner();
 
-                    var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
-                    cardPopUpController.enabled = dummySeat == playerSeat.Partner();
+                        var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
+                        cardPopUpController.enabled = isPartnerDummy;
+
+                        var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
+                        cardFollowController.enabled = isPartnerDummy;
+                    }
+                    else
+                    {
+                        var cardPopUpController = cardGameObject.GetComponent<CardPopUpController>();
+                        cardPopUpController.enabled = false;
+
+                        var cardFollowController = cardGameObject.GetComponent<CardFollowController>();
+                        cardFollowController.enabled = false;
+                    }
                 }
             }
         }
@@ -123,9 +132,11 @@ namespace LifeCycleManagers
             cardFollowController.enabled = false;
         }
 
-        private Seat? DummySeat()
+        private Seat DummySeat()
         {
-            return _session.Auction?.FinalContract?.Dummy();
+            Debug.Assert(_session.Auction != null, "_session.Auction != null");
+            Debug.Assert(_session.Auction.FinalContract != null, "_session.Auction.FinalContract != null");
+            return _session.Auction.FinalContract.Dummy();
         }
     }
 }

@@ -8,7 +8,7 @@ using Zenject;
 
 namespace AI
 {
-    // TODO Handle Dummy, Optimal moves, end.
+    // TODO Handle Optimal moves, end.
 
     public class GameAI : MonoBehaviour
     {
@@ -36,13 +36,7 @@ namespace AI
                 return;
             }
 
-            // TODO Work with dummy too...
-            if (turn == playerSeat)
-            {
-                return;
-            }
-
-            StartCoroutine(TakeTurn(turn));
+            TakeTurnIfOnTurn(turn);
         }
 
         private void OnDisable()
@@ -52,13 +46,24 @@ namespace AI
 
         private void HandleGameTurnChange(GameTurnChangeEvent e)
         {
-            // TODO Work with dummy too...
-            if (e.Seat == playerSeat)
+            TakeTurnIfOnTurn(e.Seat);
+        }
+
+        private void TakeTurnIfOnTurn(Seat turn)
+        {
+            var dummySeat = DummySeat();
+
+            if (turn == playerSeat && dummySeat != playerSeat)
             {
                 return;
             }
 
-            StartCoroutine(TakeTurn(e.Seat));
+            if (turn == dummySeat && dummySeat == playerSeat.Partner())
+            {
+                return;
+            }
+
+            StartCoroutine(TakeTurn(turn));
         }
 
         private IEnumerator TakeTurn(Seat aiSeat)
@@ -86,6 +91,14 @@ namespace AI
         {
             Debug.Assert(_session.Game != null, nameof(_session.Game) + " != null");
             return _session.Game;
+        }
+
+        private Seat DummySeat()
+        {
+            var auction = _session.Auction;
+            System.Diagnostics.Debug.Assert(auction != null, "_session.Auction != null");
+            System.Diagnostics.Debug.Assert(auction.FinalContract != null, "_session.Auction.FinalContract != null");
+            return auction.FinalContract.Dummy();
         }
     }
 }

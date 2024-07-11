@@ -28,7 +28,6 @@ namespace Decorators
             _doubleDummySolver = doubleDummySolver;
 
             eventBus.On<SessionPhaseChangedEvent>(HandleSessionPhaseChangedEvent);
-            eventBus.On<GameTurnChangeEvent>(HandleGameTurnChangeEvent);
         }
 
         public IPair Pair(Seat seat)
@@ -68,18 +67,13 @@ namespace Decorators
         {
             if (e.Phase == Phase.Auction)
             {
-                await AnalyzeBoard();
+                await AnalyzeBoardContracts();
             }
         }
 
-        private async void HandleGameTurnChangeEvent(GameTurnChangeEvent e)
+        private async Task AnalyzeBoardContracts()
         {
-            // TODO
-        }
-
-        private async Task AnalyzeBoard()
-        {
-            var solution = await Task.Run(() => _doubleDummySolver.Analyze(this));
+            var solution = await Task.Run(() => _doubleDummySolver.AnalyzeContracts(this));
 
             _auctionExtras.Solution = solution;
         }

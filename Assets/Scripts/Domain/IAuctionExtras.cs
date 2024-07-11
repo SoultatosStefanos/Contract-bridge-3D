@@ -7,6 +7,6 @@ namespace Domain
     {
         IContract PickedContract { get; set; }
 
-        IDoubleDummySolution Solution { get; set; }
+        IDoubleDummyContractsSolution Solution { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace Domain.Impl
     {
         private readonly IEventBus _eventBus;
 
-        private IDoubleDummySolution _solution;
+        private IDoubleDummyContractsSolution _solution;
 
         public AuctionExtras(IEventBus eventBus)
         {
@@ -17,7 +17,7 @@ namespace Domain.Impl
 
         public IContract PickedContract { get; set; }
 
-        public IDoubleDummySolution Solution
+        public IDoubleDummyContractsSolution Solution
         {
             get => _solution;
             set
@@ -26,7 +26,7 @@ namespace Domain.Impl
 
                 if (_solution != null)
                 {
-                    _eventBus.Post(new AuctionExtrasSolutionSetEvent(this, _solution));
+                    _eventBus.Post(new AuctionExtrasContractsSolutionEvent(this, _solution));
                 }
             }
         }

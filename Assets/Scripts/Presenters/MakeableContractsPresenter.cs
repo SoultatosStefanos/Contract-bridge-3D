@@ -33,9 +33,8 @@ namespace Presenters
         }
 
         private void OnEnable()
-
         {
-            _eventBus.On<AuctionExtrasSolutionSetEvent>(HandleAuctionExtrasSolutionSetEvent);
+            _eventBus.On<AuctionExtrasContractsSolutionEvent>(HandleAuctionExtrasSolutionSetEvent);
 
             if (_auctionExtras.Solution is { } solution)
             {
@@ -45,16 +44,16 @@ namespace Presenters
 
         private void OnDisable()
         {
-            _eventBus.Off<AuctionExtrasSolutionSetEvent>(HandleAuctionExtrasSolutionSetEvent);
+            _eventBus.Off<AuctionExtrasContractsSolutionEvent>(HandleAuctionExtrasSolutionSetEvent);
         }
 
-        private void HandleAuctionExtrasSolutionSetEvent(AuctionExtrasSolutionSetEvent e)
+        private void HandleAuctionExtrasSolutionSetEvent(AuctionExtrasContractsSolutionEvent e)
         {
             UpdateVisual(e.Solution);
         }
 
         // NOTE: Would be more efficient to traverse the contracts and invert the math, but whatever, still peanuts.
-        private void UpdateVisual(IDoubleDummySolution solution)
+        private void UpdateVisual(IDoubleDummyContractsSolution solution)
         {
             foreach (var (panel, i) in AllLevelPanelsWithIndices())
             {

@@ -44,7 +44,8 @@ namespace Installers
                     _eventBus
                 ),
                 _auctionExtras,
-                new BoHaglundDoubleDummySolver(new ContractFactory())
+                new BoHaglundDoubleDummySolver(new ContractFactory()),
+                _eventBus
             );
         }
 

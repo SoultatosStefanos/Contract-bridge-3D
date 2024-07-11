@@ -4,11 +4,10 @@ using System.Threading.Tasks;
 using ContractBridge.Core;
 using ContractBridge.Solver;
 using Domain;
+using Events;
 
 namespace Decorators
 {
-    // TODO Simply work only with the event bus on this file.
-
     public class SessionAuctionExtrasDecorator : ISession
     {
         private readonly IAuctionExtras _auctionExtras;
@@ -20,14 +19,16 @@ namespace Decorators
         public SessionAuctionExtrasDecorator(
             ISession session,
             IAuctionExtras auctionExtras,
-            IDoubleDummySolver doubleDummySolver
+            IDoubleDummySolver doubleDummySolver,
+            IEventBus eventBus
         )
         {
             _session = session;
             _auctionExtras = auctionExtras;
             _doubleDummySolver = doubleDummySolver;
 
-            _session.PhaseChanged += OnPhaseChanged;
+            eventBus.On<SessionPhaseChangedEvent>(HandleSessionPhaseChangedEvent);
+            eventBus.On<GameTurnChangeEvent>(HandleGameTurnChangeEvent);
         }
 
         public IPair Pair(Seat seat)
@@ -63,12 +64,17 @@ namespace Decorators
             remove => _session.PhaseChanged -= value;
         }
 
-        private async void OnPhaseChanged(object sender, ISession.PhaseEventArgs e)
+        private async void HandleSessionPhaseChangedEvent(SessionPhaseChangedEvent e)
         {
             if (e.Phase == Phase.Auction)
             {
                 await AnalyzeBoard();
             }
+        }
+
+        private async void HandleGameTurnChangeEvent(GameTurnChangeEvent e)
+        {
+            // TODO
         }
 
         private async Task AnalyzeBoard()

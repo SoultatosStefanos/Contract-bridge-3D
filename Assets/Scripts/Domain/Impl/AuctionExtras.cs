@@ -7,6 +7,7 @@ namespace Domain.Impl
     public class AuctionExtras : IAuctionExtras
     {
         private readonly IEventBus _eventBus;
+
         private IDoubleDummySolution _solution;
 
         public AuctionExtras(IEventBus eventBus)
@@ -29,5 +30,23 @@ namespace Domain.Impl
                 }
             }
         }
+
+        // private void LogOptimalMoves()
+        // {
+        //     foreach (var seat in EnumExtensions.AllValues<Seat>())
+        //     {
+        //         Debug.Log($"----- Seat: {seat} -----");
+        //
+        //         foreach (var contract in _solution.MakeableContracts(seat))
+        //         {
+        //             Debug.Log($"-- Contract: {contract} --");
+        //
+        //             foreach (var card in _solution.OptimalPlays(contract))
+        //             {
+        //                 Debug.Log($"Optimal play: {card}");
+        //             }
+        //         }
+        //     }
+        // }
     }
 }

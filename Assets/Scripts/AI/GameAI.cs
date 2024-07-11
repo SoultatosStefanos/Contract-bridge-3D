@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using ContractBridge.Core;
+using Domain;
 using Events;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -8,8 +10,6 @@ using Zenject;
 
 namespace AI
 {
-    // TODO Handle Optimal moves, end.
-
     public class GameAI : MonoBehaviour
     {
         [FormerlySerializedAs("Delay")]
@@ -25,28 +25,32 @@ namespace AI
         private IEventBus _eventBus;
 
         [Inject]
+        private IPlayExtras _playExtras;
+
+        [Inject]
         private ISession _session;
 
         private void OnEnable()
         {
-            _eventBus.On<GameTurnChangeEvent>(HandleGameTurnChange);
+            _eventBus.On<PlayExtrasPlaysSolutionSetEvent>(HandlePlayExtrasPlaysSolutionSetEvent);
 
-            if (_session.Game?.Turn is not { } turn)
+            if (_session.Game?.Turn is { } turn)
             {
-                return;
+                TakeTurnIfOnTurn(turn);
             }
-
-            TakeTurnIfOnTurn(turn);
         }
 
         private void OnDisable()
         {
-            _eventBus.Off<GameTurnChangeEvent>(HandleGameTurnChange);
+            _eventBus.Off<PlayExtrasPlaysSolutionSetEvent>(HandlePlayExtrasPlaysSolutionSetEvent);
         }
 
-        private void HandleGameTurnChange(GameTurnChangeEvent e)
+        private void HandlePlayExtrasPlaysSolutionSetEvent(PlayExtrasPlaysSolutionSetEvent e)
         {
-            TakeTurnIfOnTurn(e.Seat);
+            if (Game().Turn is { } turn)
+            {
+                TakeTurnIfOnTurn(turn);
+            }
         }
 
         private void TakeTurnIfOnTurn(Seat turn)
@@ -82,8 +86,23 @@ namespace AI
 
         private ICard ChooseCardToPlay(IHand hand, Seat aiSeat)
         {
-            // TODO Change this, this should take optimal move. 
+            var solution = _playExtras.Solution;
 
+            if (solution == null)
+            {
+                return ChooseFirstPlayableCard(hand, aiSeat);
+            }
+
+            var optimalPlays = solution.OptimalPlays(aiSeat);
+            var optimalCards = optimalPlays as ICard[] ?? optimalPlays.ToArray();
+
+            return optimalCards.Any()
+                ? ChooseFirstPlayableCard(optimalCards, aiSeat)
+                : ChooseFirstPlayableCard(hand, aiSeat);
+        }
+
+        private ICard ChooseFirstPlayableCard(IEnumerable<ICard> hand, Seat aiSeat)
+        {
             return hand.FirstOrDefault(c => Game().CanFollow(c, aiSeat));
         }
 

@@ -3,9 +3,9 @@ using Domain;
 
 namespace Events
 {
-    public class AuctionExtrasContractsSolutionEvent
+    public class AuctionExtrasContractsSolutionSetEvent
     {
-        public AuctionExtrasContractsSolutionEvent(IAuctionExtras auctionExtras, IDoubleDummyContractsSolution solution)
+        public AuctionExtrasContractsSolutionSetEvent(IAuctionExtras auctionExtras, IDoubleDummyContractsSolution solution)
         {
             AuctionExtras = auctionExtras;
             Solution = solution;

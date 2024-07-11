@@ -26,27 +26,9 @@ namespace Domain.Impl
 
                 if (_solution != null)
                 {
-                    _eventBus.Post(new AuctionExtrasContractsSolutionEvent(this, _solution));
+                    _eventBus.Post(new AuctionExtrasContractsSolutionSetEvent(this, _solution));
                 }
             }
         }
-
-        // private void LogOptimalMoves()
-        // {
-        //     foreach (var seat in EnumExtensions.AllValues<Seat>())
-        //     {
-        //         Debug.Log($"----- Seat: {seat} -----");
-        //
-        //         foreach (var contract in _solution.MakeableContracts(seat))
-        //         {
-        //             Debug.Log($"-- Contract: {contract} --");
-        //
-        //             foreach (var card in _solution.OptimalPlays(contract))
-        //             {
-        //                 Debug.Log($"Optimal play: {card}");
-        //             }
-        //         }
-        //     }
-        // }
     }
 }

@@ -34,7 +34,7 @@ namespace Presenters
 
         private void OnEnable()
         {
-            _eventBus.On<AuctionExtrasContractsSolutionEvent>(HandleAuctionExtrasSolutionSetEvent);
+            _eventBus.On<AuctionExtrasContractsSolutionSetEvent>(HandleAuctionExtrasSolutionSetEvent);
 
             if (_auctionExtras.Solution is { } solution)
             {
@@ -44,10 +44,10 @@ namespace Presenters
 
         private void OnDisable()
         {
-            _eventBus.Off<AuctionExtrasContractsSolutionEvent>(HandleAuctionExtrasSolutionSetEvent);
+            _eventBus.Off<AuctionExtrasContractsSolutionSetEvent>(HandleAuctionExtrasSolutionSetEvent);
         }
 
-        private void HandleAuctionExtrasSolutionSetEvent(AuctionExtrasContractsSolutionEvent e)
+        private void HandleAuctionExtrasSolutionSetEvent(AuctionExtrasContractsSolutionSetEvent e)
         {
             UpdateVisual(e.Solution);
         }

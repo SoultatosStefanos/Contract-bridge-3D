@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using ContractBridge.Core;
 using ContractBridge.Solver;
@@ -15,6 +16,18 @@ namespace Presenters
         [FormerlySerializedAs("Seat")]
         [SerializeField]
         private Seat seat;
+
+        [FormerlySerializedAs("Low Priority Color")]
+        [SerializeField]
+        private Color lowPriorityColor = Color.yellow;
+
+        [FormerlySerializedAs("Medium Priority Color")]
+        [SerializeField]
+        private Color mediumPriorityColor = new(255, 165, 0);
+
+        [FormerlySerializedAs("High Priority Color")]
+        [SerializeField]
+        private Color highPriorityColor = Color.green;
 
         [Inject]
         private IBoard _board;
@@ -53,16 +66,15 @@ namespace Presenters
         private void HighlightOptimalPlays(IDoubleDummyPlaysSolution solution)
         {
             var optimalPlays = solution.OptimalPlays(seat);
-
-            // TODO Use priority for highlighting
+            var optimalPlaysArray = optimalPlays as (ICard, Priority)[] ?? optimalPlays.ToArray();
 
             foreach (var card in _board.Hand(seat))
             {
-                // NOTE: This is fine :)
-                // ReSharper disable once PossibleMultipleEnumeration
-                if (optimalPlays.Any(play => Equals(play.Item1, card)))
+                var (cardPlay, priority) = optimalPlaysArray.FirstOrDefault(play => Equals(play.Item1, card));
+
+                if (cardPlay != null) // Non-default value.
                 {
-                    HighlightCard(card);
+                    HighlightCard(card, priority);
                 }
                 else
                 {
@@ -79,11 +91,23 @@ namespace Presenters
             }
         }
 
-        private void HighlightCard(ICard card)
+        private void HighlightCard(ICard card, Priority priority)
         {
             var cardGameObject = _cardGameObjectRegistry.GetGameObject(card);
             var outline = cardGameObject.GetComponent<Outline>();
             outline.enabled = true;
+            outline.OutlineColor = ColorCodeBy(priority);
+        }
+
+        private Color ColorCodeBy(Priority priority)
+        {
+            return priority switch
+            {
+                Priority.Low => lowPriorityColor,
+                Priority.Medium => mediumPriorityColor,
+                Priority.High => highPriorityColor,
+                _ => throw new ArgumentOutOfRangeException(nameof(priority), priority, null)
+            };
         }
 
         private void UnhighlightCard(ICard card)

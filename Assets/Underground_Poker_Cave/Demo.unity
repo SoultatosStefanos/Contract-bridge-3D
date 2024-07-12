@@ -16654,6 +16654,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seat: 3
+  lowPriorityColor: {r: 1, g: 0.8980392, b: 0.4745098, a: 1}
+  mediumPriorityColor: {r: 1, g: 0.59607846, b: 0.10980392, a: 1}
+  highPriorityColor: {r: 0.011764706, g: 0.7176471, b: 0.011764706, a: 1}
 --- !u!4 &871161912
 Transform:
   m_ObjectHideFlags: 0
@@ -26673,6 +26676,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seat: 1
+  lowPriorityColor: {r: 1, g: 0.8985122, b: 0.4764151, a: 1}
+  mediumPriorityColor: {r: 1, g: 0.59734887, b: 0.109803915, a: 1}
+  highPriorityColor: {r: 0.010145942, g: 0.7169812, b: 0.010145942, a: 1}
 --- !u!114 &1486982757
 MonoBehaviour:
   m_ObjectHideFlags: 0

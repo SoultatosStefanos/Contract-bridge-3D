@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using ContractBridge.Core;
+using ContractBridge.Solver;
 using Domain;
 using Events;
 using UnityEngine;
@@ -94,10 +95,12 @@ namespace AI
             }
 
             var optimalPlays = solution.OptimalPlays(aiSeat);
-            var optimalCards = optimalPlays as ICard[] ?? optimalPlays.ToArray();
+            var optimalCardPlays = optimalPlays as (ICard, Priority)[] ?? optimalPlays.ToArray();
 
-            return optimalCards.Any()
-                ? ChooseFirstPlayableCard(optimalCards, aiSeat)
+            // NOTE Choosing first play of already sorted by priority plays.
+
+            return optimalCardPlays.Any()
+                ? ChooseFirstPlayableCard(optimalCardPlays.Select(pair => pair.Item1), aiSeat)
                 : ChooseFirstPlayableCard(hand, aiSeat);
         }
 

@@ -54,11 +54,13 @@ namespace Presenters
         {
             var optimalPlays = solution.OptimalPlays(seat);
 
+            // TODO Use priority for highlighting
+
             foreach (var card in _board.Hand(seat))
             {
                 // NOTE: This is fine :)
                 // ReSharper disable once PossibleMultipleEnumeration
-                if (optimalPlays.Contains(card))
+                if (optimalPlays.Any(play => Equals(play.Item1, card)))
                 {
                     HighlightCard(card);
                 }

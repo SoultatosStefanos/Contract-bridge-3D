@@ -45,6 +45,11 @@ namespace Decorators
 
         public IEnumerable<IPair> Pairs => _session.Pairs;
 
+        public void Reset()
+        {
+            _session.Reset();
+        }
+
         public event EventHandler<ISession.PhaseEventArgs> PhaseChanged
         {
             add => _session.PhaseChanged += value;

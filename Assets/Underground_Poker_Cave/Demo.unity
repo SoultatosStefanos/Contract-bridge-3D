@@ -9718,7 +9718,7 @@ MonoBehaviour:
   setupCanvas: {fileID: 150331964}
   auctionCanvas: {fileID: 556338298}
   gameCanvas: {fileID: 695009141}
-  hideShowKey: 117
+  hideShowKey: 118
 --- !u!1 &474873889
 GameObject:
   m_ObjectHideFlags: 0
@@ -21938,7 +21938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 776.5523, y: -231.69601}
+  m_AnchoredPosition: {x: 776.5523, y: -228.93773}
   m_SizeDelta: {x: 57.817, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234675285
@@ -26473,6 +26473,7 @@ GameObject:
   - component: {fileID: 1486982749}
   - component: {fileID: 1486982756}
   - component: {fileID: 1486982757}
+  - component: {fileID: 1486982758}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -26685,6 +26686,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeat: 1
+  partnerCardHighlightPresenter: {fileID: 871161911}
+--- !u!114 &1486982758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486982741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4750c4cf874d828c9175aefc88c02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleKeyCode: 104
+  playerSeat: 1
+  makeAbleContractsPanel: {fileID: 1980753795}
+  playerCardHighlightPresenter: {fileID: 1486982756}
   partnerCardHighlightPresenter: {fileID: 871161911}
 --- !u!1 &1491033550
 GameObject:
@@ -32295,7 +32313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 471.93137, y: -231.69601}
+  m_AnchoredPosition: {x: 471.93137, y: -228.93773}
   m_SizeDelta: {x: 57.817, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854078515
@@ -34288,7 +34306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 167.31046, y: -231.69601}
+  m_AnchoredPosition: {x: 167.31046, y: -228.93773}
   m_SizeDelta: {x: 57.817, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974027119

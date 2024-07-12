@@ -1,5 +1,7 @@
 using System.Linq;
 using ContractBridge.Core;
+using ContractBridge.Solver;
+using Domain;
 using Events;
 using Registries;
 using UnityEngine;
@@ -23,19 +25,34 @@ namespace Presenters
         [Inject]
         private IEventBus _eventBus;
 
+        [Inject]
+        private IPlayExtras _playExtras;
+
         private void OnEnable()
         {
             _eventBus.On<PlayExtrasPlaysSolutionSetEvent>(HandlePlayExtrasPlaysSolutionSetEvent);
+
+            if (_playExtras.Solution is { } solution)
+            {
+                HighlightOptimalPlays(solution);
+            }
         }
 
         private void OnDisable()
         {
             _eventBus.Off<PlayExtrasPlaysSolutionSetEvent>(HandlePlayExtrasPlaysSolutionSetEvent);
+
+            UnhighlightAllCards();
         }
 
         private void HandlePlayExtrasPlaysSolutionSetEvent(PlayExtrasPlaysSolutionSetEvent e)
         {
-            var optimalPlays = e.Solution.OptimalPlays(seat);
+            HighlightOptimalPlays(e.Solution);
+        }
+
+        private void HighlightOptimalPlays(IDoubleDummyPlaysSolution solution)
+        {
+            var optimalPlays = solution.OptimalPlays(seat);
 
             foreach (var card in _board.Hand(seat))
             {
@@ -49,6 +66,14 @@ namespace Presenters
                 {
                     UnhighlightCard(card);
                 }
+            }
+        }
+
+        private void UnhighlightAllCards()
+        {
+            foreach (var card in _board.Hand(seat))
+            {
+                UnhighlightCard(card);
             }
         }
 

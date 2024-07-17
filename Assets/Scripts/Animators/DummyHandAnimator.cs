@@ -1,3 +1,4 @@
+using System.Linq;
 using ContractBridge.Core;
 using Events;
 using Extensions;
@@ -72,7 +73,7 @@ namespace Animators
 
         private void AnimateCardsOnSpline()
         {
-            var hand = _board.Hand(seat);
+            var hand = _board.Hand(seat).Grouped().ToList();
 
             for (var i = 0; i < hand.Count; i++)
             {

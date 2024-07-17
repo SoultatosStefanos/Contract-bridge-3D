@@ -1,6 +1,7 @@
 using System.Linq;
 using ContractBridge.Core;
 using Events;
+using Extensions;
 using JetBrains.Annotations;
 using Registries;
 using UnityEngine;
@@ -55,10 +56,7 @@ namespace Animators
         private void AnimateCardsOnSpline(IDeck deck, IBoard board)
         {
             var hand = board.Hand(seat);
-            var cards = hand
-                .OrderBy(card => card.Suit)
-                .ThenBy(card => card.Rank)
-                .ToList();
+            var cards = hand.Grouped().ToList();
 
             for (var i = 0; i < cards.Count; i++)
             {
